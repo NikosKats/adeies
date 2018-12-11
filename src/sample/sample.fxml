@@ -4,16 +4,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="844.0" style="-fx-background-image: url(bg.jpg);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: url(bg1.jpg);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutX="275.0" layoutY="14.0" prefHeight="486.0" prefWidth="312.0">
+      <VBox layoutX="477.0" layoutY="13.0" prefHeight="785.0" prefWidth="312.0">
          <children>
-            <JFXButton prefHeight="100.0" prefWidth="312.0" textAlignment="CENTER" />
-            <JFXButton prefHeight="100.0" prefWidth="312.0" textAlignment="CENTER" />
-            <JFXButton prefHeight="100.0" prefWidth="312.0" textAlignment="CENTER" />
-            <JFXButton prefHeight="100.0" prefWidth="332.0" textAlignment="CENTER" />
-            <JFXButton prefHeight="100.0" prefWidth="329.0" />
+            <JFXButton prefHeight="108.0" prefWidth="312.0" text="Πρώτο" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton prefHeight="100.0" prefWidth="312.0" text="Δεύτερο" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton prefHeight="100.0" prefWidth="312.0" text="Τρίτο" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton prefHeight="100.0" prefWidth="332.0" text="Τέταρτο" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton prefHeight="100.0" prefWidth="329.0" text="Πέμπτο" textFill="WHITE" />
          </children>
       </VBox>
    </children>
