@@ -1,10 +1,39 @@
 #anchor
 {
 
+    -fx-background-image:url(../bg1.jpg);
+
 
 }
 
 #btn1
 {
-    background-color: firebrick;
+
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#btn2
+{
+
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+
+
+}
+
+#btn3
+{
+
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#btn4
+{
+
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#btn5
+{
+
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }

@@ -4,15 +4,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image:url(bg1.jpg);" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutX="477.0" layoutY="25.0" prefHeight="751.0" prefWidth="312.0">
+      <VBox layoutX="300.0" layoutY="20.0" prefHeight="751.0" prefWidth="600.0">
          <children>
-            <JFXButton id="btn1" prefHeight="150.0" prefWidth="329.0" stylesheets="@style.css" text="Προσδιορισμός Βαπτίσεως" textFill="WHITE" />
-            <JFXButton prefHeight="150.0" prefWidth="312.0" text="Δήλωση Βαπτίσεως" textAlignment="CENTER" textFill="WHITE" />
-            <JFXButton prefHeight="150.0" prefWidth="312.0" text="Δήλωση Γάμου" textAlignment="CENTER" textFill="WHITE" />
-            <JFXButton prefHeight="150.0" prefWidth="312.0" text="Πιστοποιητικό Αγαμίας Α" textAlignment="CENTER" textFill="WHITE" />
-            <JFXButton prefHeight="150.0" prefWidth="332.0" text="Πιστοποιητικό Αγαμίας Β" textAlignment="CENTER" textFill="WHITE" />
+            <JFXButton id="btn1" prefHeight="150.0" prefWidth="600.0" stylesheets="@style.css" text="Προσδιορισμός Βαπτίσεως" textFill="WHITE" />
+            <VBox prefHeight="80.0" prefWidth="312.0" />
+            <JFXButton id="btn2" prefHeight="150.0" prefWidth="600.0" stylesheets="@style.css" text="Δήλωση Βαπτίσεως" textAlignment="CENTER" textFill="WHITE" />
+            <VBox prefHeight="80.0" prefWidth="312.0" />
+            <JFXButton id="btn3" prefHeight="150.0" prefWidth="600.0" stylesheets="@style.css" text="Δήλωση Γάμου" textAlignment="CENTER" textFill="WHITE" />
+            <VBox prefHeight="80.0" prefWidth="312.0" />
+            <JFXButton id="btn4" prefHeight="150.0" prefWidth="600.0" stylesheets="@style.css" text="Πιστοποιητικό Αγαμίας Α" textAlignment="CENTER" textFill="WHITE" />
+            <VBox prefHeight="80.0" prefWidth="312.0" />
+            <JFXButton id="btn5" prefHeight="150.0" prefWidth="600.0" stylesheets="@style.css" text="Πιστοποιητικό Αγαμίας Β" textAlignment="CENTER" textFill="WHITE" />
          </children>
       </VBox>
    </children>
