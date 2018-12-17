@@ -18,6 +18,8 @@ public class Main extends Application {
         primaryStage.setTitle("Αρχική");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+
     }
 
 
