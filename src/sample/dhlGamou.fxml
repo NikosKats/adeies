@@ -11,10 +11,10 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DhlGamou">
    <children>
-      <JFXButton layoutX="80.0" layoutY="760.0" prefHeight="27.0" prefWidth="250.0" text="Αρχικό Μενού" />
-      <JFXButton layoutX="480.0" layoutY="760.0" prefHeight="27.0" prefWidth="250.0" text="Προβολή Δηλώσεων" />
-      <JFXButton layoutX="894.0" layoutY="760.0" prefHeight="27.0" prefWidth="250.0" text="Υποβολή Στοιχείων" />
-      <ScrollPane layoutX="-17.0" prefHeight="746.0" prefWidth="1216.0">
+      <JFXButton id="btn_menu" layoutX="80.0" layoutY="750.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
+      <JFXButton id="btn_view" layoutX="480.0" layoutY="750.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Προβολή Δηλώσεων" textFill="WHITE" />
+      <JFXButton id="btn_add" layoutX="894.0" layoutY="750.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Υποβολή Στοιχείων" textFill="WHITE" />
+      <ScrollPane layoutX="-17.0" prefHeight="740.0" prefWidth="1216.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2093.0" prefWidth="1190.0" stylesheets="@style.css">
                <children>
@@ -144,7 +144,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="529.0" layoutY="468.0" text="ΤΟΥ ΣΥΖΥΓΟΥ">
+                  <Label layoutX="499.0" layoutY="468.0" text="ΤΟΥ ΣΥΖΥΓΟΥ">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -169,7 +169,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="972.0" layoutY="467.0" text="ΤΗΣ ΣΥΖΥΓΟΥ">
+                  <Label layoutX="952.0" layoutY="467.0" text="ΤΗΣ ΣΥΖΥΓΟΥ">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -195,15 +195,15 @@
                   <JFXTextField layoutX="818.0" layoutY="304.0" prefHeight="27.0" prefWidth="146.0" />
                   <JFXTextField layoutX="133.0" layoutY="338.0" prefHeight="27.0" prefWidth="224.0" />
                   <JFXTextField layoutX="715.0" layoutY="341.0" prefHeight="27.0" prefWidth="283.0" />
-                  <JFXTextField layoutX="328.0" layoutY="488.0" prefHeight="27.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="783.0" layoutY="486.0" prefHeight="27.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="331.0" layoutY="521.0" prefHeight="27.0" prefWidth="322.0" />
-                  <JFXTextField layoutX="780.0" layoutY="518.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="329.0" layoutY="555.0" prefHeight="27.0" prefWidth="322.0" />
+                  <JFXTextField layoutX="139.0" layoutY="488.0" prefHeight="27.0" prefWidth="581.0" />
+                  <JFXTextField layoutX="780.0" layoutY="486.0" prefHeight="27.0" prefWidth="383.0" />
+                  <JFXTextField layoutX="117.0" layoutY="519.0" prefHeight="27.0" prefWidth="604.0" />
+                  <JFXTextField layoutX="780.0" layoutY="518.0" prefHeight="27.0" prefWidth="385.0" />
+                  <JFXTextField layoutX="278.0" layoutY="551.0" prefHeight="27.0" prefWidth="445.0" />
                   <JFXTextField layoutX="780.0" layoutY="549.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="326.0" layoutY="587.0" prefHeight="27.0" prefWidth="325.0" />
+                  <JFXTextField layoutX="230.0" layoutY="581.0" prefHeight="27.0" prefWidth="493.0" />
                   <JFXTextField layoutX="782.0" layoutY="580.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="325.0" layoutY="619.0" prefHeight="27.0" prefWidth="327.0" />
+                  <JFXTextField layoutX="266.0" layoutY="610.0" prefHeight="27.0" prefWidth="458.0" />
                   <JFXTextField layoutX="780.0" layoutY="617.0" prefWidth="325.0" />
                   <Label layoutX="27.0" layoutY="738.0" text="9.Τόπος Γέννησης">
                      <font>
@@ -275,13 +275,13 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="328.0" layoutY="653.0" prefHeight="27.0" prefWidth="325.0" />
+                  <JFXTextField layoutX="94.0" layoutY="640.0" prefHeight="27.0" prefWidth="630.0" />
                   <JFXTextField layoutX="783.0" layoutY="651.0" prefHeight="27.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="331.0" layoutY="686.0" prefHeight="27.0" prefWidth="322.0" />
+                  <JFXTextField layoutX="100.0" layoutY="674.0" prefHeight="27.0" prefWidth="626.0" />
                   <JFXTextField layoutX="780.0" layoutY="683.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="329.0" layoutY="720.0" prefHeight="27.0" prefWidth="322.0" />
+                  <JFXTextField layoutX="205.0" layoutY="706.0" prefHeight="27.0" prefWidth="520.0" />
                   <JFXTextField layoutX="780.0" layoutY="714.0" prefWidth="325.0" />
-                  <JFXTextField layoutX="326.0" layoutY="752.0" prefHeight="27.0" prefWidth="325.0" />
+                  <JFXTextField layoutX="199.0" layoutY="752.0" prefHeight="27.0" prefWidth="452.0" />
                   <JFXTextField layoutX="782.0" layoutY="745.0" prefWidth="325.0" />
                   <JFXTextField layoutX="320.0" layoutY="784.0" prefHeight="27.0" prefWidth="332.0" />
                   <JFXTextField layoutX="780.0" layoutY="782.0" prefWidth="325.0" />
@@ -392,12 +392,12 @@
                   <JFXCheckBox layoutX="896.0" layoutY="1430.0" text="Άγαμη" />
                   <JFXCheckBox layoutX="896.0" layoutY="1456.0" text="Χήρα" />
                   <JFXCheckBox layoutX="896.0" layoutY="1485.0" text="Διαζευγμένη" />
-                  <Label layoutX="12.0" layoutY="1529.0" text="18.Βαθμός γάμου (πρώτος,δεύτερος,τρίτος)">
+                  <Label layoutX="21.0" layoutY="1529.0" text="18.Βαθμός γάμου (πρώτος,δεύτερος,τρίτος)">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="390.0" layoutY="1522.0" prefHeight="27.0" prefWidth="327.0" />
+                  <JFXTextField layoutX="403.0" layoutY="1522.0" prefHeight="27.0" prefWidth="327.0" />
                   <JFXTextField layoutX="787.0" layoutY="1520.0" prefWidth="325.0" />
                   <Label layoutX="16.0" layoutY="1576.0" text="19.Εκπαίδευση">
                      <font>
