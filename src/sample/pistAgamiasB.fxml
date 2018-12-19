@@ -13,7 +13,7 @@
             <JFXButton id="btn_menu" fx:id="menu_btn" layoutX="80.0" layoutY="15.0" onAction="#main_menu" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
             <JFXButton id="btn_view" layoutX="480.0" layoutY="15.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Προβολή Δηλώσεων" textFill="WHITE" />
             <JFXButton id="btn_add" layoutX="894.0" layoutY="15.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Υποβολή Στοιχείων" textFill="WHITE" />
-            <ScrollPane layoutX="-10.0" layoutY="59.0" prefHeight="732.0" prefWidth="1211.0">
+            <ScrollPane layoutX="-10.0" layoutY="59.0" prefHeight="741.0" prefWidth="1211.0">
                 <content>
                     <AnchorPane id="pistAgamiasB" minHeight="0.0" minWidth="0.0" prefHeight="1412.0" prefWidth="1193.0" stylesheets="@style.css">
                         <children>
