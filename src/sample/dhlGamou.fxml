@@ -19,7 +19,7 @@
           <AnchorPane id="dhlGamou" minHeight="0.0" minWidth="0.0" prefHeight="2114.0" prefWidth="1198.0" stylesheets="@style.css">
                <children>
                   <JFXTextField layoutX="201.0" layoutY="15.0" prefHeight="27.0" prefWidth="319.0" />
-                  <Label layoutX="20.0" layoutY="26.0" prefHeight="23.0" prefWidth="169.0" text="ΙΕΡΑ ΜΗΤΡΟΠΟΛΗ">
+                  <Label layoutX="20.0"  layoutY="26.0" prefHeight="23.0" prefWidth="169.0" text="ΙΕΡΑ ΜΗΤΡΟΠΟΛΗ">
                      <font>
                         <Font size="18.0" />
                      </font>
