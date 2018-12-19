@@ -16,6 +16,7 @@ public class Main extends Application {
 
         scene.getStylesheets().addAll(getClass().getResource("style.css").toExternalForm());
         primaryStage.setTitle("Αρχική");
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
 

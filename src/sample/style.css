@@ -9,13 +9,13 @@
 #btn1
 {
     -fx-font-family: SignPainter;
-    -fx-font-size: 50px;
+    -fx-font-size: 43px;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
 
 #btn2
 {
-    -fx-font-size: 50px;
+    -fx-font-size: 43px;
     -fx-font-family: SignPainter;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 
@@ -25,20 +25,20 @@
 #btn3
 {
     -fx-font-family: SignPainter;
-    -fx-font-size: 50px;
+    -fx-font-size: 43px;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
 
 #btn4
 {
     -fx-font-family: SignPainter;
-    -fx-font-size: 50px;
+    -fx-font-size: 43px;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
 
 #btn5
 {
-    -fx-font-size: 50px;
+    -fx-font-size: 43px;
     -fx-font-family: SignPainter;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
