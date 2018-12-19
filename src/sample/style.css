@@ -5,7 +5,7 @@
 
 #dhlGamou
 {
-    /*-fx-background-image:url(../bg1.jpg);*/
+    -fx-background-image:url(../bg2.jpg);
 }
 
 #dhlGamouAnchor
@@ -22,7 +22,7 @@
 
 #dhlBapt
 {
-    /*-fx-background-image:url(../bg1.jpg);*/
+    -fx-background-image:url(../bg5.jpg);
 }
 
 #dhlBaptAnchor
@@ -39,7 +39,7 @@
 
 #pistAgamiasA
 {
-    /*-fx-background-image:url(../bg1.jpg);*/
+    -fx-background-image:url(../bg2.jpg);
 }
 
 #pistAgamiasAAnchor
@@ -56,7 +56,7 @@
 
 #pistAgamiasB
 {
-    /*-fx-background-image:url(../bg1.jpg);*/
+    -fx-background-image:url(../bg4.jpg);
 }
 
 #pistAgamiasBAnchor
