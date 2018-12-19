@@ -1,10 +1,77 @@
 #anchor
 {
-
     -fx-background-image:url(../bg1.jpg);
+}
+
+#dhlGamou
+{
+    /*-fx-background-image:url(../bg1.jpg);*/
+}
+
+#dhlGamouAnchor
+{
+
+    -fx-background-color: #269,
+    linear-gradient(from 0px 0px to 20px 0px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 0px 20px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 100px 0px, repeat, white 0%, transparent 1%, transparent 99%, white 100% ),
+    linear-gradient(from 0px 0px to 0px 100px, repeat, white 0%, transparent 1%, transparent 99%, white 100% );
 
 
 }
+
+#dhlBapt
+{
+    /*-fx-background-image:url(../bg1.jpg);*/
+}
+
+#dhlBaptAnchor
+{
+
+    -fx-background-color: #269,
+    linear-gradient(from 0px 0px to 20px 0px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 0px 20px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 100px 0px, repeat, white 0%, transparent 1%, transparent 99%, white 100% ),
+    linear-gradient(from 0px 0px to 0px 100px, repeat, white 0%, transparent 1%, transparent 99%, white 100% );
+
+
+}
+
+#pistAgamiasA
+{
+    /*-fx-background-image:url(../bg1.jpg);*/
+}
+
+#pistAgamiasAAnchor
+{
+
+    -fx-background-color: #269,
+    linear-gradient(from 0px 0px to 20px 0px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 0px 20px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 100px 0px, repeat, white 0%, transparent 1%, transparent 99%, white 100% ),
+    linear-gradient(from 0px 0px to 0px 100px, repeat, white 0%, transparent 1%, transparent 99%, white 100% );
+
+
+}
+
+#pistAgamiasB
+{
+    /*-fx-background-image:url(../bg1.jpg);*/
+}
+
+#pistAgamiasBAnchor
+{
+
+    -fx-background-color: #269,
+    linear-gradient(from 0px 0px to 20px 0px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 0px 20px, repeat, rgba(255, 255, 255, 0.3) 0%, transparent 5%, transparent 95%, rgba(255, 255, 255, 0.3) 100% ),
+    linear-gradient(from 0px 0px to 100px 0px, repeat, white 0%, transparent 1%, transparent 99%, white 100% ),
+    linear-gradient(from 0px 0px to 0px 100px, repeat, white 0%, transparent 1%, transparent 99%, white 100% );
+
+
+}
+
+
 
 #btn1
 {
