@@ -5,7 +5,9 @@
 
 #dhlGamou
 {
-    -fx-background-image:url(../bg2.jpg);
+
+    -fx-background-image:url(../bg2.2.jpg);
+
 }
 
 #dhlGamouAnchor
@@ -22,7 +24,10 @@
 
 #dhlBapt
 {
-    -fx-background-image:url(../bg.jpg);
+
+    -fx-background-image:url(../bg3.3.jpg);
+
+
 }
 
 #dhlBaptAnchor
