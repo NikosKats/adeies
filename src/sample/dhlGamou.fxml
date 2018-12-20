@@ -12,7 +12,7 @@
 <AnchorPane id="dhlGamouAnchor" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DhlGamou">
    <children>
       <JFXButton id="btn_menu" fx:id="menu_btn" layoutX="80.0" layoutY="15.0" onAction="#main_menu" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
-      <JFXButton id="btn_view" layoutX="480.0" layoutY="15.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Προβολή Δηλώσεων" textFill="WHITE" />
+      <JFXButton id="btn_view" fx:id="view_btn" layoutX="480.0" layoutY="15.0" onAction="#view_screen" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Προβολή Δηλώσεων" textFill="WHITE" />
       <JFXButton id="btn_add" layoutX="894.0" layoutY="15.0" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Υποβολή Στοιχείων" textFill="WHITE" />
       <ScrollPane layoutX="-17.0" layoutY="69.0" prefHeight="732.0" prefWidth="1216.0">
         <content>
