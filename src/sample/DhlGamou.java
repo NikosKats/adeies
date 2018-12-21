@@ -322,7 +322,7 @@ public class DhlGamou {
 
 
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptTable.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlGamouTable.fxml"));
 
             AnchorPane pane = loader.load();
 

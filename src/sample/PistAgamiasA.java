@@ -167,7 +167,7 @@ public class PistAgamiasA {
 
 
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptTable.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("pistAgamiasATable.fxml"));
 
             AnchorPane pane = loader.load();
 
