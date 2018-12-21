@@ -1,6 +1,7 @@
 package sample;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -109,6 +110,22 @@ public class DhlGamou {
     public JFXTextField field86;
     public JFXTextField field87;
     public JFXTextField field88;
+    public JFXCheckBox check1;
+    public JFXCheckBox check2;
+    public JFXCheckBox check3;
+    public JFXCheckBox check4;
+    public JFXCheckBox check5;
+    public JFXCheckBox check6;
+    public JFXCheckBox check7;
+    public JFXCheckBox check8;
+    public JFXCheckBox check9;
+    public JFXCheckBox check10;
+    public JFXCheckBox check11;
+    public JFXCheckBox check12;
+    public JFXCheckBox check13;
+    public JFXCheckBox check14;
+    public JFXCheckBox check15;
+    public JFXCheckBox check16;
 
 
     /*******************************
@@ -329,7 +346,9 @@ public class DhlGamou {
         String Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50;
         String Field51, Field52, Field53, Field54, Field55, Field56, Field57, Field58, Field59, Field60, Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68;
         String Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85;
-        String Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4;
+        String Field86, Field87, Field88;
+        String Check1,Check2,Check3,Check4,Check5,Check6,Check7,Check8,Check9,Check10,Check11,Check12,Check13,Check14,Check15,Check16;
+        String CheckBox1, CheckBox2, CheckBox3, CheckBox4;
 
 
         Field1 = field1.getText();
@@ -422,6 +441,24 @@ public class DhlGamou {
         Field88 = field88.getText();
 
 
+        check1.isSelected();
+        check2.isSelected();
+        check3.isSelected();
+        check4.isSelected();
+        check5.isSelected();
+        check6.isSelected();
+        check7.isSelected();
+        check8.isSelected();
+        check9.isSelected();
+        check10.isSelected();
+        check11.isSelected();
+        check12.isSelected();
+        check13.isSelected();
+        check14.isSelected();
+        check15.isSelected();
+        check16.isSelected();
+
+
         if (   (Field1.trim().isEmpty()) || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
                 || (Field6.trim().isEmpty()) || (Field7.trim().isEmpty()) || (Field8.trim().isEmpty()) || (Field9.trim().isEmpty()) || (Field10.trim().isEmpty())
                 || (Field11.trim().isEmpty()) || (Field12.trim().isEmpty()) || (Field13.trim().isEmpty()) || (Field14.trim().isEmpty()) || (Field15.trim().isEmpty())
@@ -438,7 +475,8 @@ public class DhlGamou {
                 || (Field71.trim().isEmpty()) || (Field72.trim().isEmpty()) || (Field73.trim().isEmpty()) || (Field74.trim().isEmpty()) || (Field75.trim().isEmpty())
                 || (Field76.trim().isEmpty()) || (Field77.trim().isEmpty()) || (Field78.trim().isEmpty()) || (Field79.trim().isEmpty()) || (Field80.trim().isEmpty())
                 || (Field81.trim().isEmpty()) || (Field82.trim().isEmpty()) || (Field83.trim().isEmpty()) || (Field84.trim().isEmpty()) || (Field85.trim().isEmpty())
-                || (Field86.trim().isEmpty()) || (Field87.trim().isEmpty()) || (Field88.trim().isEmpty())
+                || (Field86.trim().isEmpty()) || (Field87.trim().isEmpty()) || (Field88.trim().isEmpty()) || (Field88.trim().isEmpty())
+
 
                 ) {
 
@@ -464,7 +502,7 @@ public class DhlGamou {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == buttonTypeOne) {
 
-                insert(Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31, Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50,Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59, Field60,Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68, Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85, Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4);
+               // insert(Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31, Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50,Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59, Field60,Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68, Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85, Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4);
 
                 /**
                  * *

@@ -392,12 +392,12 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXCheckBox layoutX="465.0" layoutY="1436.0" text="Άγαμος" />
-                  <JFXCheckBox layoutX="465.0" layoutY="1462.0" text="Χήρος" />
-                  <JFXCheckBox layoutX="465.0" layoutY="1491.0" text="Διαζευγμένος" />
-                  <JFXCheckBox layoutX="896.0" layoutY="1430.0" text="Άγαμη" />
-                  <JFXCheckBox layoutX="896.0" layoutY="1456.0" text="Χήρα" />
-                  <JFXCheckBox layoutX="896.0" layoutY="1485.0" text="Διαζευγμένη" />
+                  <JFXCheckBox fx:id="check1" layoutX="465.0" layoutY="1436.0" text="Άγαμος" />
+                  <JFXCheckBox fx:id="check2" layoutX="465.0" layoutY="1462.0" text="Χήρος" />
+                  <JFXCheckBox fx:id="check3" layoutX="465.0" layoutY="1491.0" text="Διαζευγμένος" />
+                  <JFXCheckBox fx:id="check4" layoutX="896.0" layoutY="1430.0" text="Άγαμη" />
+                  <JFXCheckBox fx:id="check5" layoutX="896.0" layoutY="1456.0" text="Χήρα" />
+                  <JFXCheckBox fx:id="check6" layoutX="896.0" layoutY="1485.0" text="Διαζευγμένη" />
                   <Label layoutX="21.0" layoutY="1529.0" text="18.Βαθμός γάμου (πρώτος,δεύτερος,τρίτος)">
                      <font>
                         <Font size="18.0" />
@@ -410,16 +410,16 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXCheckBox layoutX="417.0" layoutY="1577.0" text="Αναλφάβητος" />
-                  <JFXCheckBox layoutX="417.0" layoutY="1603.0" text="Γνωρίζει γραφή και ανάγνωση" />
-                  <JFXCheckBox layoutX="418.0" layoutY="1631.0" text="Τελείωσε τριτάξιο γυμνάσιο" />
-                  <JFXCheckBox layoutX="418.0" layoutY="1659.0" text="Έχει απολυτήριο λυκείου ή ισότιμο" />
-                  <JFXCheckBox layoutX="419.0" layoutY="1687.0" text="Έχει πτυχίο ΑΕΙ ή ΤΕΙ" />
-                  <JFXCheckBox layoutX="864.0" layoutY="1580.0" text="Αναλφάβητη" />
-                  <JFXCheckBox layoutX="864.0" layoutY="1606.0" text="Γνωρίζει γραφή και ανάγνωση" />
-                  <JFXCheckBox layoutX="865.0" layoutY="1634.0" text="Τελείωσε τριτάξιο γυμνάσιο" />
-                  <JFXCheckBox layoutX="865.0" layoutY="1662.0" text="Έχει απολυτήριο λυκείου ή ισότιμο" />
-                  <JFXCheckBox layoutX="866.0" layoutY="1690.0" text="Έχει πτυχίο ΑΕΙ ή ΤΕΙ" />
+                  <JFXCheckBox fx:id="check7" layoutX="417.0" layoutY="1577.0" text="Αναλφάβητος" />
+                  <JFXCheckBox fx:id="check8" layoutX="417.0" layoutY="1603.0" text="Γνωρίζει γραφή και ανάγνωση" />
+                  <JFXCheckBox fx:id="check9" layoutX="418.0" layoutY="1631.0" text="Τελείωσε τριτάξιο γυμνάσιο" />
+                  <JFXCheckBox fx:id="check10" layoutX="418.0" layoutY="1659.0" text="Έχει απολυτήριο λυκείου ή ισότιμο" />
+                  <JFXCheckBox fx:id="check11" layoutX="419.0" layoutY="1687.0" text="Έχει πτυχίο ΑΕΙ ή ΤΕΙ" />
+                  <JFXCheckBox fx:id="check12" layoutX="864.0" layoutY="1580.0" text="Αναλφάβητη" />
+                  <JFXCheckBox fx:id="check13" layoutX="864.0" layoutY="1606.0" text="Γνωρίζει γραφή και ανάγνωση" />
+                  <JFXCheckBox fx:id="check14" layoutX="865.0" layoutY="1634.0" text="Τελείωσε τριτάξιο γυμνάσιο" />
+                  <JFXCheckBox fx:id="check15" layoutX="865.0" layoutY="1662.0" text="Έχει απολυτήριο λυκείου ή ισότιμο" />
+                  <JFXCheckBox fx:id="check16" layoutX="866.0" layoutY="1690.0" text="Έχει πτυχίο ΑΕΙ ή ΤΕΙ" />
                   <Label layoutX="21.0" layoutY="1736.0" text="20.Αριθμός άδειας γάμου άνδρα">
                      <font>
                         <Font size="18.0" />
