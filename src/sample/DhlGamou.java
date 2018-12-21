@@ -2,13 +2,14 @@ package sample;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -110,23 +111,28 @@ public class DhlGamou {
     public JFXTextField field86;
     public JFXTextField field87;
     public JFXTextField field88;
-    public JFXCheckBox check1;
-    public JFXCheckBox check2;
-    public JFXCheckBox check3;
-    public JFXCheckBox check4;
-    public JFXCheckBox check5;
-    public JFXCheckBox check6;
-    public JFXCheckBox check7;
-    public JFXCheckBox check8;
-    public JFXCheckBox check9;
-    public JFXCheckBox check10;
-    public JFXCheckBox check11;
-    public JFXCheckBox check12;
-    public JFXCheckBox check13;
-    public JFXCheckBox check14;
-    public JFXCheckBox check15;
-    public JFXCheckBox check16;
+    public JFXRadioButton check1;
+    public JFXRadioButton check2;
+    public JFXRadioButton check3;
+    public JFXRadioButton check4;
+    public JFXRadioButton check5;
+    public JFXRadioButton check6;
+    public JFXRadioButton check7;
+    public JFXRadioButton check8;
+    public JFXRadioButton check9;
+    public JFXRadioButton check10;
+    public JFXRadioButton check11;
+    public JFXRadioButton check12;
+    public JFXRadioButton check13;
+    public JFXRadioButton check14;
+    public JFXRadioButton check15;
+    public JFXRadioButton check16;
+    public ToggleGroup group1;
+    public ToggleGroup group2;
+    public ToggleGroup group3;
+    public ToggleGroup group4;
 
+    String CheckBox1, CheckBox2, CheckBox3, CheckBox4;
 
     /*******************************
      //Σύνδεση με Βάση
@@ -347,8 +353,7 @@ public class DhlGamou {
         String Field51, Field52, Field53, Field54, Field55, Field56, Field57, Field58, Field59, Field60, Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68;
         String Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85;
         String Field86, Field87, Field88;
-        String Check1,Check2,Check3,Check4,Check5,Check6,Check7,Check8,Check9,Check10,Check11,Check12,Check13,Check14,Check15,Check16;
-        String CheckBox1, CheckBox2, CheckBox3, CheckBox4;
+
 
 
         Field1 = field1.getText();
@@ -440,23 +445,150 @@ public class DhlGamou {
         Field87 = field87.getText();
         Field88 = field88.getText();
 
+        /******
+         *
+         * Group 1
+         * ****/
+        if(check1.isSelected())
+//        {
+//            CheckBox1 = check1.getText();
+//        }
+//        if(check2.isSelected())
+//        {
+//            CheckBox1 = check2.getText();
+//        }
+//        if(check3.isSelected())
+//        {
+//            CheckBox1 = check3.getText();
+//        }
 
-        check1.isSelected();
-        check2.isSelected();
-        check3.isSelected();
-        check4.isSelected();
-        check5.isSelected();
-        check6.isSelected();
-        check7.isSelected();
-        check8.isSelected();
-        check9.isSelected();
-        check10.isSelected();
-        check11.isSelected();
-        check12.isSelected();
-        check13.isSelected();
-        check14.isSelected();
-        check15.isSelected();
-        check16.isSelected();
+
+        group1.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
+            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+
+                if (group1.getSelectedToggle() != null) {
+
+                    System.out.println(group1.getSelectedToggle().getUserData().toString());
+                    // Do something here with the userData of newly selected radioButton
+
+                     CheckBox1 = group1.getSelectedToggle().getUserData().toString();
+
+                }
+
+            }
+        });
+
+        /******
+         *
+         * Group 2
+         * ****/
+//        if(check4.isSelected())
+//        {
+//            CheckBox2 = check4.getText();
+//        }
+//        if(check5.isSelected())
+//        {
+//            CheckBox2 = check5.getText();
+//        }
+//        if(check6.isSelected())
+//        {
+//            CheckBox2 = check6.getText();
+//        }
+
+        group2.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
+            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+
+                if (group2.getSelectedToggle() != null) {
+
+                    System.out.println(group2.getSelectedToggle().getUserData().toString());
+                    // Do something here with the userData of newly selected radioButton
+
+                    CheckBox2 = group2.getSelectedToggle().getUserData().toString();
+
+                }
+
+            }
+        });
+
+        /******
+         *
+         * Group 3
+         * ****/
+//        if(check7.isSelected())
+//        {
+//            CheckBox3 = check7.getText();
+//        }
+//        if(check8.isSelected())
+//        {
+//            CheckBox3 = check8.getText();
+//        }
+//        if(check9.isSelected())
+//        {
+//            CheckBox3 = check9.getText();
+//        }
+//        if(check10.isSelected())
+//        {
+//            CheckBox3 = check10.getText();
+//        }
+//        if(check11.isSelected())
+//        {
+//            CheckBox3 = check11.getText();
+//        }
+
+        group3.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
+            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+
+                if (group3.getSelectedToggle() != null) {
+
+                    System.out.println(group3.getSelectedToggle().getUserData().toString());
+                    // Do something here with the userData of newly selected radioButton
+
+                    CheckBox3 = group3.getSelectedToggle().getUserData().toString();
+
+                }
+
+            }
+        });
+
+        /******
+         *
+         * Group 4
+         * ****/
+//        if(check12.isSelected())
+//        {
+//            CheckBox4 = check12.getText();
+//        }
+//        if(check13.isSelected())
+//        {
+//            CheckBox4 = check13.getText();
+//        }
+//        if(check14.isSelected())
+//        {
+//            CheckBox4 = check14.getText();
+//        }
+//        if(check15.isSelected())
+//        {
+//            CheckBox4 = check15.getText();
+//        }
+//        if(check16.isSelected())
+//        {
+//            CheckBox4 = check16.getText();
+//        }
+
+        group4.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
+            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+
+                if (group4.getSelectedToggle() != null) {
+
+                    System.out.println(group4.getSelectedToggle().getUserData().toString());
+                    // Do something here with the userData of newly selected radioButton
+
+                    CheckBox4 = group4.getSelectedToggle().getUserData().toString();
+
+                }
+
+            }
+        });
 
 
         if (   (Field1.trim().isEmpty()) || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
@@ -467,7 +599,8 @@ public class DhlGamou {
                 || (Field26.trim().isEmpty()) || (Field27.trim().isEmpty()) || (Field28.trim().isEmpty()) || (Field29.trim().isEmpty()) || (Field30.trim().isEmpty())
                 || (Field31.trim().isEmpty()) || (Field32.trim().isEmpty()) || (Field33.trim().isEmpty()) || (Field34.trim().isEmpty()) || (Field35.trim().isEmpty())
                 || (Field36.trim().isEmpty()) || (Field37.trim().isEmpty()) || (Field38.trim().isEmpty()) || (Field39.trim().isEmpty()) || (Field40.trim().isEmpty())
-                || (Field41.trim().isEmpty()) || (Field47.trim().isEmpty()) || (Field48.trim().isEmpty()) || (Field49.trim().isEmpty()) || (Field50.trim().isEmpty())
+                || (Field41.trim().isEmpty()) || (Field42.trim().isEmpty()) || (Field43.trim().isEmpty()) || (Field44.trim().isEmpty()) || (Field45.trim().isEmpty())
+                || (Field46.trim().isEmpty()) || (Field47.trim().isEmpty()) || (Field48.trim().isEmpty()) || (Field49.trim().isEmpty()) || (Field50.trim().isEmpty())
                 || (Field51.trim().isEmpty()) || (Field52.trim().isEmpty()) || (Field53.trim().isEmpty()) || (Field54.trim().isEmpty()) || (Field55.trim().isEmpty())
                 || (Field56.trim().isEmpty()) || (Field57.trim().isEmpty()) || (Field58.trim().isEmpty()) || (Field59.trim().isEmpty()) || (Field60.trim().isEmpty())
                 || (Field61.trim().isEmpty()) || (Field62.trim().isEmpty()) || (Field63.trim().isEmpty()) || (Field64.trim().isEmpty()) || (Field65.trim().isEmpty())
@@ -476,7 +609,7 @@ public class DhlGamou {
                 || (Field76.trim().isEmpty()) || (Field77.trim().isEmpty()) || (Field78.trim().isEmpty()) || (Field79.trim().isEmpty()) || (Field80.trim().isEmpty())
                 || (Field81.trim().isEmpty()) || (Field82.trim().isEmpty()) || (Field83.trim().isEmpty()) || (Field84.trim().isEmpty()) || (Field85.trim().isEmpty())
                 || (Field86.trim().isEmpty()) || (Field87.trim().isEmpty()) || (Field88.trim().isEmpty()) || (Field88.trim().isEmpty())
-
+                || (CheckBox1.trim().isEmpty()) || (CheckBox2.trim().isEmpty()) || (CheckBox3.trim().isEmpty()) || (CheckBox4.trim().isEmpty())
 
                 ) {
 
@@ -502,7 +635,7 @@ public class DhlGamou {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == buttonTypeOne) {
 
-               // insert(Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31, Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50,Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59, Field60,Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68, Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85, Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4);
+                insert(Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31, Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50,Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59, Field60,Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68, Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85, Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4);
 
                 /**
                  * *
