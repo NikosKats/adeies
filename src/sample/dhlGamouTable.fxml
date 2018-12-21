@@ -9,12 +9,20 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DhlGamouTable">
 <children>
-    <TableView layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
+    <TableView fx:id="tableView" layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
         <columns>
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="Column X" />
-            <TableColumn prefWidth="504.34080505371094" text="Column X" />
+            <TableColumn fx:id="col1" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="col2" prefWidth="85.0" text="Ιερός Ναός" />
+            <TableColumn fx:id="col3" prefWidth="159.0" text="Αριθμ. ληξ. πραξ. γάμου" />
+            <TableColumn fx:id="col4" prefWidth="96.5" text="Εφημέριος" />
+            <TableColumn fx:id="col5" prefWidth="116.0" text="Επώνυμο Άνδρα" />
+            <TableColumn fx:id="col6" prefWidth="126.0" text="Επώνυμο Γυναίκας" />
+            <TableColumn fx:id="col7" prefWidth="94.0" text="ΑΦΜ Άνδρα" />
+            <TableColumn fx:id="col8" prefWidth="101.69854736328125" text="ΑΦΜ Γυναίκας" />
+            <TableColumn fx:id="col9" prefWidth="70.301513671875" text="Ημέρα" />
+            <TableColumn fx:id="col10" prefWidth="69.98028564453125" text="Μήνας" />
+            <TableColumn fx:id="col11" prefWidth="65.0196533203125" text="Έτος" />
+            <TableColumn fx:id="col12" prefWidth="145.0" text="Αριθμός Τηλεφώνου" />
         </columns>
     </TableView>
     <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
