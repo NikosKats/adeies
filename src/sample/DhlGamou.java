@@ -137,7 +137,7 @@ public class DhlGamou {
                        String Field61,String Field62,String Field63,String Field64,String Field65,String Field66,String Field67,String Field68,String Field69,String Field70,
                        String Field71, String Field72, String Field73,String Field74, String Field75,String Field76,String Field77,String Field78,String Field79,String Field80,
                        String Field81,String Field82, String Field83,String Field84,String Field85,String Field86,String Field87, String Field88,String Field89,String Field90,
-                       String Field91,String Field92, String Field93,String Field94) {
+                       String CheckBox1,String CheckBox2, String CheckBox3,String CheckBox4) {
 
             String sql = "INSERT INTO dataGamou(Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10," +
                     "Field11,Field12,Field13,Field14,Field15,Field16,Field17,Field18,Field19,Field20," +
@@ -148,7 +148,7 @@ public class DhlGamou {
                     "Field61,Field62,Field63,Field64,Field65,Field66,Field67,Field68,Field69,Field70,)" +
                     "Field71,Field72,Field73,Field74,Field75,Field76,Field77,Field78,Field79,Field80," +
                     "Field81,Field82,Field83,Field84,Field85,Field86,Field87,Field88,Field89,Field90," +
-                    "Field91,Field92,Field93,Field94)" +
+                    "CheckBox1,CheckBox2,CheckBox3,CheckBox4)" +
                     " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," +
                     "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?" +
                     ",?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -245,10 +245,10 @@ public class DhlGamou {
             pstmt.setString(88, Field88);
             pstmt.setString(89, Field89);
             pstmt.setString(90, Field90);
-            pstmt.setString(91, Field91);
-            pstmt.setString(92, Field92);
-            pstmt.setString(93, Field93);
-            pstmt.setString(94, Field94);
+            pstmt.setString(91, CheckBox1);
+            pstmt.setString(92, CheckBox2);
+            pstmt.setString(93, CheckBox3);
+            pstmt.setString(94, CheckBox4);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
