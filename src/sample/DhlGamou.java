@@ -462,7 +462,7 @@ public class DhlGamou {
             CheckBox1 = check3.getText();
         }
 
-        System.out.println(CheckBox1);
+
 
 
 
@@ -483,7 +483,7 @@ public class DhlGamou {
             CheckBox2 = check6.getText();
         }
 
-        System.out.println(CheckBox2);
+
 
         /******
          *
@@ -510,7 +510,7 @@ public class DhlGamou {
             CheckBox3 = check11.getText();
         }
 
-        System.out.println(CheckBox3);
+
 
 
 
@@ -540,7 +540,7 @@ public class DhlGamou {
         }
 
 
-        System.out.println(CheckBox4);
+
 
 
         if (       (Field1.trim().isEmpty())  || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
