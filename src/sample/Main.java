@@ -51,28 +51,28 @@ public class Main extends Application {
 
         if(mac.equals(CustomersMAC))
         {
-            if(today.after(expirationDate))
-            {
-                try {
-                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("expirationWindow.fxml"));
-                    AnchorPane pane = loader.load();
-                    Scene scene = new Scene(pane);
-                    scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
-                    scene.getRoot().requestFocus();//key event needs focus
-                    primaryStage.setResizable(false);
-                    primaryStage.setTitle("Expiration Window");
-                    primaryStage.setScene(scene);
-                    primaryStage.show();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            else
-            {
+//            if(today.after(expirationDate))
+//            {
+//                try {
+//                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("expirationWindow.fxml"));
+//                    AnchorPane pane = loader.load();
+//                    Scene scene = new Scene(pane);
+//                    scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+//                    scene.getRoot().requestFocus();//key event needs focus
+//                    primaryStage.setResizable(false);
+//                    primaryStage.setTitle("Expiration Window");
+//                    primaryStage.setScene(scene);
+//                    primaryStage.show();
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//            else
+//            {
                 this.primaryStage=primaryStage;
                 mainWindow();
-            }
+//            }
 
         }
         else {

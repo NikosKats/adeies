@@ -18,6 +18,10 @@ public class DhlBaptTable {
 
     public JFXButton create_new_btn;
     public JFXButton menu_btn;
+    public JFXButton view_btn;
+    public JFXButton edit_btn;
+    public JFXButton delete_btn;
+    public JFXButton refresh_btn;
 
     /*******************************
     //Σύνδεση με Βάση
@@ -114,5 +118,17 @@ public class DhlBaptTable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void view(ActionEvent actionEvent) {
+    }
+
+    public void edit(ActionEvent actionEvent) {
+    }
+
+    public void delete(ActionEvent actionEvent) {
+    }
+
+    public void refresh(ActionEvent actionEvent) {
     }
 }
