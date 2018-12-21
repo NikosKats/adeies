@@ -9,6 +9,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DhlGamou {
 
@@ -75,6 +78,50 @@ public class DhlGamou {
     public JFXTextField field60;
     public JFXTextField field61;
     public JFXTextField field62;
+    public JFXTextField field63;
+    public JFXTextField field64;
+    public JFXTextField field65;
+    public JFXTextField field66;
+    public JFXTextField field67;
+    public JFXTextField field68;
+    public JFXTextField field69;
+    public JFXTextField field70;
+    public JFXTextField field71;
+    public JFXTextField field72;
+    public JFXTextField field73;
+    public JFXTextField field74;
+    public JFXTextField field75;
+    public JFXTextField field76;
+    public JFXTextField field77;
+    public JFXTextField field78;
+    public JFXTextField field79;
+    public JFXTextField field80;
+    public JFXTextField field81;
+    public JFXTextField field82;
+    public JFXTextField field83;
+    public JFXTextField field84;
+    public JFXTextField field85;
+    public JFXTextField field86;
+    public JFXTextField field87;
+    public JFXTextField field88;
+
+
+    /*******************************
+     //Σύνδεση με Βάση
+     ******************************/
+
+    private Connection connect() {
+        // SQLite connection string
+        String url = "jdbc:sqlite:adeies.db";
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return conn;
+    }
+
 
 
     public JFXButton menu_btn;

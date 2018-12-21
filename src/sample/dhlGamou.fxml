@@ -278,33 +278,33 @@
                   <JFXTextField fx:id="field28" layoutX="84.0" layoutY="640.0" prefHeight="27.0" prefWidth="656.0" />
                   <JFXTextField fx:id="field29" layoutX="750.0" layoutY="640.0" prefHeight="27.0" prefWidth="420.0" />
                   <JFXTextField fx:id="field30" layoutX="95.0" layoutY="668.0" prefHeight="27.0" prefWidth="644.0" />
-                  <JFXTextField fx:id="field30" layoutX="750.0" layoutY="669.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field31" layoutX="205.0" layoutY="701.0" prefHeight="27.0" prefWidth="534.0" />
-                  <JFXTextField fx:id="field32" layoutX="750.0" layoutY="702.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field33" layoutX="182.0" layoutY="730.0" prefHeight="27.0" prefWidth="556.0" />
-                  <JFXTextField fx:id="field34" layoutX="750.0" layoutY="731.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field35" layoutX="99.0" layoutY="759.0" prefHeight="27.0" prefWidth="639.0" />
-                  <JFXTextField fx:id="field36" layoutX="750.0" layoutY="760.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field37" layoutX="263.0" layoutY="784.0" prefHeight="27.0" prefWidth="476.0" />
-                  <JFXTextField fx:id="field38" layoutX="750.0" layoutY="784.0" prefHeight="27.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field39" layoutX="283.0" layoutY="813.0" prefHeight="27.0" prefWidth="456.0" />
-                  <JFXTextField fx:id="field40" layoutX="750.0" layoutY="814.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field41" layoutX="246.0" layoutY="839.0" prefHeight="27.0" prefWidth="493.0" />
-                  <JFXTextField fx:id="field42" layoutX="750.0" layoutY="840.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field43" layoutX="239.0" layoutY="870.0" prefHeight="27.0" prefWidth="501.0" />
-                  <JFXTextField fx:id="field44" layoutX="750.0" layoutY="871.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field45" layoutX="300.0" layoutY="898.0" prefHeight="27.0" prefWidth="440.0" />
-                  <JFXTextField fx:id="field46" layoutX="750.0" layoutY="899.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field47" layoutX="112.0" layoutY="923.0" prefHeight="27.0" prefWidth="628.0" />
-                  <JFXTextField fx:id="field48" layoutX="750.0" layoutY="923.0" prefHeight="27.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field49" layoutX="274.0" layoutY="952.0" prefHeight="27.0" prefWidth="465.0" />
-                  <JFXTextField fx:id="field50" layoutX="750.0" layoutY="953.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field51" layoutX="295.0" layoutY="980.0" prefHeight="27.0" prefWidth="443.0" />
-                  <JFXTextField fx:id="field52" layoutX="750.0" layoutY="981.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field53" layoutX="261.0" layoutY="1005.0" prefHeight="27.0" prefWidth="476.0" />
-                  <JFXTextField fx:id="field54" layoutX="750.0" layoutY="1006.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field55" layoutX="341.0" layoutY="1036.0" prefHeight="27.0" prefWidth="395.0" />
-                  <JFXTextField fx:id="field56" layoutX="750.0" layoutY="1036.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field31" layoutX="750.0" layoutY="669.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field32" layoutX="205.0" layoutY="701.0" prefHeight="27.0" prefWidth="534.0" />
+                  <JFXTextField fx:id="field33" layoutX="750.0" layoutY="702.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field34" layoutX="182.0" layoutY="730.0" prefHeight="27.0" prefWidth="556.0" />
+                  <JFXTextField fx:id="field35" layoutX="750.0" layoutY="731.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field36" layoutX="99.0" layoutY="759.0" prefHeight="27.0" prefWidth="639.0" />
+                  <JFXTextField fx:id="field37" layoutX="750.0" layoutY="760.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field38" layoutX="263.0" layoutY="784.0" prefHeight="27.0" prefWidth="476.0" />
+                  <JFXTextField fx:id="field39" layoutX="750.0" layoutY="784.0" prefHeight="27.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field40" layoutX="283.0" layoutY="813.0" prefHeight="27.0" prefWidth="456.0" />
+                  <JFXTextField fx:id="field41" layoutX="750.0" layoutY="814.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field42" layoutX="246.0" layoutY="839.0" prefHeight="27.0" prefWidth="493.0" />
+                  <JFXTextField fx:id="field43" layoutX="750.0" layoutY="840.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field44" layoutX="239.0" layoutY="870.0" prefHeight="27.0" prefWidth="501.0" />
+                  <JFXTextField fx:id="field45" layoutX="750.0" layoutY="871.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field46" layoutX="300.0" layoutY="898.0" prefHeight="27.0" prefWidth="440.0" />
+                  <JFXTextField fx:id="field47" layoutX="750.0" layoutY="899.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field48" layoutX="112.0" layoutY="923.0" prefHeight="27.0" prefWidth="628.0" />
+                  <JFXTextField fx:id="field49" layoutX="750.0" layoutY="923.0" prefHeight="27.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field50" layoutX="274.0" layoutY="952.0" prefHeight="27.0" prefWidth="465.0" />
+                  <JFXTextField fx:id="field51" layoutX="750.0" layoutY="953.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field52" layoutX="295.0" layoutY="980.0" prefHeight="27.0" prefWidth="443.0" />
+                  <JFXTextField fx:id="field53" layoutX="750.0" layoutY="981.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field54" layoutX="261.0" layoutY="1005.0" prefHeight="27.0" prefWidth="476.0" />
+                  <JFXTextField fx:id="field55" layoutX="750.0" layoutY="1006.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field56" layoutX="341.0" layoutY="1036.0" prefHeight="27.0" prefWidth="395.0" />
+                  <JFXTextField fx:id="field57" layoutX="750.0" layoutY="1036.0" prefWidth="420.0" />
                   <Label layoutX="19.0" layoutY="1042.0" text="12.Δημότης:Δήμος/Δημοτική Ενότητα">
                      <font>
                         <Font size="18.0" />
@@ -360,22 +360,28 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="field57" layoutX="122.0" layoutY="1067.0" prefHeight="27.0" prefWidth="614.0" />
-                  <JFXTextField fx:id="field58" layoutX="750.0" layoutY="1068.0" prefHeight="27.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field59" layoutX="251.0" layoutY="1101.0" prefHeight="27.0" prefWidth="484.0" />
-                  <JFXTextField fx:id="field60" layoutX="750.0" layoutY="1102.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field61" layoutX="329.0" layoutY="1137.0" prefHeight="27.0" prefWidth="404.0" />
-                  <JFXTextField fx:id="field62" layoutX="750.0" layoutY="1137.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field63" layoutX="335.0" layoutY="1171.0" prefHeight="27.0" prefWidth="397.0" />
-                  <JFXTextField fx:id="field64" layoutX="750.0" layoutY="1171.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field65" layoutX="197.0" layoutY="1202.0" prefHeight="27.0" prefWidth="535.0" />
-                  <JFXTextField fx:id="field66" layoutX="750.0" layoutY="1203.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field67" layoutX="207.0" layoutY="1233.0" prefHeight="27.0" prefWidth="525.0" />
-                  <JFXTextField fx:id="field68" layoutX="750.0" layoutY="1233.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field69" layoutX="120.0" layoutY="1266.0" prefHeight="27.0" prefWidth="612.0" />
-                  <JFXTextField fx:id="field70" layoutX="750.0" layoutY="1267.0" prefWidth="420.0" />
-                  <JFXTextField fx:id="field71" layoutX="277.0" layoutY="1295.0" prefHeight="27.0" prefWidth="454.0" />
-                  <JFXTextField fx:id="field72" layoutX="750.0" layoutY="1296.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field58" layoutX="122.0" layoutY="1067.0" prefHeight="27.0" prefWidth="614.0" />
+                  <JFXTextField fx:id="field59" layoutX="750.0" layoutY="1068.0" prefHeight="27.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field60" layoutX="251.0" layoutY="1101.0" prefHeight="27.0" prefWidth="484.0" />
+                  <JFXTextField fx:id="field61" layoutX="750.0" layoutY="1102.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field62" layoutX="329.0" layoutY="1137.0" prefHeight="27.0" prefWidth="404.0" />
+                  <JFXTextField fx:id="field63" layoutX="750.0" layoutY="1137.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field64" layoutX="335.0" layoutY="1171.0" prefHeight="27.0" prefWidth="397.0" />
+                  <JFXTextField fx:id="field65" layoutX="750.0" layoutY="1171.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field66" layoutX="197.0" layoutY="1202.0" prefHeight="27.0" prefWidth="535.0" />
+                  <JFXTextField fx:id="field67" layoutX="750.0" layoutY="1203.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field68" layoutX="207.0" layoutY="1233.0" prefHeight="27.0" prefWidth="525.0" />
+                  <JFXTextField fx:id="field69" layoutX="750.0" layoutY="1233.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field70" layoutX="120.0" layoutY="1266.0" prefHeight="27.0" prefWidth="612.0" />
+                  <JFXTextField fx:id="field71" layoutX="750.0" layoutY="1267.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field72" layoutX="277.0" layoutY="1295.0" prefHeight="27.0" prefWidth="454.0" />
+                  <JFXTextField fx:id="field73" layoutX="750.0" layoutY="1296.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field74" layoutX="303.0" layoutY="1327.0" prefHeight="27.0" prefWidth="427.0" />
+                  <JFXTextField fx:id="field75" layoutX="750.0" layoutY="1327.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field76" layoutX="265.0" layoutY="1354.0" prefHeight="27.0" prefWidth="465.0" />
+                  <JFXTextField fx:id="field77" layoutX="750.0" layoutY="1354.0" prefWidth="420.0" />
+                  <JFXTextField fx:id="field78" layoutX="198.0" layoutY="1394.0" prefHeight="27.0" prefWidth="534.0" />
+                  <JFXTextField fx:id="field79" layoutX="748.0" layoutY="1393.0" prefWidth="420.0" />
                   <Label layoutX="22.0" layoutY="1401.0" text="16.Επώνυμο Τέκνων">
                      <font>
                         <Font size="18.0" />
@@ -397,8 +403,8 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField fx:id="field73" layoutX="403.0" layoutY="1522.0" prefHeight="27.0" prefWidth="327.0" />
-                  <JFXTextField fx:id="field74" layoutX="787.0" layoutY="1520.0" prefWidth="325.0" />
+                  <JFXTextField fx:id="field80" layoutX="403.0" layoutY="1522.0" prefHeight="27.0" prefWidth="327.0" />
+                  <JFXTextField fx:id="field81" layoutX="787.0" layoutY="1520.0" prefWidth="325.0" />
                   <Label layoutX="16.0" layoutY="1576.0" text="19.Εκπαίδευση">
                      <font>
                         <Font size="18.0" />
@@ -419,37 +425,37 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="330.0" layoutY="1727.0" prefHeight="27.0" prefWidth="124.0" />
+                  <JFXTextField fx:id="field82" layoutX="330.0" layoutY="1727.0" prefHeight="27.0" prefWidth="124.0" />
                   <Label layoutX="469.0" layoutY="1734.0" text="Ιεράς Μητροπόλεως">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="648.0" layoutY="1724.0" prefHeight="27.0" prefWidth="124.0" />
+                  <JFXTextField fx:id="field83" layoutX="648.0" layoutY="1724.0" prefHeight="27.0" prefWidth="124.0" />
                   <Label layoutX="48.0" layoutY="1765.0" text="Αριθμός άδειας γάμου γυναίκας">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="330.0" layoutY="1756.0" prefHeight="27.0" prefWidth="124.0" />
+                  <JFXTextField fx:id="field84" layoutX="330.0" layoutY="1756.0" prefHeight="27.0" prefWidth="124.0" />
                   <Label layoutX="470.0" layoutY="1763.0" text="Ιεράς Μητροπόλεως">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="652.0" layoutY="1753.0" prefHeight="27.0" prefWidth="124.0" />
+                  <JFXTextField fx:id="field85" layoutX="652.0" layoutY="1753.0" prefHeight="27.0" prefWidth="124.0" />
                   <Label layoutX="24.0" layoutY="1810.0" text="21.Αριθμός παραβόλου γάμου άνδρα">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="370.0" layoutY="1797.0" prefHeight="27.0" prefWidth="164.0" />
+                  <JFXTextField fx:id="field86" layoutX="370.0" layoutY="1797.0" prefHeight="27.0" prefWidth="164.0" />
                   <Label layoutX="51.0" layoutY="1839.0" text="Αριθμός παραβόλου γάμου γυναίκας">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="372.0" layoutY="1829.0" prefHeight="27.0" prefWidth="163.0" />
+                  <JFXTextField fx:id="field87" layoutX="372.0" layoutY="1829.0" prefHeight="27.0" prefWidth="163.0" />
                   <Label layoutX="95.0" layoutY="1896.0" text="Οι Σύζυγοι">
                      <font>
                         <Font size="18.0" />
@@ -485,16 +491,10 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="993.0" layoutY="2038.0" prefHeight="27.0" prefWidth="163.0" />
+                  <JFXTextField fx:id="field88" layoutX="993.0" layoutY="2038.0" prefHeight="27.0" prefWidth="163.0" />
                   <Line endX="100.0" layoutX="151.0" layoutY="2006.0" startX="-100.0" />
                   <Line endX="100.0" layoutX="607.0" layoutY="2006.0" startX="-100.0" />
                   <Line endX="177.908447265625" layoutX="993.0" layoutY="2006.0" startX="-100.0" />
-                  <JFXTextField layoutX="303.0" layoutY="1327.0" prefHeight="27.0" prefWidth="427.0" />
-                  <JFXTextField layoutX="750.0" layoutY="1327.0" prefWidth="420.0" />
-                  <JFXTextField layoutX="265.0" layoutY="1354.0" prefHeight="27.0" prefWidth="465.0" />
-                  <JFXTextField layoutX="750.0" layoutY="1354.0" prefWidth="420.0" />
-                  <JFXTextField layoutX="198.0" layoutY="1394.0" prefHeight="27.0" prefWidth="534.0" />
-                  <JFXTextField layoutX="748.0" layoutY="1393.0" prefWidth="420.0" />
                </children>
             </AnchorPane>
         </content>
