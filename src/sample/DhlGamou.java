@@ -5,6 +5,9 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -13,6 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class DhlGamou {
 
@@ -128,30 +132,30 @@ public class DhlGamou {
      //Εισαγωγή στη Βάση
      //*******************************/
 
-    public void insert(String Field1,String Field2,String Field3,String Field4,String Field5,String Field6,String Field7,String Field8,String Field9,String Field10,
-                       String Field11,String Field12, String Field13,String Field14,String Field15,String Field16,String Field17,String Field18,String Field19,String Field20,
-                       String Field21,String Field22,String Field23,String Field24,String Field25, String Field26,String Field27,String Field28,String Field29,String Field30,
-                       String Field31,String Field32,String Field33,String Field34,String Field35,String Field36,String Field37,String Field38, String Field39,String Field40,
-                       String Field41, String Field42,String Field43,String Field44,String Field45,String Field46,String Field47,String Field48,String Field49,String Field50,
-                       String Field51,String Field52, String Field53,String Field54,String Field55,String Field56, String Field57,String Field58,String Field59,String Field60,
-                       String Field61,String Field62,String Field63,String Field64,String Field65,String Field66,String Field67,String Field68,String Field69,String Field70,
-                       String Field71, String Field72, String Field73,String Field74, String Field75,String Field76,String Field77,String Field78,String Field79,String Field80,
-                       String Field81,String Field82, String Field83,String Field84,String Field85,String Field86,String Field87, String Field88,String Field89,String Field90,
-                       String CheckBox1,String CheckBox2, String CheckBox3,String CheckBox4) {
+    public void insert(String Field1, String Field2, String Field3, String Field4, String Field5, String Field6, String Field7, String Field8, String Field9, String Field10,
+                       String Field11, String Field12, String Field13, String Field14, String Field15, String Field16, String Field17, String Field18, String Field19, String Field20,
+                       String Field21, String Field22, String Field23, String Field24, String Field25, String Field26, String Field27, String Field28, String Field29, String Field30,
+                       String Field31, String Field32, String Field33, String Field34, String Field35, String Field36, String Field37, String Field38, String Field39, String Field40,
+                       String Field41, String Field42, String Field43, String Field44, String Field45, String Field46, String Field47, String Field48, String Field49, String Field50,
+                       String Field51, String Field52, String Field53, String Field54, String Field55, String Field56, String Field57, String Field58, String Field59, String Field60,
+                       String Field61, String Field62, String Field63, String Field64, String Field65, String Field66, String Field67, String Field68, String Field69, String Field70,
+                       String Field71, String Field72, String Field73, String Field74, String Field75, String Field76, String Field77, String Field78, String Field79, String Field80,
+                       String Field81, String Field82, String Field83, String Field84, String Field85, String Field86, String Field87, String Field88,
+                       String CheckBox1, String CheckBox2, String CheckBox3, String CheckBox4) {
 
-            String sql = "INSERT INTO dataGamou(Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10," +
-                    "Field11,Field12,Field13,Field14,Field15,Field16,Field17,Field18,Field19,Field20," +
-                    "Field21,Field22,Field23,Field24,Field25,Field26,Field27,Field28,Field29,Field30," +
-                    "Field31,Field32,Field33,Field34,Field35,Field36,Field37,Field38,Field39,Field40,)" +
-                    "Field41,Field42,Field43,Field44,Field45,Field46,Field47,Field48,Field49,Field50," +
-                    "Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59,Field60," +
-                    "Field61,Field62,Field63,Field64,Field65,Field66,Field67,Field68,Field69,Field70,)" +
-                    "Field71,Field72,Field73,Field74,Field75,Field76,Field77,Field78,Field79,Field80," +
-                    "Field81,Field82,Field83,Field84,Field85,Field86,Field87,Field88,Field89,Field90," +
-                    "CheckBox1,CheckBox2,CheckBox3,CheckBox4)" +
-                    " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," +
-                    "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?" +
-                    ",?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO dataGamou(Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10," +
+                "Field11,Field12,Field13,Field14,Field15,Field16,Field17,Field18,Field19,Field20," +
+                "Field21,Field22,Field23,Field24,Field25,Field26,Field27,Field28,Field29,Field30," +
+                "Field31,Field32,Field33,Field34,Field35,Field36,Field37,Field38,Field39,Field40,)" +
+                "Field41,Field42,Field43,Field44,Field45,Field46,Field47,Field48,Field49,Field50," +
+                "Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59,Field60," +
+                "Field61,Field62,Field63,Field64,Field65,Field66,Field67,Field68,Field69,Field70,)" +
+                "Field71,Field72,Field73,Field74,Field75,Field76,Field77,Field78,Field79,Field80," +
+                "Field81,Field82,Field83,Field84,Field85,Field86,Field87,Field88," +
+                "CheckBox1,CheckBox2,CheckBox3,CheckBox4)" +
+                " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?," +
+                "?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?" +
+                ",?,?,?,?,?,?,?,?,?,?,?)";
 
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -243,12 +247,11 @@ public class DhlGamou {
             pstmt.setString(86, Field86);
             pstmt.setString(87, Field87);
             pstmt.setString(88, Field88);
-            pstmt.setString(89, Field89);
-            pstmt.setString(90, Field90);
-            pstmt.setString(91, CheckBox1);
-            pstmt.setString(92, CheckBox2);
-            pstmt.setString(93, CheckBox3);
-            pstmt.setString(94, CheckBox4);
+            pstmt.setString(89, CheckBox1);
+            pstmt.setString(90, CheckBox2);
+            pstmt.setString(91, CheckBox3);
+            pstmt.setString(92, CheckBox4);
+
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -267,7 +270,6 @@ public class DhlGamou {
         Stage stage = new Stage();
 
 
-
         try {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("sample.fxml"));
 
@@ -277,19 +279,12 @@ public class DhlGamou {
             Scene scene = new Scene(pane);
 
 
-
-
-
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
             stage.setResizable(false);
             stage.setTitle("Αρχική");
             stage.setScene(scene);
             stage.show();
-
-
-
-
 
 
         } catch (IOException e) {
@@ -306,7 +301,6 @@ public class DhlGamou {
         Stage stage = new Stage();
 
 
-
         try {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptView.fxml"));
 
@@ -314,9 +308,6 @@ public class DhlGamou {
 
 
             Scene scene = new Scene(pane);
-
-
-
 
 
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
@@ -327,19 +318,245 @@ public class DhlGamou {
             stage.show();
 
 
-
-
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
+    public void getDataInsertData() {
+        String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
+        String Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50;
+        String Field51, Field52, Field53, Field54, Field55, Field56, Field57, Field58, Field59, Field60, Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68;
+        String Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85;
+        String Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4;
 
 
+        Field1 = field1.getText();
+        Field2 = field2.getText();
+        Field3 = field3.getText();
+        Field4 = field4.getText();
+        Field5 = field5.getText();
+        Field6 = field6.getText();
+        Field7 = field7.getText();
+        Field8 = field8.getText();
+        Field9 = field9.getText();
+        Field10 = field10.getText();
+        Field11 = field11.getText();
+        Field12 = field12.getText();
+        Field13 = field13.getText();
+        Field14 = field14.getText();
+        Field15 = field15.getText();
+        Field16 = field16.getText();
+        Field17 = field17.getText();
+        Field18 = field18.getText();
+        Field19 = field19.getText();
+        Field20 = field20.getText();
+        Field21 = field21.getText();
+        Field22 = field22.getText();
+        Field23 = field23.getText();
+        Field24 = field24.getText();
+        Field25 = field25.getText();
+        Field26 = field26.getText();
+        Field27 = field27.getText();
+        Field28 = field28.getText();
+        Field29 = field29.getText();
+        Field30 = field30.getText();
+        Field31 = field31.getText();
+        Field32 = field32.getText();
+        Field33 = field33.getText();
+        Field34 = field34.getText();
+        Field35 = field35.getText();
+        Field36 = field36.getText();
+        Field37 = field37.getText();
+        Field38 = field38.getText();
+        Field39 = field39.getText();
+        Field40 = field40.getText();
+        Field41 = field41.getText();
+        Field42 = field42.getText();
+        Field43 = field43.getText();
+        Field44 = field44.getText();
+        Field45 = field45.getText();
+        Field46 = field46.getText();
+        Field47 = field47.getText();
+        Field48 = field48.getText();
+        Field49 = field49.getText();
+        Field50 = field50.getText();
+        Field51 = field51.getText();
+        Field52 = field52.getText();
+        Field53 = field53.getText();
+        Field54 = field54.getText();
+        Field55 = field55.getText();
+        Field56 = field56.getText();
+        Field57 = field57.getText();
+        Field58 = field58.getText();
+        Field59 = field59.getText();
+        Field60 = field60.getText();
+        Field61 = field61.getText();
+        Field62 = field62.getText();
+        Field63 = field63.getText();
+        Field64 = field64.getText();
+        Field65 = field65.getText();
+        Field66 = field66.getText();
+        Field67 = field67.getText();
+        Field68 = field68.getText();
+        Field69 = field69.getText();
+        Field70 = field70.getText();
+        Field71 = field71.getText();
+        Field72 = field72.getText();
+        Field73 = field73.getText();
+        Field74 = field74.getText();
+        Field75 = field75.getText();
+        Field76 = field76.getText();
+        Field77 = field77.getText();
+        Field78 = field78.getText();
+        Field79 = field79.getText();
+        Field80 = field80.getText();
+        Field81 = field81.getText();
+        Field82 = field82.getText();
+        Field83 = field83.getText();
+        Field84 = field84.getText();
+        Field85 = field85.getText();
+        Field86 = field86.getText();
+        Field87 = field87.getText();
+        Field88 = field88.getText();
 
 
+        if ((Field1.trim().isEmpty()) || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
+                || (Field6.trim().isEmpty()) || (Field7.trim().isEmpty()) || (Field8.trim().isEmpty()) || (Field9.trim().isEmpty()) || (Field10.trim().isEmpty())
+                || (Field11.trim().isEmpty()) || (Field12.trim().isEmpty()) || (Field13.trim().isEmpty()) || (Field14.trim().isEmpty()) || (Field15.trim().isEmpty())
+                || (Field16.trim().isEmpty()) || (Field17.trim().isEmpty()) || (Field18.trim().isEmpty()) || (Field19.trim().isEmpty()) || (Field20.trim().isEmpty())
+                || (Field21.trim().isEmpty()) || (Field22.trim().isEmpty()) || (Field23.trim().isEmpty()) || (Field24.trim().isEmpty()) || (Field25.trim().isEmpty())
+                || (Field26.trim().isEmpty()) || (Field27.trim().isEmpty()) || (Field28.trim().isEmpty()) || (Field29.trim().isEmpty()) || (Field30.trim().isEmpty()) || (Field31.trim().isEmpty())) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ειδοποίηση");
+            alert.setHeaderText("Προσοχή!");
+            alert.setContentText("Δεν έχεις συμπληρώσει όλα τα πεδία!");
+            alert.showAndWait();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Θέλετε να οριστικοποιήσετε την δήλωση;");
+            alert.setHeaderText("Επιβεβαίωση Υποβολής Στοιχείων.");
+            alert.setContentText("Επιλέξτε.");
+
+            ButtonType buttonTypeOne = new ButtonType("Ναι, τελική υποβολή");
+            ButtonType buttonTypeTwo = new ButtonType("Όχι, διόρθωση στοιχείων");
+
+            ButtonType buttonTypeCancel = new ButtonType("Ακύρωση, διαγραφή στοιχείων!", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeOne) {
+
+                insert(Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31, Field32, Field33, Field34, Field35, Field36, Field37, Field38, Field39, Field40, Field41, Field42, Field43, Field44, Field45, Field46, Field47, Field48, Field49, Field50,Field51,Field52,Field53,Field54,Field55,Field56,Field57,Field58,Field59, Field60,Field61, Field62, Field63, Field64, Field65, Field66, Field67, Field68, Field69, Field70, Field71, Field72, Field73, Field74, Field75, Field76, Field77, Field78, Field79, Field80, Field81, Field82, Field83, Field84, Field85, Field86, Field87, Field88, CheckBox1, CheckBox2, CheckBox3, CheckBox4);
+
+                /**
+                 * *
+                 *  Also I have to pass the values to the next screen
+                 * **/
+
+
+            } else if (result.get() == buttonTypeTwo) {
+                // ... user chose "Two"
+            } else {
+                field1.setText("");
+                field2.setText("");
+                field3.setText("");
+                field4.setText("");
+                field5.setText("");
+                field6.setText("");
+                field7.setText("");
+                field8.setText("");
+                field9.setText("");
+                field10.setText("");
+                field11.setText("");
+                field12.setText("");
+                field13.setText("");
+                field14.setText("");
+                field15.setText("");
+                field16.setText("");
+                field17.setText("");
+                field18.setText("");
+                field19.setText("");
+                field20.setText("");
+                field21.setText("");
+                field22.setText("");
+                field23.setText("");
+                field24.setText("");
+                field26.setText("");
+                field27.setText("");
+                field28.setText("");
+                field29.setText("");
+                field30.setText("");
+                field31.setText("");
+                field32.setText("");
+                field33.setText("");
+                field34.setText("");
+                field35.setText("");
+                field36.setText("");
+                field37.setText("");
+                field38.setText("");
+                field39.setText("");
+                field40.setText("");
+                field41.setText("");
+                field42.setText("");
+                field43.setText("");
+                field44.setText("");
+                field45.setText("");
+                field46.setText("");
+                field47.setText("");
+                field48.setText("");
+                field49.setText("");
+                field50.setText("");
+                field51.setText("");
+                field52.setText("");
+                field53.setText("");
+                field54.setText("");
+                field55.setText("");
+                field56.setText("");
+                field57.setText("");
+                field58.setText("");
+                field59.setText("");
+                field60.setText("");
+                field61.setText("");
+                field62.setText("");
+                field63.setText("");
+                field64.setText("");
+                field65.setText("");
+                field66.setText("");
+                field67.setText("");
+                field68.setText("");
+                field69.setText("");
+                field70.setText("");
+                field71.setText("");
+                field72.setText("");
+                field73.setText("");
+                field74.setText("");
+                field75.setText("");
+                field76.setText("");
+                field77.setText("");
+                field78.setText("");
+                field79.setText("");
+                field80.setText("");
+                field81.setText("");
+                field82.setText("");
+                field83.setText("");
+                field84.setText("");
+                field85.setText("");
+                field86.setText("");
+                field87.setText("");
+                field88.setText("");
+            }
+
+
+        }
+
+
+    }
 
 }
+
+
