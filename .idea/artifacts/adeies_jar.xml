@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/adeies_jar</output-path>
     <root id="archive" name="adeies.jar">
       <element id="module-output" name="adeies" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/sqlite-jdbc-3.21.0 12.46.13 AM.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/jfoenix-9.0.6.jar" path-in-jar="/" />
     </root>
   </artifact>

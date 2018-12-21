@@ -67,6 +67,12 @@ public class DhlBapt {
             conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ειδοποίηση");
+            alert.setHeaderText("Προσοχή!");
+            alert.setContentText("Υπάρχει σφάλμα με τη βάση!");
+            alert.showAndWait();
         }
         return conn;
     }
