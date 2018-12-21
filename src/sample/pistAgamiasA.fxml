@@ -80,13 +80,13 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="589.0" layoutY="374.0" prefHeight="27.0" prefWidth="150.0" />
+                  <JFXTextField layoutX="253.0" layoutY="374.0" prefHeight="27.0" prefWidth="245.0" />
                   <Label layoutX="748.0" layoutY="382.0" prefHeight="23.0" prefWidth="24.0" text="ἐν">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="253.0" layoutY="374.0" prefHeight="27.0" prefWidth="245.0" />
+                  <JFXTextField layoutX="589.0" layoutY="374.0" prefHeight="27.0" prefWidth="150.0" />
                   <JFXTextField layoutX="777.0" layoutY="375.0" prefHeight="27.0" prefWidth="126.0" />
                   <Label layoutX="248.0" layoutY="421.0" text="τό ἒτος">
                      <font>
