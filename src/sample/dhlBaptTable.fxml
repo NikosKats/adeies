@@ -9,12 +9,19 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DhlBaptTable">
    <children>
-      <TableView layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
+      <TableView fx:id="tableView" layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="Column X" />
-            <TableColumn prefWidth="504.34080505371094" text="Column X" />
+            <TableColumn prefWidth="60.47230672836304" text="ID" />
+          <TableColumn prefWidth="104.12532424926758" text="Ιερός Ναός" />
+          <TableColumn prefWidth="186.45164489746094" text="Αριθμός Πρωτοκόλλου" />
+            <TableColumn prefWidth="96.73968505859375" text="Εφημέριος" />
+            <TableColumn prefWidth="87.92745971679688" text="Ημέρα" />
+            <TableColumn minWidth="9.9075927734375" prefWidth="103.08355712890625" text="Μήνας" />
+            <TableColumn prefWidth="66.45166015625" text="Έτος" />
+            <TableColumn prefWidth="119.34747314453125" text="Όνομα Πατέρα" />
+            <TableColumn prefWidth="138.08355712890625" text="Όνομα Μητέρας" />
+            <TableColumn minWidth="5.993408203125" prefWidth="119.819580078125" text="Όνομα Παιδιού" />
+            <TableColumn prefWidth="114.5" text="Όνομα Αναδόχου" />
         </columns>
       </TableView>
       <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
