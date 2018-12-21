@@ -91,7 +91,7 @@ public class DhlBaptTable  {
                 Field28 = rs.getString("Field28");
                 Field29 = rs.getString("Field29");
                 Field30 = rs.getString("Field30");
-                Field3 = rs.getString("Field31");
+                Field31 = rs.getString("Field31");
 
 
 
