@@ -450,149 +450,101 @@ public class DhlGamou {
          * Group 1
          * ****/
         if(check1.isSelected())
-//        {
-//            CheckBox1 = check1.getText();
-//        }
-//        if(check2.isSelected())
-//        {
-//            CheckBox1 = check2.getText();
-//        }
-//        if(check3.isSelected())
-//        {
-//            CheckBox1 = check3.getText();
-//        }
+        {
+            CheckBox1 = check1.getText();
+        }
+        if(check2.isSelected())
+        {
+            CheckBox1 = check2.getText();
+        }
+        if(check3.isSelected())
+        {
+            CheckBox1 = check3.getText();
+        }
+
+        System.out.println(CheckBox1);
 
 
-        group1.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
-            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
-
-                if (group1.getSelectedToggle() != null) {
-
-                    System.out.println(group1.getSelectedToggle().getUserData().toString());
-                    // Do something here with the userData of newly selected radioButton
-
-                     CheckBox1 = group1.getSelectedToggle().getUserData().toString();
-
-                }
-
-            }
-        });
 
         /******
          *
          * Group 2
          * ****/
-//        if(check4.isSelected())
-//        {
-//            CheckBox2 = check4.getText();
-//        }
-//        if(check5.isSelected())
-//        {
-//            CheckBox2 = check5.getText();
-//        }
-//        if(check6.isSelected())
-//        {
-//            CheckBox2 = check6.getText();
-//        }
+        if(check4.isSelected())
+        {
+            CheckBox2 = check4.getText();
+        }
+        if(check5.isSelected())
+        {
+            CheckBox2 = check5.getText();
+        }
+        if(check6.isSelected())
+        {
+            CheckBox2 = check6.getText();
+        }
 
-        group2.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
-            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
-
-                if (group2.getSelectedToggle() != null) {
-
-                    System.out.println(group2.getSelectedToggle().getUserData().toString());
-                    // Do something here with the userData of newly selected radioButton
-
-                    CheckBox2 = group2.getSelectedToggle().getUserData().toString();
-
-                }
-
-            }
-        });
+        System.out.println(CheckBox2);
 
         /******
          *
          * Group 3
          * ****/
-//        if(check7.isSelected())
-//        {
-//            CheckBox3 = check7.getText();
-//        }
-//        if(check8.isSelected())
-//        {
-//            CheckBox3 = check8.getText();
-//        }
-//        if(check9.isSelected())
-//        {
-//            CheckBox3 = check9.getText();
-//        }
-//        if(check10.isSelected())
-//        {
-//            CheckBox3 = check10.getText();
-//        }
-//        if(check11.isSelected())
-//        {
-//            CheckBox3 = check11.getText();
-//        }
+        if(check7.isSelected())
+        {
+            CheckBox3 = check7.getText();
+        }
+        if(check8.isSelected())
+        {
+            CheckBox3 = check8.getText();
+        }
+        if(check9.isSelected())
+        {
+            CheckBox3 = check9.getText();
+        }
+        if(check10.isSelected())
+        {
+            CheckBox3 = check10.getText();
+        }
+        if(check11.isSelected())
+        {
+            CheckBox3 = check11.getText();
+        }
 
-        group3.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
-            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+        System.out.println(CheckBox3);
 
-                if (group3.getSelectedToggle() != null) {
 
-                    System.out.println(group3.getSelectedToggle().getUserData().toString());
-                    // Do something here with the userData of newly selected radioButton
-
-                    CheckBox3 = group3.getSelectedToggle().getUserData().toString();
-
-                }
-
-            }
-        });
 
         /******
          *
          * Group 4
          * ****/
-//        if(check12.isSelected())
-//        {
-//            CheckBox4 = check12.getText();
-//        }
-//        if(check13.isSelected())
-//        {
-//            CheckBox4 = check13.getText();
-//        }
-//        if(check14.isSelected())
-//        {
-//            CheckBox4 = check14.getText();
-//        }
-//        if(check15.isSelected())
-//        {
-//            CheckBox4 = check15.getText();
-//        }
-//        if(check16.isSelected())
-//        {
-//            CheckBox4 = check16.getText();
-//        }
-
-        group4.selectedToggleProperty().addListener(new ChangeListener<Toggle>(){
-            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
-
-                if (group4.getSelectedToggle() != null) {
-
-                    System.out.println(group4.getSelectedToggle().getUserData().toString());
-                    // Do something here with the userData of newly selected radioButton
-
-                    CheckBox4 = group4.getSelectedToggle().getUserData().toString();
-
-                }
-
-            }
-        });
+        if(check12.isSelected())
+        {
+            CheckBox4 = check12.getText();
+        }
+        if(check13.isSelected())
+        {
+            CheckBox4 = check13.getText();
+        }
+        if(check14.isSelected())
+        {
+            CheckBox4 = check14.getText();
+        }
+        if(check15.isSelected())
+        {
+            CheckBox4 = check15.getText();
+        }
+        if(check16.isSelected())
+        {
+            CheckBox4 = check16.getText();
+        }
 
 
-        if (   (Field1.trim().isEmpty()) || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
-                || (Field6.trim().isEmpty()) || (Field7.trim().isEmpty()) || (Field8.trim().isEmpty()) || (Field9.trim().isEmpty()) || (Field10.trim().isEmpty())
+        System.out.println(CheckBox4);
+
+
+        if (       (Field1.trim().isEmpty())  || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
+                || (Field6.trim().isEmpty())  || (Field7.trim().isEmpty()) || (Field8.trim().isEmpty()) || (Field9.trim().isEmpty()) || (Field10.trim().isEmpty())
                 || (Field11.trim().isEmpty()) || (Field12.trim().isEmpty()) || (Field13.trim().isEmpty()) || (Field14.trim().isEmpty()) || (Field15.trim().isEmpty())
                 || (Field16.trim().isEmpty()) || (Field17.trim().isEmpty()) || (Field18.trim().isEmpty()) || (Field19.trim().isEmpty()) || (Field20.trim().isEmpty())
                 || (Field21.trim().isEmpty()) || (Field22.trim().isEmpty()) || (Field23.trim().isEmpty()) || (Field24.trim().isEmpty()) || (Field25.trim().isEmpty())
@@ -608,10 +560,9 @@ public class DhlGamou {
                 || (Field71.trim().isEmpty()) || (Field72.trim().isEmpty()) || (Field73.trim().isEmpty()) || (Field74.trim().isEmpty()) || (Field75.trim().isEmpty())
                 || (Field76.trim().isEmpty()) || (Field77.trim().isEmpty()) || (Field78.trim().isEmpty()) || (Field79.trim().isEmpty()) || (Field80.trim().isEmpty())
                 || (Field81.trim().isEmpty()) || (Field82.trim().isEmpty()) || (Field83.trim().isEmpty()) || (Field84.trim().isEmpty()) || (Field85.trim().isEmpty())
-                || (Field86.trim().isEmpty()) || (Field87.trim().isEmpty()) || (Field88.trim().isEmpty()) || (Field88.trim().isEmpty())
-                || (CheckBox1.trim().isEmpty()) || (CheckBox2.trim().isEmpty()) || (CheckBox3.trim().isEmpty()) || (CheckBox4.trim().isEmpty())
-
-                ) {
+                || (Field86.trim().isEmpty()) || (Field87.trim().isEmpty()) || (Field88.trim().isEmpty())
+                || (CheckBox1.isEmpty()) || (CheckBox2.isEmpty()) || (CheckBox3.isEmpty()) || (CheckBox4.isEmpty())
+                  ) {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ειδοποίηση");
