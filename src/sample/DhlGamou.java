@@ -422,12 +422,25 @@ public class DhlGamou {
         Field88 = field88.getText();
 
 
-        if ((Field1.trim().isEmpty()) || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
+        if (   (Field1.trim().isEmpty()) || (Field2.trim().isEmpty()) || (Field3.trim().isEmpty()) || (Field4.trim().isEmpty()) || (Field5.trim().isEmpty())
                 || (Field6.trim().isEmpty()) || (Field7.trim().isEmpty()) || (Field8.trim().isEmpty()) || (Field9.trim().isEmpty()) || (Field10.trim().isEmpty())
                 || (Field11.trim().isEmpty()) || (Field12.trim().isEmpty()) || (Field13.trim().isEmpty()) || (Field14.trim().isEmpty()) || (Field15.trim().isEmpty())
                 || (Field16.trim().isEmpty()) || (Field17.trim().isEmpty()) || (Field18.trim().isEmpty()) || (Field19.trim().isEmpty()) || (Field20.trim().isEmpty())
                 || (Field21.trim().isEmpty()) || (Field22.trim().isEmpty()) || (Field23.trim().isEmpty()) || (Field24.trim().isEmpty()) || (Field25.trim().isEmpty())
-                || (Field26.trim().isEmpty()) || (Field27.trim().isEmpty()) || (Field28.trim().isEmpty()) || (Field29.trim().isEmpty()) || (Field30.trim().isEmpty()) || (Field31.trim().isEmpty())) {
+                || (Field26.trim().isEmpty()) || (Field27.trim().isEmpty()) || (Field28.trim().isEmpty()) || (Field29.trim().isEmpty()) || (Field30.trim().isEmpty())
+                || (Field31.trim().isEmpty()) || (Field32.trim().isEmpty()) || (Field33.trim().isEmpty()) || (Field34.trim().isEmpty()) || (Field35.trim().isEmpty())
+                || (Field36.trim().isEmpty()) || (Field37.trim().isEmpty()) || (Field38.trim().isEmpty()) || (Field39.trim().isEmpty()) || (Field40.trim().isEmpty())
+                || (Field41.trim().isEmpty()) || (Field47.trim().isEmpty()) || (Field48.trim().isEmpty()) || (Field49.trim().isEmpty()) || (Field50.trim().isEmpty())
+                || (Field51.trim().isEmpty()) || (Field52.trim().isEmpty()) || (Field53.trim().isEmpty()) || (Field54.trim().isEmpty()) || (Field55.trim().isEmpty())
+                || (Field56.trim().isEmpty()) || (Field57.trim().isEmpty()) || (Field58.trim().isEmpty()) || (Field59.trim().isEmpty()) || (Field60.trim().isEmpty())
+                || (Field61.trim().isEmpty()) || (Field62.trim().isEmpty()) || (Field63.trim().isEmpty()) || (Field64.trim().isEmpty()) || (Field65.trim().isEmpty())
+                || (Field66.trim().isEmpty()) || (Field67.trim().isEmpty()) || (Field68.trim().isEmpty()) || (Field69.trim().isEmpty()) || (Field70.trim().isEmpty())
+                || (Field71.trim().isEmpty()) || (Field72.trim().isEmpty()) || (Field73.trim().isEmpty()) || (Field74.trim().isEmpty()) || (Field75.trim().isEmpty())
+                || (Field76.trim().isEmpty()) || (Field77.trim().isEmpty()) || (Field78.trim().isEmpty()) || (Field79.trim().isEmpty()) || (Field80.trim().isEmpty())
+                || (Field81.trim().isEmpty()) || (Field82.trim().isEmpty()) || (Field83.trim().isEmpty()) || (Field84.trim().isEmpty()) || (Field85.trim().isEmpty())
+                || (Field86.trim().isEmpty()) || (Field87.trim().isEmpty()) || (Field88.trim().isEmpty())
+
+                ) {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ειδοποίηση");
