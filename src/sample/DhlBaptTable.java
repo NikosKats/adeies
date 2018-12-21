@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.prefs.Preferences;
 
-public class DhlBaptView {
+public class DhlBaptTable {
 
     /*******************************
     //Σύνδεση με Βάση
