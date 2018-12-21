@@ -1,11 +1,15 @@
 package sample;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -17,9 +21,16 @@ import java.util.prefs.Preferences;
 
 public class DhlBaptTable  implements Initializable{
 
+    public TableView tableView;
+    public TableColumn col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11;
+
+
+
     int id;
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
 
+
+    ObservableList<BaptisiTableData> obList = FXCollections.observableArrayList();
 
     public JFXButton create_new_btn;
     public JFXButton menu_btn;
@@ -27,7 +38,7 @@ public class DhlBaptTable  implements Initializable{
     public JFXButton edit_btn;
     public JFXButton delete_btn;
     public JFXButton refresh_btn;
-    public TableView tableView;
+
 
     /*******************************
     //Σύνδεση με Βάση
@@ -52,6 +63,9 @@ public class DhlBaptTable  implements Initializable{
 
     public void selectAll(){
         String sql = "SELECT * FROM dataBaptisis";
+
+
+
 
         try (Connection conn = this.connect();
              Statement stmt  = conn.createStatement();
@@ -93,7 +107,22 @@ public class DhlBaptTable  implements Initializable{
                 Field30 = rs.getString("Field30");
                 Field31 = rs.getString("Field31");
 
+                obList.add(new BaptisiTableData(id,Field2,Field3,Field4,Field6,Field7,Field8,Field11,Field12,Field23,Field31));
 
+
+                col1.setCellValueFactory(new PropertyValueFactory<>("id"));
+                col2.setCellValueFactory(new PropertyValueFactory<>("Field2"));
+                col3.setCellValueFactory(new PropertyValueFactory<>("Field3"));
+                col4.setCellValueFactory(new PropertyValueFactory<>("Field4"));
+                col5.setCellValueFactory(new PropertyValueFactory<>("Field6"));
+                col6.setCellValueFactory(new PropertyValueFactory<>("Field7"));
+                col7.setCellValueFactory(new PropertyValueFactory<>("Field8"));
+                col8.setCellValueFactory(new PropertyValueFactory<>("Field11"));
+                col9.setCellValueFactory(new PropertyValueFactory<>("Field12"));
+                col10.setCellValueFactory(new PropertyValueFactory<>("Field23"));
+                col11.setCellValueFactory(new PropertyValueFactory<>("Field31"));
+
+                tableView.setItems(obList);
 
             }
         } catch (SQLException e) {
@@ -197,6 +226,6 @@ public class DhlBaptTable  implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
        selectAll();
-        System.out.println(Field1);
+
     }
 }

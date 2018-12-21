@@ -11,17 +11,17 @@
    <children>
       <TableView fx:id="tableView" layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
         <columns>
-            <TableColumn prefWidth="60.47230672836304" text="ID" />
-          <TableColumn prefWidth="104.12532424926758" text="Ιερός Ναός" />
-          <TableColumn prefWidth="186.45164489746094" text="Αριθμός Πρωτοκόλλου" />
-            <TableColumn prefWidth="96.73968505859375" text="Εφημέριος" />
-            <TableColumn prefWidth="87.92745971679688" text="Ημέρα" />
-            <TableColumn minWidth="9.9075927734375" prefWidth="103.08355712890625" text="Μήνας" />
-            <TableColumn prefWidth="66.45166015625" text="Έτος" />
-            <TableColumn prefWidth="119.34747314453125" text="Όνομα Πατέρα" />
-            <TableColumn prefWidth="138.08355712890625" text="Όνομα Μητέρας" />
-            <TableColumn minWidth="5.993408203125" prefWidth="119.819580078125" text="Όνομα Παιδιού" />
-            <TableColumn prefWidth="114.5" text="Όνομα Αναδόχου" />
+            <TableColumn fx:id="col1" prefWidth="60.47230672836304" text="ID" />
+          <TableColumn fx:id="col2" prefWidth="104.12532424926758" text="Ιερός Ναός" />
+          <TableColumn fx:id="col3" prefWidth="186.45164489746094" text="Αριθμός Πρωτοκόλλου" />
+            <TableColumn fx:id="col4" prefWidth="96.73968505859375" text="Εφημέριος" />
+            <TableColumn fx:id="col5" prefWidth="87.92745971679688" text="Ημέρα" />
+            <TableColumn fx:id="col6" minWidth="9.9075927734375" prefWidth="103.08355712890625" text="Μήνας" />
+            <TableColumn fx:id="col7" prefWidth="66.45166015625" text="Έτος" />
+            <TableColumn fx:id="col8" prefWidth="119.34747314453125" text="Όνομα Πατέρα" />
+            <TableColumn fx:id="col9" prefWidth="138.08355712890625" text="Όνομα Μητέρας" />
+            <TableColumn fx:id="col10" minWidth="5.993408203125" prefWidth="119.819580078125" text="Όνομα Παιδιού" />
+            <TableColumn fx:id="col11" prefWidth="114.5" text="Όνομα Αναδόχου" />
         </columns>
       </TableView>
       <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
