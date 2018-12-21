@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.PistAgamiasATable"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PistAgamiasATable">
+<children>
+    <TableView layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
+        <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="504.34080505371094" text="Column X" />
+        </columns>
+    </TableView>
+    <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
+    <JFXButton fx:id="create_new_btn" layoutX="96.0" layoutY="63.0" onAction="#create_new" text="Δημιουργία Δήλωσης" />
+    <JFXButton layoutX="282.0" layoutY="63.0" text="Προβολή Δήλωσης" />
+    <JFXButton layoutX="454.0" layoutY="63.0" text="Επεξεργασία Δήλωσης" />
+    <JFXButton layoutX="650.0" layoutY="63.0" text="Διαγραφή Δήλωσης" />
+    <JFXButton layoutX="829.0" layoutY="63.0" text="Ανανέωση Πίνακα" />
+    <JFXButton fx:id="menu_btn" layoutX="996.0" layoutY="63.0" onAction="#main_menu" text="Αρχικό Μενού" />
+    <JFXButton layoutX="1094.0" layoutY="12.0" text=" Αναζήτηση" />
+    <TextField layoutX="760.0" layoutY="12.0" prefHeight="27.0" prefWidth="328.0" />
+</children>
 </AnchorPane>
