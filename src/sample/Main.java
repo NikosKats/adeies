@@ -6,10 +6,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class Main extends Application {
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+
+
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         Scene scene = new Scene(root, 1200, 800);
