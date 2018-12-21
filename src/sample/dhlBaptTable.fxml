@@ -19,10 +19,10 @@
       </TableView>
       <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
       <JFXButton fx:id="create_new_btn" layoutX="96.0" layoutY="63.0" onAction="#create_new" text="Δημιουργία Δήλωσης" />
-      <JFXButton layoutX="282.0" layoutY="63.0" text="Προβολή Δήλωσης" />
-      <JFXButton layoutX="454.0" layoutY="63.0" text="Επεξεργασία Δήλωσης" />
-      <JFXButton layoutX="650.0" layoutY="63.0" text="Διαγραφή Δήλωσης" />
-      <JFXButton layoutX="829.0" layoutY="63.0" text="Ανανέωση Πίνακα" />
+      <JFXButton fx:id="view_btn" layoutX="282.0" layoutY="63.0" onAction="#view" text="Προβολή Δήλωσης" />
+      <JFXButton fx:id="edit_btn" layoutX="454.0" layoutY="63.0" onAction="#edit" text="Επεξεργασία Δήλωσης" />
+      <JFXButton fx:id="delete_btn" layoutX="650.0" layoutY="63.0" onAction="#delete" text="Διαγραφή Δήλωσης" />
+      <JFXButton fx:id="refresh_btn" layoutX="829.0" layoutY="63.0" onAction="#refresh" text="Ανανέωση Πίνακα" />
       <JFXButton fx:id="menu_btn" layoutX="996.0" layoutY="63.0" onAction="#main_menu" text="Αρχικό Μενού" />
       <JFXButton layoutX="1094.0" layoutY="12.0" text=" Αναζήτηση" />
       <TextField layoutX="760.0" layoutY="12.0" prefHeight="27.0" prefWidth="328.0" />
