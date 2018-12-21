@@ -618,6 +618,7 @@ public class DhlGamou {
                 field22.setText("");
                 field23.setText("");
                 field24.setText("");
+                field25.setText("");
                 field26.setText("");
                 field27.setText("");
                 field28.setText("");

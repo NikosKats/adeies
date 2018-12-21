@@ -130,3 +130,32 @@ CREATE TABLE `dataGamou` (
 	`CheckBox3`	TEXT,
 	`CheckBox4`	TEXT
 );
+
+CREATE TABLE `dataAgamiasA` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`Field1`	TEXT,
+	`Field2`	TEXT,
+	`Field3`	TEXT,
+	`Field4`	TEXT,
+	`Field5`	TEXT,
+	`Field6`	TEXT,
+	`Field7`	TEXT,
+	`Field8`	TEXT,
+	`Field9`	TEXT,
+	`Field10`	TEXT,
+	`Field11`	TEXT,
+	`Field12`	TEXT,
+	`Field13`	TEXT,
+	`Field14`	TEXT,
+	`Field15`	TEXT,
+	`Field16`	TEXT,
+	`Field17`	TEXT,
+	`Field18`	TEXT,
+	`Field19`	TEXT,
+	`Field20`	TEXT,
+	`Field21`	TEXT,
+	`Field22`	TEXT,
+	`Field23`	TEXT,
+	`Field24`	TEXT,
+	`Field25`	TEXT
+);
