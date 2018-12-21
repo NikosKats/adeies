@@ -75,6 +75,8 @@ public class DhlBaptTable  implements Initializable{
             while (rs.next()) {
 
                 id = rs.getInt("id");
+                String s_id = Integer.toString(id);
+
                 Field1 = rs.getString("Field1");
                 Field2 = rs.getString("Field2");
                 Field3 = rs.getString("Field3");
@@ -107,7 +109,7 @@ public class DhlBaptTable  implements Initializable{
                 Field30 = rs.getString("Field30");
                 Field31 = rs.getString("Field31");
 
-                obList.add(new BaptisiTableData(id,Field2,Field3,Field4,Field6,Field7,Field8,Field11,Field12,Field23,Field31));
+                obList.add(new BaptisiTableData(s_id,Field2,Field3,Field4,Field6,Field7,Field8,Field11,Field12,Field23,Field31));
 
 
                 col1.setCellValueFactory(new PropertyValueFactory<>("id"));

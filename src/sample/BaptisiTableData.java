@@ -4,12 +4,12 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class BaptisiTableData {
-    SimpleIntegerProperty id;
+    SimpleStringProperty id;
     private final SimpleStringProperty field2,field3,field4,field6,field7,field8,field11,field12,field23,field31;
 
-    public BaptisiTableData(int id, String field2,String field3,String field4,String field6,String field7,String field8,String field11,String field12,String field23,String field31)
+    public BaptisiTableData(String id, String field2,String field3,String field4,String field6,String field7,String field8,String field11,String field12,String field23,String field31)
     {
-        this.id = new SimpleIntegerProperty(id);
+        this.id = new SimpleStringProperty(id);
         this.field2 = new SimpleStringProperty(field2);
         this.field3 = new SimpleStringProperty(field3);
         this.field4 = new SimpleStringProperty(field4);
@@ -23,7 +23,7 @@ public class BaptisiTableData {
     }
 
 
-     public SimpleIntegerProperty getId() {
+     public SimpleStringProperty getId() {
          return id;
      }
 
@@ -80,7 +80,7 @@ public class BaptisiTableData {
      }
 
 
-     public void setId(SimpleIntegerProperty id) {
+     public void setId(SimpleStringProperty id) {
          this.id = id;
      }
 
