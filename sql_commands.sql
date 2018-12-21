@@ -159,3 +159,47 @@ CREATE TABLE `dataAgamiasA` (
 	`Field24`	TEXT,
 	`Field25`	TEXT
 );
+
+
+
+CREATE TABLE `dataAgamiasB` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`Field1`	TEXT,
+	`Field2`	TEXT,
+	`Field3`	TEXT,
+	`Field4`	TEXT,
+	`Field5`	TEXT,
+	`Field6`	TEXT,
+	`Field7`	TEXT,
+	`Field8`	TEXT,
+	`Field9`	TEXT,
+	`Field10`	TEXT,
+	`Field11`	TEXT,
+	`Field12`	TEXT,
+	`Field13`	TEXT,
+	`Field14`	TEXT,
+	`Field15`	TEXT,
+	`Field16`	TEXT,
+	`Field17`	TEXT,
+	`Field18`	TEXT,
+	`Field19`	TEXT,
+	`Field20`	TEXT,
+	`Field21`	TEXT,
+	`Field22`	TEXT,
+	`Field23`	TEXT,
+	`Field24`	TEXT,
+	`Field25`	TEXT,
+	`Field26`	TEXT,
+	`Field27`	TEXT,
+	`Field28`	TEXT,
+	`Field29`	TEXT,
+	`Field30`	TEXT,
+	`Field31`	TEXT,
+	`Field32`	TEXT,
+	`Field33`	TEXT,
+	`Field34`	TEXT,
+	`Field35`	TEXT,
+	`Field36`	TEXT,
+	`Field37`	TEXT,
+	`Field38`	TEXT
+);
