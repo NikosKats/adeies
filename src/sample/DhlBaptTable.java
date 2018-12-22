@@ -254,6 +254,37 @@ public class DhlBaptTable  implements Initializable{
         BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
         System.out.println(data.getId());
 
+        String pass_id = data.getId();
+
+        Preferences preferences = Preferences.userNodeForPackage(DhlBaptTable.class);
+        preferences.put("id",pass_id);
+
+
+
+
+        Stage primaryStage = (Stage) edit_btn.getScene().getWindow();
+        primaryStage.close();
+
+        Stage stage = new Stage();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptEdit.fxml"));
+            AnchorPane pane = loader.load();
+            Scene scene = new Scene(pane);
+
+
+            scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+            stage.setResizable(false);
+            stage.setTitle("Επεξεργασία Δήλωσης");
+
+            stage.setScene(scene);
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
