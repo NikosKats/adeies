@@ -201,7 +201,7 @@ public class DhlGamouView implements Initializable {
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
             stage.setResizable(false);
-            stage.setTitle("Δήλωση Βαπτίσεως");
+            stage.setTitle("Δήλωση Γάμου");
             stage.setScene(scene);
             stage.show();
 
