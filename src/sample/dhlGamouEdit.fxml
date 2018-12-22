@@ -196,7 +196,7 @@
                     <JFXTextField fx:id="field15" layoutX="818.0" layoutY="304.0" prefHeight="27.0" prefWidth="146.0" />
                     <JFXTextField fx:id="field16" layoutX="133.0" layoutY="338.0" prefHeight="27.0" prefWidth="224.0" />
                     <JFXTextField fx:id="field17" layoutX="715.0" layoutY="341.0" prefHeight="27.0" prefWidth="283.0" />
-                    <JFXTextField fx:id="field18" layoutX="117.0" layoutY="490.0" prefHeight="27.0" prefWidth="623.0" />
+                    <JFXTextField fx:id="field18" layoutX="130.0" layoutY="492.0" prefHeight="27.0" prefWidth="610.0" />
                     <JFXTextField fx:id="field19" layoutX="749.0" layoutY="491.0" prefHeight="27.0" prefWidth="420.0" />
                     <JFXTextField fx:id="field20" layoutX="107.0" layoutY="518.0" prefHeight="27.0" prefWidth="634.0" />
                     <JFXTextField fx:id="field21" layoutX="749.0" layoutY="519.0" prefHeight="27.0" prefWidth="416.0" />
