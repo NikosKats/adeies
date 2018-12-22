@@ -112,16 +112,16 @@ public class DhlGamouTable implements Initializable {
 
 
                 col1.setCellValueFactory(new PropertyValueFactory<>("id"));
-                col2.setCellValueFactory(new PropertyValueFactory<>("Field2"));
-                col3.setCellValueFactory(new PropertyValueFactory<>("Field5"));
+                col2.setCellValueFactory(new PropertyValueFactory<>("Field5"));
+                col3.setCellValueFactory(new PropertyValueFactory<>("Field2"));
                 col4.setCellValueFactory(new PropertyValueFactory<>("Field10"));
-                col5.setCellValueFactory(new PropertyValueFactory<>("Field12"));
-                col6.setCellValueFactory(new PropertyValueFactory<>("Field13"));
-                col7.setCellValueFactory(new PropertyValueFactory<>("Field14"));
-                col8.setCellValueFactory(new PropertyValueFactory<>("Field18"));
-                col9.setCellValueFactory(new PropertyValueFactory<>("Field19"));
-                col10.setCellValueFactory(new PropertyValueFactory<>("Field28"));
-                col11.setCellValueFactory(new PropertyValueFactory<>("Field29"));
+                col5.setCellValueFactory(new PropertyValueFactory<>("Field18"));
+                col6.setCellValueFactory(new PropertyValueFactory<>("Field19"));
+                col7.setCellValueFactory(new PropertyValueFactory<>("Field28"));
+                col8.setCellValueFactory(new PropertyValueFactory<>("Field29"));
+                col9.setCellValueFactory(new PropertyValueFactory<>("Field12"));
+                col10.setCellValueFactory(new PropertyValueFactory<>("Field13"));
+                col11.setCellValueFactory(new PropertyValueFactory<>("Field14"));
                 col12.setCellValueFactory(new PropertyValueFactory<>("Field88"));
                 tableView.setItems(obList);
 
