@@ -270,6 +270,11 @@ public class DhlGamouEdit implements Initializable {
                 Field87 = rs.getString("Field87");
                 Field88 = rs.getString("Field88");
 
+                CheckBox1 = rs.getString("CheckBox1");
+                CheckBox2 = rs.getString("CheckBox2");
+                CheckBox3 = rs.getString("CheckBox3");
+                CheckBox4 = rs.getString("CheckBox4");
+
 
                 field1.setText(Field1);
                 field2.setText(Field2);
@@ -360,6 +365,91 @@ public class DhlGamouEdit implements Initializable {
                 field87.setText(Field87);
                 field88.setText(Field88);
 
+                /******
+                 *
+                 * Group 1
+                 * ****/
+                if(CheckBox1.equals("Άγαμος"))
+                {
+                    check1.setSelected(true);
+                }
+                if(CheckBox1.equals("Χήρος"))
+                {
+                    check2.setSelected(true);
+                }
+                if(CheckBox1.equals("Διαζευγμένος"))
+                {
+                    check3.setSelected(true);
+                }
+
+
+                /******
+                 *
+                 * Group 2
+                 * ****/
+                if(CheckBox2.equals("Άγαμη"))
+                {
+                    check4.setSelected(true);
+                }
+                if(CheckBox2.equals("Χήρα"))
+                {
+                    check5.setSelected(true);
+                }
+                if(CheckBox2.equals("Διαζευγμένη"))
+                {
+                    check6.setSelected(true);
+                }
+
+
+                /******
+                 *
+                 * Group 3
+                 * ****/
+                if(CheckBox3.equals("Αναλφάβητος"))
+                {
+                    check7.setSelected(true);
+                }
+                if(CheckBox3.equals("Γνωρίζει γραφή και ανάγνωση"))
+                {
+                    check8.setSelected(true);
+                }
+                if(CheckBox3.equals("Τελείωσε τριτάξιο γυμνάσιο"))
+                {
+                    check9.setSelected(true);
+                }
+                if(CheckBox3.equals("Έχει απολυτήριο λυκείου ή ισότιμο"))
+                {
+                    check10.setSelected(true);
+                }
+                if(CheckBox3.equals("Έχει πτυχίο ΑΕΙ ή ΤΕΙ"))
+                {
+                    check11.setSelected(true);
+                }
+
+                /******
+                 *
+                 * Group 4
+                 * ****/
+                if(CheckBox4.equals("Αναλφάβητη"))
+                {
+                    check12.setSelected(true);
+                }
+                if(CheckBox4.equals("Γνωρίζει γραφή και ανάγνωση"))
+                {
+                    check13.setSelected(true);
+                }
+                if(CheckBox4.equals("Τελείωσε τριτάξιο γυμνάσιο"))
+                {
+                    check14.setSelected(true);
+                }
+                if(CheckBox4.equals("Έχει απολυτήριο λυκείου ή ισότιμο"))
+                {
+                    check15.setSelected(true);
+                }
+                if(CheckBox4.equals("Έχει πτυχίο ΑΕΙ ή ΤΕΙ"))
+                {
+                    check16.setSelected(true);
+                }
 
 
             }
