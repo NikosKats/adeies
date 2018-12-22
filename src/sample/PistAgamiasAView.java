@@ -214,18 +214,20 @@ public class PistAgamiasAView implements Initializable {
     }
 
     public void print(ActionEvent actionEvent) throws Exception{
-//        PrinterJob job = PrinterJob.createPrinterJob();
-//        if(job != null){
-//            job.printPage(htmlEditor);
-//            job.endJob();
+        PrinterJob job = PrinterJob.createPrinterJob();
+        if(job != null){
+            job.printPage(htmlEditor);
+            job.endJob();
+        }
+
+
+//        try{
+//            htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 //        }
-        try{
-            htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
-        }
-        catch (RuntimeException ex)
-        {
-            ex.printStackTrace();
-        }
+//        catch (RuntimeException ex)
+//        {
+//            ex.printStackTrace();
+//        }
 
     }
 
