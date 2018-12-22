@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.print.Printer;
+import javafx.print.PrinterJob;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
@@ -291,6 +293,21 @@ public class DhlGamouView implements Initializable {
         }
     }
 
+    public void print(ActionEvent actionEvent) throws Exception{
+//        PrinterJob job = PrinterJob.createPrinterJob();
+//        if(job != null){
+//            job.printPage(htmlEditor);
+//            job.endJob();
+//        }
+        try{
+            htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+        }
+        catch (RuntimeException ex)
+        {
+            ex.printStackTrace();
+        }
+
+    }
 
 
 
