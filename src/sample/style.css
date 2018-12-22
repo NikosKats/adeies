@@ -115,3 +115,46 @@
     -fx-font-size: 18px;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
+
+
+#create_new_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#view_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#edit_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#delete_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#refresh_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+#menu_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 18px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}

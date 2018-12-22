@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DhlBaptTable">
@@ -24,14 +22,11 @@
             <TableColumn fx:id="col11" prefWidth="114.5" text="Όνομα Αναδόχου" />
         </columns>
       </TableView>
-      <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
-      <JFXButton fx:id="create_new_btn" layoutX="96.0" layoutY="63.0" onAction="#create_new" text="Δημιουργία Δήλωσης" />
-      <JFXButton fx:id="view_btn" layoutX="282.0" layoutY="63.0" onAction="#view" text="Προβολή Δήλωσης" />
-      <JFXButton fx:id="edit_btn" layoutX="454.0" layoutY="63.0" onAction="#edit" text="Επεξεργασία Δήλωσης" />
-      <JFXButton fx:id="delete_btn" layoutX="650.0" layoutY="63.0" onAction="#delete" text="Διαγραφή Δήλωσης" />
-      <JFXButton fx:id="refresh_btn" layoutX="829.0" layoutY="63.0" onAction="#refresh" text="Ανανέωση Πίνακα" />
-      <JFXButton fx:id="menu_btn" layoutX="996.0" layoutY="63.0" onAction="#main_menu" text="Αρχικό Μενού" />
-      <JFXButton layoutX="1094.0" layoutY="12.0" text=" Αναζήτηση" />
-      <TextField layoutX="760.0" layoutY="12.0" prefHeight="27.0" prefWidth="328.0" />
+      <JFXButton id="create_new_btn" fx:id="create_new_btn" layoutX="96.0" layoutY="37.0" onAction="#create_new" stylesheets="@style.css" text="Δημιουργία Δήλωσης" textFill="WHITE" />
+      <JFXButton id="view_btn" fx:id="view_btn" layoutX="282.0" layoutY="37.0" onAction="#view" stylesheets="@style.css" text="Προβολή Δήλωσης" textFill="WHITE" />
+      <JFXButton id="edit_btn" fx:id="edit_btn" layoutX="454.0" layoutY="37.0" onAction="#edit" stylesheets="@style.css" text="Επεξεργασία Δήλωσης" textFill="WHITE" />
+      <JFXButton id="delete_btn" fx:id="delete_btn" layoutX="650.0" layoutY="37.0" onAction="#delete" stylesheets="@style.css" text="Διαγραφή Δήλωσης" textFill="WHITE" />
+      <JFXButton id="refresh_btn" fx:id="refresh_btn" layoutX="829.0" layoutY="37.0" onAction="#refresh" stylesheets="@style.css" text="Ανανέωση Πίνακα" textFill="WHITE" />
+      <JFXButton id="menu_btn" fx:id="menu_btn" layoutX="996.0" layoutY="37.0" onAction="#main_menu" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
    </children>
 </AnchorPane>

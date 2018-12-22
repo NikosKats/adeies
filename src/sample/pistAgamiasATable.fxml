@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PistAgamiasATable">
@@ -22,14 +20,11 @@
             <TableColumn fx:id="col9" minWidth="0.0" prefWidth="125.5" text="Έτος Γέννησης" />
         </columns>
     </TableView>
-    <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
-    <JFXButton fx:id="create_new_btn" layoutX="96.0" layoutY="63.0" onAction="#create_new" text="Δημιουργία Δήλωσης" />
-    <JFXButton layoutX="282.0" layoutY="63.0" text="Προβολή Δήλωσης" />
-    <JFXButton layoutX="454.0" layoutY="63.0" text="Επεξεργασία Δήλωσης" />
-    <JFXButton layoutX="650.0" layoutY="63.0" text="Διαγραφή Δήλωσης" />
-    <JFXButton layoutX="829.0" layoutY="63.0" text="Ανανέωση Πίνακα" />
-    <JFXButton fx:id="menu_btn" layoutX="996.0" layoutY="63.0" onAction="#main_menu" text="Αρχικό Μενού" />
-    <JFXButton layoutX="1094.0" layoutY="12.0" text=" Αναζήτηση" />
-    <TextField layoutX="760.0" layoutY="12.0" prefHeight="27.0" prefWidth="328.0" />
+    <JFXButton fx:id="create_new_btn" layoutX="96.0" layoutY="38.0" onAction="#create_new" stylesheets="@style.css" text="Δημιουργία Δήλωσης" textFill="WHITE" />
+    <JFXButton id="view_btn" layoutX="282.0" layoutY="38.0" stylesheets="@style.css" text="Προβολή Δήλωσης" textFill="WHITE" />
+    <JFXButton id="edit_btn" layoutX="454.0" layoutY="38.0" stylesheets="@style.css" text="Επεξεργασία Δήλωσης" textFill="WHITE" />
+    <JFXButton id="delete_btn" layoutX="650.0" layoutY="38.0" stylesheets="@style.css" text="Διαγραφή Δήλωσης" textFill="WHITE" />
+    <JFXButton id="refresh_btn" layoutX="829.0" layoutY="38.0" stylesheets="@style.css" text="Ανανέωση Πίνακα" textFill="WHITE" />
+    <JFXButton fx:id="menu_btn" layoutX="996.0" layoutY="38.0" onAction="#main_menu" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
 </children>
 </AnchorPane>

@@ -213,12 +213,26 @@ public class DhlBaptTable  implements Initializable{
     }
 
     public void view(ActionEvent actionEvent) {
+        BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
+        System.out.println(data.getId());
+
+
     }
 
     public void edit(ActionEvent actionEvent) {
+        BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
+        System.out.println(data.getId());
+
+
+
     }
 
     public void delete(ActionEvent actionEvent) {
+        BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
+        System.out.println(data.getId());
+
+
+
     }
 
     public void refresh(ActionEvent actionEvent) {
