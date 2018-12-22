@@ -113,8 +113,25 @@ public class PistAgamiasBView implements Initializable {
         }
     }
 
-    public void create_new(ActionEvent actionEvent)  {
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Preferences preferences = Preferences.userNodeForPackage(PistAgamiasBView.class);
+        String pass_id = preferences.get("id",null);
+
+        int id = Integer.parseInt(pass_id);
+        selectRow(id);
+
+
+
+        String INITIAL_TEXT = "<h3> ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ <br>"+ Field1+ "</h3>\n" +
+                "<h3>ΙΕΡΟΣ ΝΑΟΣ "+ Field2+ "</h3><t" ;
+
+
+        htmlEditor.setHtmlText(INITIAL_TEXT);
+    }
+
+    public void create_new(ActionEvent actionEvent) {
         Stage primaryStage = (Stage) create_new_btn.getScene().getWindow();
 
         primaryStage.close();
@@ -124,7 +141,7 @@ public class PistAgamiasBView implements Initializable {
 
 
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("pistAgamiasΒ.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("pistAgamiasB.fxml"));
 
             AnchorPane pane = loader.load();
 
@@ -148,10 +165,47 @@ public class PistAgamiasBView implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void view_screen(ActionEvent actionEvent) {
+        Stage primaryStage = (Stage) view_btn.getScene().getWindow();
+
+        primaryStage.close();
+
+        Stage stage = new Stage();
+
+
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("pistAgamiasBTable.fxml"));
+
+            AnchorPane pane = loader.load();
+
+
+            Scene scene = new Scene(pane);
+
+
+
+            scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+            stage.setResizable(false);
+            stage.setTitle("Προβολή Λίστας Δηλώσεων");
+            stage.setScene(scene);
+            stage.show();
+
+
+
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     public void main_menu(ActionEvent actionEvent) {
+
 
         Stage primaryStage = (Stage) menu_btn.getScene().getWindow();
 
@@ -188,58 +242,5 @@ public class PistAgamiasBView implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void view_screen(ActionEvent actionEvent) {
-        Stage primaryStage = (Stage) view_btn.getScene().getWindow();
-
-        primaryStage.close();
-
-        Stage stage = new Stage();
-
-
-
-        try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("pistAgamiasΒTable.fxml"));
-
-            AnchorPane pane = loader.load();
-
-
-            Scene scene = new Scene(pane);
-
-
-
-            scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
-
-            stage.setResizable(false);
-            stage.setTitle("Προβολή Λίστας Δηλώσεων");
-            stage.setScene(scene);
-            stage.show();
-
-
-
-
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        Preferences preferences = Preferences.userNodeForPackage(PistAgamiasBView.class);
-        String pass_id = preferences.get("id",null);
-
-        int id = Integer.parseInt(pass_id);
-        selectRow(id);
-
-
-
-        String INITIAL_TEXT = "<h3> ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ <br>"+ Field1+ "</h3>\n" +
-                "<h3>ΙΕΡΟΣ ΝΑΟΣ "+ Field2+ "</h3><t" ;
-
-
-        htmlEditor.setHtmlText(INITIAL_TEXT);
     }
 }
