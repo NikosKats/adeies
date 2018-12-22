@@ -268,6 +268,41 @@ public class PistAgamiasA {
                  *  Also I have to pass the values to the next screen
                  * **/
 
+                Stage primaryStage = (Stage) view_btn.getScene().getWindow();
+
+                primaryStage.close();
+
+                Stage stage = new Stage();
+
+
+
+                try {
+                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("pistAgamiasATable.fxml"));
+
+                    AnchorPane pane = loader.load();
+
+
+                    Scene scene = new Scene(pane);
+
+
+
+
+
+                    scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+                    stage.setResizable(false);
+                    stage.setTitle("Προβολή Δηλώσεων");
+                    stage.setScene(scene);
+                    stage.show();
+
+
+
+
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
             } else if (result.get() == buttonTypeTwo) {
                 // ... user chose "Two"
