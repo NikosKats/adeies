@@ -80,6 +80,89 @@ public class DhlBaptEdit implements Initializable {
 
 
     /*******************************
+    //Ενημέρωση  Βάσης
+    //*******************************/
+
+    public void update(int id,  String Field1,String Field2,String Field3,String Field4,String Field5,String Field6,String Field7,String Field8,String Field9,String Field10,String Field11,String Field12,String Field13,String Field14,String Field15,String Field16,String Field17,String Field18,String Field19,String Field20,String Field21,String Field22,String Field23,String Field24,String Field25,String Field26,String Field27,String Field28,String Field29,String Field30,String Field31) {
+        String sql = "UPDATE dataBaptisis SET field1 = ? , "
+                + "field2 = ? ,"
+                + "field3 = ? ,"
+                + "field4 = ? ,"
+                + "field5 = ? ,"
+                + "field6 = ? ,"
+                + "field7 = ? ,"
+                + "field8 = ? ,"
+                + "field9 = ? ,"
+                + "field10 = ?, "
+                + "field11 = ? ,"
+                + "field12 = ? ,"
+                + "field13 = ? ,"
+                + "field14 = ? ,"
+                + "field15 = ? ,"
+                + "field16 = ? ,"
+                + "field17 = ? ,"
+                + "field18 = ? ,"
+                + "field19 = ?, "
+                + "field20 = ?, "
+                + "field21 = ?, "
+                + "field22 = ?, "
+                + "field23 = ?, "
+                + "field24 = ?, "
+                + "field25 = ?,"
+                + "field26 = ? ,"
+                + "field27 = ? ,"
+                + "field28 = ? ,"
+                + "field29 = ? ,"
+                + "field30 = ? ,"
+                + "field31 = ? "
+                + "WHERE id = ?";
+
+        try (Connection conn = this.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // set the corresponding param
+
+            pstmt.setString(1, Field1);
+            pstmt.setString(2, Field2);
+            pstmt.setString(3, Field3);
+            pstmt.setString(4, Field4);
+            pstmt.setString(5, Field5);
+            pstmt.setString(6, Field6);
+            pstmt.setString(7, Field7);
+            pstmt.setString(8, Field8);
+            pstmt.setString(9, Field9);
+            pstmt.setString(10, Field10);
+            pstmt.setString(11, Field11);
+            pstmt.setString(12, Field12);
+            pstmt.setString(13, Field13);
+            pstmt.setString(14, Field14);
+            pstmt.setString(15, Field15);
+            pstmt.setString(16, Field16);
+            pstmt.setString(17, Field17);
+            pstmt.setString(18, Field18);
+            pstmt.setString(19, Field19);
+            pstmt.setString(20, Field20);
+            pstmt.setString(21, Field21);
+            pstmt.setString(22, Field22);
+            pstmt.setString(23, Field23);
+            pstmt.setString(24, Field24);
+            pstmt.setString(25, Field25);
+            pstmt.setString(26, Field26);
+            pstmt.setString(27, Field27);
+            pstmt.setString(28, Field28);
+            pstmt.setString(29, Field29);
+            pstmt.setString(30, Field30);
+            pstmt.setString(31, Field31);
+            pstmt.setInt(32, id);
+
+            // update
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /*******************************
      //Επιλογή άδειας
      /*******************************/
 
@@ -167,13 +250,13 @@ public class DhlBaptEdit implements Initializable {
             System.out.println(e.getMessage());
         }
     }
-
+    int id;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Preferences preferences = Preferences.userNodeForPackage(DhlBaptTable.class);
         String pass_id = preferences.get("id",null);
 
-        int id = Integer.parseInt(pass_id);
+        id = Integer.parseInt(pass_id);
         selectRow(id);
 
     }
@@ -322,12 +405,9 @@ public class DhlBaptEdit implements Initializable {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == buttonTypeOne) {
 
-//                insert(Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31);
 
-                /**
-                 * *
-                 *  Also I have to pass the values to the next screen
-                 * **/
+                update(id,Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31);
+
 
                 Stage primaryStage = (Stage) view_btn.getScene().getWindow();
 
