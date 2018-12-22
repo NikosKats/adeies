@@ -9,12 +9,17 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PistAgamiasATable">
 <children>
-    <TableView layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
+    <TableView fx:id="tableView" layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
         <columns>
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="Column X" />
-            <TableColumn prefWidth="504.34080505371094" text="Column X" />
+            <TableColumn fx:id="col1" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="col2" prefWidth="145.0" text="Ιερός Ναός" />
+            <TableColumn fx:id="col3" prefWidth="171.0" text="Αριθμός Πρωτοκόλλου" />
+            <TableColumn fx:id="col4" prefWidth="149.5" text="Εφημέριος" />
+            <TableColumn fx:id="col5" prefWidth="131.0" text="Όνομα Ατόμου" />
+            <TableColumn fx:id="col6" minWidth="0.0" prefWidth="140.0" text="Επώνυμο Ατόμου" />
+            <TableColumn fx:id="col7" minWidth="9.0" prefWidth="131.0" text="Ημέρα Γέννησης" />
+            <TableColumn fx:id="col8" prefWidth="131.0" text="Μήνας Γέννησης" />
+            <TableColumn fx:id="col9" minWidth="0.0" prefWidth="125.5" text="Έτος Γέννησης" />
         </columns>
     </TableView>
     <Separator layoutY="40.0" prefHeight="24.0" prefWidth="1200.0" />
