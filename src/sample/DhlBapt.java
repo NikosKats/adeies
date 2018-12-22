@@ -191,7 +191,7 @@ public class DhlBapt {
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
             stage.setResizable(false);
-            stage.setTitle("Προβολή Δηλώσεων");
+            stage.setTitle("Προβολή Λίστας Δηλώσεων");
             stage.setScene(scene);
             stage.show();
 

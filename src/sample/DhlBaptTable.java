@@ -7,8 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -16,6 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.prefs.Preferences;
 
@@ -55,6 +55,27 @@ public class DhlBaptTable  implements Initializable{
             System.out.println(e.getMessage());
         }
         return conn;
+    }
+
+
+    /*******************************
+    //Διαγραφή από Βάση
+    /******************************/
+
+    public void delete(int id) {
+        String sql = "DELETE FROM dataBaptisis WHERE id = ?";
+
+        try (Connection conn = this.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // set the corresponding param
+            pstmt.setInt(1, id);
+            // execute the delete statement
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /*******************************
@@ -293,13 +314,81 @@ public class DhlBaptTable  implements Initializable{
         BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
         System.out.println(data.getId());
 
+        String pass_id = data.getId();
+        int id = Integer.parseInt(pass_id);
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Θέλετε να διαγράψετε οριστικά την δήλωση;");
+        alert.setHeaderText("Επιβεβαίωση Διαγραφής Στοιχείων.");
+        alert.setContentText("Επιλέξτε.");
+
+        ButtonType buttonTypeOne = new ButtonType("Ναι, διαγραφή δήλωσης");
+        ButtonType buttonTypeTwo = new ButtonType("Όχι, ακύρωση διαγραφής");
 
 
+        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == buttonTypeOne){
+            delete(id);
+
+
+            Stage primaryStage = (Stage) delete_btn.getScene().getWindow();
+            primaryStage.close();
+
+            Stage stage = new Stage();
+
+            try {
+                FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptTable.fxml"));
+                AnchorPane pane = loader.load();
+                Scene scene = new Scene(pane);
+
+
+                scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+                stage.setResizable(false);
+                stage.setTitle("Προβολή Λίστας Δηλώσεων");
+
+                stage.setScene(scene);
+                stage.show();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
+        } else if (result.get() == buttonTypeTwo) {
+            // ... user chose "Two"
+        }
     }
 
     public void refresh(ActionEvent actionEvent) {
 
+        Stage primaryStage = (Stage) refresh_btn.getScene().getWindow();
+        primaryStage.close();
 
+        Stage stage = new Stage();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptTable.fxml"));
+            AnchorPane pane = loader.load();
+            Scene scene = new Scene(pane);
+
+
+            scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+            stage.setResizable(false);
+            stage.setTitle("Προβολή Λίστας Δηλώσεων");
+
+            stage.setScene(scene);
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
