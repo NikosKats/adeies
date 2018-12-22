@@ -235,7 +235,7 @@ public class DhlBaptTable  implements Initializable{
 
     public void view(ActionEvent actionEvent) {
         BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
-        System.out.println(data.getId());
+
 
         String pass_id = data.getId();
 
@@ -273,7 +273,7 @@ public class DhlBaptTable  implements Initializable{
 
     public void edit(ActionEvent actionEvent) {
         BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
-        System.out.println(data.getId());
+
 
         String pass_id = data.getId();
 
@@ -312,7 +312,7 @@ public class DhlBaptTable  implements Initializable{
 
     public void delete(ActionEvent actionEvent) {
         BaptisiTableData data = (BaptisiTableData) tableView.getSelectionModel().getSelectedItem();
-        System.out.println(data.getId());
+
 
         String pass_id = data.getId();
         int id = Integer.parseInt(pass_id);
