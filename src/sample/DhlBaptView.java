@@ -222,7 +222,7 @@ public class DhlBaptView implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Preferences preferences = Preferences.userNodeForPackage(DhlBaptTable.class);
+        Preferences preferences = Preferences.userNodeForPackage(DhlBaptView.class);
         String pass_id = preferences.get("id",null);
 
         int id = Integer.parseInt(pass_id);

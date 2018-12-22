@@ -296,7 +296,7 @@ public class DhlGamouView implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Preferences preferences = Preferences.userNodeForPackage(DhlGamouTable.class);
+        Preferences preferences = Preferences.userNodeForPackage(DhlGamouView.class);
         String pass_id = preferences.get("id",null);
 
         int id = Integer.parseInt(pass_id);
