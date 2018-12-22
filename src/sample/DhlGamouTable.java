@@ -7,6 +7,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -16,7 +18,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.prefs.Preferences;
 
 public class DhlGamouTable implements Initializable {
 
@@ -24,6 +28,11 @@ public class DhlGamouTable implements Initializable {
     public JFXButton menu_btn;
     public TableView tableView;
     public TableColumn col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col12;
+
+    public JFXButton view_btn;
+    public JFXButton edit_btn;
+    public JFXButton delete_btn;
+    public JFXButton refresh_btn;
 
     int id;
     String Field2, Field5, Field10, Field4, Field12, Field13, Field14, Field18, Field19, Field28, Field29, Field88;
@@ -45,6 +54,26 @@ public class DhlGamouTable implements Initializable {
             System.out.println(e.getMessage());
         }
         return conn;
+    }
+
+    /*******************************
+     //Διαγραφή από Βάση
+     /******************************/
+
+    public void delete(int id) {
+        String sql = "DELETE FROM dataGamou WHERE id = ?";
+
+        try (Connection conn = this.connect();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // set the corresponding param
+            pstmt.setInt(1, id);
+            // execute the delete statement
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /*******************************
@@ -177,6 +206,202 @@ public class DhlGamouTable implements Initializable {
             e.printStackTrace();
         }
     }
+
+
+    public void view(ActionEvent actionEvent) {
+        GamosTableData data = (GamosTableData) tableView.getSelectionModel().getSelectedItem();
+
+        if(data == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ειδοποίηση");
+            alert.setHeaderText("Προσοχή!");
+            alert.setContentText("Δεν έχεις επιλέξει άδεια για προβολή!");
+            alert.showAndWait();
+        }
+
+        else
+        {
+            System.out.println("ok");
+
+            String pass_id = data.getId();
+
+            Preferences preferences = Preferences.userNodeForPackage(DhlBaptTable.class);
+            preferences.put("id",pass_id);
+
+
+
+
+            Stage primaryStage = (Stage) view_btn.getScene().getWindow();
+            primaryStage.close();
+
+            Stage stage = new Stage();
+
+            try {
+                FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlGamouView.fxml"));
+                AnchorPane pane = loader.load();
+                Scene scene = new Scene(pane);
+
+
+                scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+                stage.setResizable(false);
+                stage.setTitle("Προβολή Δήλωσης Γάμου");
+
+                stage.setScene(scene);
+                stage.show();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
+    }
+
+    public void edit(ActionEvent actionEvent) {
+        GamosTableData data = (GamosTableData) tableView.getSelectionModel().getSelectedItem();
+
+        if(data == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ειδοποίηση");
+            alert.setHeaderText("Προσοχή!");
+            alert.setContentText("Δεν έχεις επιλέξει άδεια προς επεξεργασία!");
+            alert.showAndWait();
+        }
+        else {
+            String pass_id = data.getId();
+
+            Preferences preferences = Preferences.userNodeForPackage(DhlBaptTable.class);
+            preferences.put("id",pass_id);
+
+
+
+
+            Stage primaryStage = (Stage) edit_btn.getScene().getWindow();
+            primaryStage.close();
+
+            Stage stage = new Stage();
+
+            try {
+                FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlGamouEdit.fxml"));
+                AnchorPane pane = loader.load();
+                Scene scene = new Scene(pane);
+
+
+                scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+                stage.setResizable(false);
+                stage.setTitle("Επεξεργασία Δήλωσης Γάμου");
+
+                stage.setScene(scene);
+                stage.show();
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+
+    }
+
+    public void delete(ActionEvent actionEvent) {
+        GamosTableData data = (GamosTableData) tableView.getSelectionModel().getSelectedItem();
+
+        if(data == null)
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ειδοποίηση");
+            alert.setHeaderText("Προσοχή!");
+            alert.setContentText("Δεν έχεις επιλέξει άδεια προς διαγραφή!");
+            alert.showAndWait();
+        }
+        else {
+
+            String pass_id = data.getId();
+            int id = Integer.parseInt(pass_id);
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Θέλετε να διαγράψετε οριστικά την δήλωση;");
+            alert.setHeaderText("Επιβεβαίωση Διαγραφής Στοιχείων.");
+            alert.setContentText("Επιλέξτε.");
+
+            ButtonType buttonTypeOne = new ButtonType("Ναι, διαγραφή δήλωσης");
+            ButtonType buttonTypeTwo = new ButtonType("Όχι, ακύρωση διαγραφής");
+
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeOne) {
+                delete(id);
+
+
+                Stage primaryStage = (Stage) delete_btn.getScene().getWindow();
+                primaryStage.close();
+
+                Stage stage = new Stage();
+
+                try {
+                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlGamouTable.fxml"));
+                    AnchorPane pane = loader.load();
+                    Scene scene = new Scene(pane);
+
+
+                    scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+                    stage.setResizable(false);
+                    stage.setTitle("Προβολή Λίστας Δηλώσεων");
+
+                    stage.setScene(scene);
+                    stage.show();
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+            } else if (result.get() == buttonTypeTwo) {
+                // ... user chose "Two"
+            }
+        }
+    }
+
+    public void refresh(ActionEvent actionEvent) {
+
+        Stage primaryStage = (Stage) refresh_btn.getScene().getWindow();
+        primaryStage.close();
+
+        Stage stage = new Stage();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlGamouTable.fxml"));
+            AnchorPane pane = loader.load();
+            Scene scene = new Scene(pane);
+
+
+            scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
+
+            stage.setResizable(false);
+            stage.setTitle("Προβολή Λίστας Δηλώσεων");
+
+            stage.setScene(scene);
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

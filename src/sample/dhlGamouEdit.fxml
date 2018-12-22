@@ -1,14 +1,516 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.DhlGamouEdit"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane id="dhlGamouAnchor" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DhlGamouEdit">
+<children>
+    <JFXButton id="btn_menu" fx:id="menu_btn" layoutX="80.0" layoutY="15.0" onAction="#main_menu" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
+    <JFXButton id="btn_view" fx:id="view_btn" layoutX="480.0" layoutY="15.0" onAction="#view_screen" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Προβολή Δηλώσεων" textFill="WHITE" />
+    <JFXButton id="btn_add" layoutX="894.0" layoutY="15.0" onAction="#getDataInsertData" prefHeight="27.0" prefWidth="250.0" stylesheets="@style.css" text="Υποβολή Στοιχείων" textFill="WHITE" />
+    <ScrollPane layoutX="-17.0" layoutY="69.0" prefHeight="732.0" prefWidth="1216.0">
+        <content>
+            <AnchorPane id="dhlGamou" minHeight="0.0" minWidth="0.0" prefHeight="2114.0" prefWidth="1198.0" stylesheets="@style.css">
+                <children>
+                    <JFXTextField fx:id="field1" layoutX="201.0" layoutY="15.0" prefHeight="27.0" prefWidth="319.0" />
+                    <Label layoutX="20.0" layoutY="26.0" prefHeight="23.0" prefWidth="169.0" text="ΙΕΡΑ ΜΗΤΡΟΠΟΛΗ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="545.0" layoutY="26.0" prefHeight="23.0" prefWidth="208.0" text="Αριθμ. ληξ. πραξ. γάμου">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field2" layoutX="753.0" layoutY="16.0" />
+                    <Label layoutX="909.0" layoutY="26.0" text="Τόμος">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="1045.0" layoutY="27.0" text="Έτος">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field3" layoutX="967.0" layoutY="17.0" prefHeight="27.0" prefWidth="72.0" />
+                    <JFXTextField fx:id="field4" layoutX="1093.0" layoutY="18.0" prefHeight="27.0" prefWidth="85.0" />
+                    <Label layoutX="22.0" layoutY="61.0" text="ΙΕΡΟΣ ΝΑΟΣ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="22.0" layoutY="95.0" text="ΔΗΜΟΤΙΚΟ/ΤΟΠΙΚΟ ΔΙΑΜΕΡΙΣΜΑ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="23.0" layoutY="201.0" text="Αριθμ. Βιβλ.">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="132.0" layoutY="274.0" text="Ο υπογεγραμμένος ιερέας">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="416.0" layoutY="240.0" text="ΔΗΛΩΣΗ ΤΕΛΕΣΗΣ ΘΡΗΣΚΕΥΤΙΚΟΥ ΓΑΜΟΥ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="550.0" layoutY="274.0" text="της ενορίας του Ιερού Ναού">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="22.0" layoutY="129.0" prefHeight="23.0" prefWidth="269.0" text="ΔΗΜΟΣ/ΔΗΜΟΤΙΚΗ ΕΝΟΤΗΤΑ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="23.0" layoutY="164.0" text="ΝΟΜΟΣ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field5" layoutX="143.0" layoutY="51.0" prefHeight="27.0" prefWidth="377.0" />
+                    <JFXTextField fx:id="field6" layoutX="322.0" layoutY="84.0" prefHeight="27.0" prefWidth="198.0" />
+                    <JFXTextField fx:id="field7" layoutX="291.0" layoutY="120.0" prefHeight="27.0" prefWidth="229.0" />
+                    <JFXTextField fx:id="field8" layoutX="100.0" layoutY="155.0" prefHeight="27.0" prefWidth="419.0" />
+                    <JFXTextField fx:id="field9" layoutX="145.0" layoutY="189.0" prefHeight="27.0" prefWidth="374.0" />
+                    <JFXTextField fx:id="field10" layoutX="359.0" layoutY="264.0" prefHeight="27.0" prefWidth="190.0" />
+                    <JFXTextField fx:id="field11" layoutX="790.0" layoutY="263.0" prefHeight="27.0" prefWidth="163.0" />
+                    <Label layoutX="590.0" layoutY="69.0" prefHeight="68.0" prefWidth="592.0" text="Ο γάμος δηλώνεται στο Ληξιαρχείο μέσα σε (40), σαράντα ημέρες ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="590.0" layoutY="101.0" prefHeight="68.0" prefWidth="592.0" text="από την τέλεσή του, σύμφωνα με το άρθρο 29, παραγρ. 1 του Ν.">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="591.0" layoutY="134.0" prefHeight="68.0" prefWidth="592.0" text="344/1976">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="960.0" layoutY="272.0" text="δηλώνω">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="133.0" layoutY="311.0" text="ότι σήμερα στις">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="134.0" layoutY="385.0" text="μυστήριο του γάμου των κατωτέρων συζήγων:">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="1005.0" layoutY="350.0" text="το">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="358.0" layoutY="312.0" text="του μήνα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="360.0" layoutY="350.0" text="και στον ως άνω Ιερό Ναό κατά το δόγμα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="538.0" layoutY="313.0" text="του έτους">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="44.0" layoutY="467.0" text="ΣΤΟΙΧΕΙΑ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="419.0" layoutY="468.0" text="ΤΟΥ ΣΥΖΥΓΟΥ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="749.0" layoutY="313.0" text="και ώρα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="24.0" layoutY="588.0" text="4.θρήσκευμα και δόγμα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="24.0" layoutY="558.0" text="3.Επάγγελμα (προ του γάμου)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="968.0" layoutY="314.0" text="τέλεσα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="892.0" layoutY="467.0" text="ΤΗΣ ΣΥΖΥΓΟΥ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="25.0" layoutY="528.0" text="2.Όνομα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="24.0" layoutY="499.0" text="1.Επώνυμο*">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="26.0" layoutY="618.0" text="5.Ιθαγένεια (προ του γάμου)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field12" layoutX="276.0" layoutY="301.0" prefHeight="27.0" prefWidth="80.0" />
+                    <JFXTextField fx:id="field13" layoutX="441.0" layoutY="302.0" prefHeight="27.0" prefWidth="93.0" />
+                    <JFXTextField fx:id="field14" layoutX="622.0" layoutY="304.0" prefHeight="27.0" prefWidth="119.0" />
+                    <JFXTextField fx:id="field15" layoutX="818.0" layoutY="304.0" prefHeight="27.0" prefWidth="146.0" />
+                    <JFXTextField fx:id="field16" layoutX="133.0" layoutY="338.0" prefHeight="27.0" prefWidth="224.0" />
+                    <JFXTextField fx:id="field17" layoutX="715.0" layoutY="341.0" prefHeight="27.0" prefWidth="283.0" />
+                    <JFXTextField fx:id="field18" layoutX="117.0" layoutY="490.0" prefHeight="27.0" prefWidth="623.0" />
+                    <JFXTextField fx:id="field19" layoutX="749.0" layoutY="491.0" prefHeight="27.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field20" layoutX="107.0" layoutY="518.0" prefHeight="27.0" prefWidth="634.0" />
+                    <JFXTextField fx:id="field21" layoutX="749.0" layoutY="519.0" prefHeight="27.0" prefWidth="416.0" />
+                    <JFXTextField fx:id="field22" layoutX="278.0" layoutY="550.0" prefHeight="27.0" prefWidth="462.0" />
+                    <JFXTextField fx:id="field23" layoutX="750.0" layoutY="551.0" prefHeight="27.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field24" layoutX="230.0" layoutY="579.0" prefHeight="27.0" prefWidth="510.0" />
+                    <JFXTextField fx:id="field25" layoutX="750.0" layoutY="580.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field26" layoutX="266.0" layoutY="610.0" prefHeight="27.0" prefWidth="475.0" />
+                    <JFXTextField fx:id="field27" layoutX="750.0" layoutY="611.0" prefWidth="420.0" />
+                    <Label layoutX="27.0" layoutY="738.0" text="9.Τόπος Γέννησης">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="27.0" layoutY="708.0" text="8.Φορείς Ασφάλισης">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="28.0" layoutY="678.0" text="7.ΑΜΚΑ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="27.0" layoutY="649.0" text="6.ΑΦΜ">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="48.0" layoutY="764.0" text="Νομός">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="28.0" layoutY="878.0" text="10.Χρονολογία Γέννησης">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="46.0" layoutY="849.0" text="Χώρα/Πόλη Εξωτερικού">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="45.0" layoutY="820.0" text="Δημοτική/Τοπική Κοινότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="45.0" layoutY="791.0" text="Δήμος/Δημοτική Ενότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="28.0" layoutY="906.0" text="11.Μόνιμη Κατοικία (προ γάμου)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="58.0" layoutY="929.0" text="Νομός">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="56.0" layoutY="1014.0" text="Χώρα/Πόλη Εξωτερικού">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="55.0" layoutY="985.0" text="Δημοτική/Τοπική Κοινότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="55.0" layoutY="956.0" text="Δήμος/Δημοτική Ενότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field28" layoutX="84.0" layoutY="640.0" prefHeight="27.0" prefWidth="656.0" />
+                    <JFXTextField fx:id="field29" layoutX="750.0" layoutY="640.0" prefHeight="27.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field30" layoutX="95.0" layoutY="668.0" prefHeight="27.0" prefWidth="644.0" />
+                    <JFXTextField fx:id="field31" layoutX="750.0" layoutY="669.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field32" layoutX="205.0" layoutY="701.0" prefHeight="27.0" prefWidth="534.0" />
+                    <JFXTextField fx:id="field33" layoutX="750.0" layoutY="702.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field34" layoutX="182.0" layoutY="730.0" prefHeight="27.0" prefWidth="556.0" />
+                    <JFXTextField fx:id="field35" layoutX="750.0" layoutY="731.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field36" layoutX="99.0" layoutY="759.0" prefHeight="27.0" prefWidth="639.0" />
+                    <JFXTextField fx:id="field37" layoutX="750.0" layoutY="760.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field38" layoutX="263.0" layoutY="784.0" prefHeight="27.0" prefWidth="476.0" />
+                    <JFXTextField fx:id="field39" layoutX="750.0" layoutY="784.0" prefHeight="27.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field40" layoutX="283.0" layoutY="813.0" prefHeight="27.0" prefWidth="456.0" />
+                    <JFXTextField fx:id="field41" layoutX="750.0" layoutY="814.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field42" layoutX="246.0" layoutY="839.0" prefHeight="27.0" prefWidth="493.0" />
+                    <JFXTextField fx:id="field43" layoutX="750.0" layoutY="840.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field44" layoutX="239.0" layoutY="870.0" prefHeight="27.0" prefWidth="501.0" />
+                    <JFXTextField fx:id="field45" layoutX="750.0" layoutY="871.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field46" layoutX="300.0" layoutY="898.0" prefHeight="27.0" prefWidth="440.0" />
+                    <JFXTextField fx:id="field47" layoutX="750.0" layoutY="899.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field48" layoutX="112.0" layoutY="923.0" prefHeight="27.0" prefWidth="628.0" />
+                    <JFXTextField fx:id="field49" layoutX="750.0" layoutY="923.0" prefHeight="27.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field50" layoutX="274.0" layoutY="952.0" prefHeight="27.0" prefWidth="465.0" />
+                    <JFXTextField fx:id="field51" layoutX="750.0" layoutY="953.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field52" layoutX="295.0" layoutY="980.0" prefHeight="27.0" prefWidth="443.0" />
+                    <JFXTextField fx:id="field53" layoutX="750.0" layoutY="981.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field54" layoutX="261.0" layoutY="1005.0" prefHeight="27.0" prefWidth="476.0" />
+                    <JFXTextField fx:id="field55" layoutX="750.0" layoutY="1006.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field56" layoutX="341.0" layoutY="1036.0" prefHeight="27.0" prefWidth="395.0" />
+                    <JFXTextField fx:id="field57" layoutX="750.0" layoutY="1036.0" prefWidth="420.0" />
+                    <Label layoutX="19.0" layoutY="1042.0" text="12.Δημότης:Δήμος/Δημοτική Ενότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="67.0" layoutY="1077.0" text="Νομός">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="26.0" layoutY="1145.0" text="13.Όνομα και Επώνυμο του πατέρα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="68.0" layoutY="1110.0" text="Αριθμ. Δημοτολογίου">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="25.0" layoutY="1179.0" text="14.Όνομα και Επώνυμο του μητέρας">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="27.0" layoutY="1211.0" text="15.Στοιχεία Ζεύγους">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="62.0" layoutY="1275.0" text="Νομός">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="60.0" layoutY="1360.0" text="Χώρα/Πόλη Εξωτερικού">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="59.0" layoutY="1331.0" text="Δημοτική/Τοπική Κοινότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="59.0" layoutY="1302.0" text="Δήμος/Δημοτική Ενότητα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="63.0" layoutY="1244.0" text="Μόνιμη Κατοικία">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field58" layoutX="122.0" layoutY="1067.0" prefHeight="27.0" prefWidth="614.0" />
+                    <JFXTextField fx:id="field59" layoutX="750.0" layoutY="1068.0" prefHeight="27.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field60" layoutX="251.0" layoutY="1101.0" prefHeight="27.0" prefWidth="484.0" />
+                    <JFXTextField fx:id="field61" layoutX="750.0" layoutY="1102.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field62" layoutX="329.0" layoutY="1137.0" prefHeight="27.0" prefWidth="404.0" />
+                    <JFXTextField fx:id="field63" layoutX="750.0" layoutY="1137.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field64" layoutX="335.0" layoutY="1171.0" prefHeight="27.0" prefWidth="397.0" />
+                    <JFXTextField fx:id="field65" layoutX="750.0" layoutY="1171.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field66" layoutX="197.0" layoutY="1202.0" prefHeight="27.0" prefWidth="535.0" />
+                    <JFXTextField fx:id="field67" layoutX="750.0" layoutY="1203.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field68" layoutX="207.0" layoutY="1233.0" prefHeight="27.0" prefWidth="525.0" />
+                    <JFXTextField fx:id="field69" layoutX="750.0" layoutY="1233.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field70" layoutX="120.0" layoutY="1266.0" prefHeight="27.0" prefWidth="612.0" />
+                    <JFXTextField fx:id="field71" layoutX="750.0" layoutY="1267.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field72" layoutX="277.0" layoutY="1295.0" prefHeight="27.0" prefWidth="454.0" />
+                    <JFXTextField fx:id="field73" layoutX="750.0" layoutY="1296.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field74" layoutX="303.0" layoutY="1327.0" prefHeight="27.0" prefWidth="427.0" />
+                    <JFXTextField fx:id="field75" layoutX="750.0" layoutY="1327.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field76" layoutX="265.0" layoutY="1354.0" prefHeight="27.0" prefWidth="465.0" />
+                    <JFXTextField fx:id="field77" layoutX="750.0" layoutY="1354.0" prefWidth="420.0" />
+                    <JFXTextField fx:id="field78" layoutX="198.0" layoutY="1394.0" prefHeight="27.0" prefWidth="534.0" />
+                    <JFXTextField fx:id="field79" layoutX="748.0" layoutY="1393.0" prefWidth="420.0" />
+                    <Label layoutX="22.0" layoutY="1401.0" text="16.Επώνυμο Τέκνων">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="20.0" layoutY="1436.0" text="17.Οικογενειακή κατάσταση (προ του γάμου)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXRadioButton fx:id="check1" layoutX="465.0" layoutY="1436.0" text="Άγαμος">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="group1" />
+                        </toggleGroup></JFXRadioButton>
+                    <JFXRadioButton fx:id="check2" layoutX="465.0" layoutY="1462.0" text="Χήρος" toggleGroup="$group1" />
+                    <JFXRadioButton fx:id="check3" layoutX="465.0" layoutY="1491.0" text="Διαζευγμένος" toggleGroup="$group1" />
+                    <JFXRadioButton fx:id="check4" layoutX="896.0" layoutY="1430.0" text="Άγαμη">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="group2" />
+                        </toggleGroup></JFXRadioButton>
+                    <JFXRadioButton fx:id="check5" layoutX="896.0" layoutY="1456.0" text="Χήρα" toggleGroup="$group2" />
+                    <JFXRadioButton fx:id="check6" layoutX="896.0" layoutY="1485.0" text="Διαζευγμένη" toggleGroup="$group2" />
+                    <Label layoutX="21.0" layoutY="1529.0" text="18.Βαθμός γάμου (πρώτος,δεύτερος,τρίτος)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field80" layoutX="403.0" layoutY="1522.0" prefHeight="27.0" prefWidth="327.0" />
+                    <JFXTextField fx:id="field81" layoutX="787.0" layoutY="1520.0" prefWidth="325.0" />
+                    <Label layoutX="16.0" layoutY="1576.0" text="19.Εκπαίδευση">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXRadioButton fx:id="check7" layoutX="417.0" layoutY="1577.0" text="Αναλφάβητος">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="group3" />
+                        </toggleGroup></JFXRadioButton>
+                    <JFXRadioButton fx:id="check8" layoutX="417.0" layoutY="1603.0" text="Γνωρίζει γραφή και ανάγνωση" toggleGroup="$group3" />
+                    <JFXRadioButton fx:id="check9" layoutX="418.0" layoutY="1631.0" text="Τελείωσε τριτάξιο γυμνάσιο" toggleGroup="$group3" />
+                    <JFXRadioButton fx:id="check10" layoutX="418.0" layoutY="1659.0" text="Έχει απολυτήριο λυκείου ή ισότιμο" toggleGroup="$group3" />
+                    <JFXRadioButton fx:id="check11" layoutX="419.0" layoutY="1687.0" text="Έχει πτυχίο ΑΕΙ ή ΤΕΙ" toggleGroup="$group3" />
+                    <JFXRadioButton fx:id="check12" layoutX="864.0" layoutY="1580.0" text="Αναλφάβητη">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="group4" />
+                        </toggleGroup></JFXRadioButton>
+                    <JFXRadioButton fx:id="check13" layoutX="864.0" layoutY="1606.0" text="Γνωρίζει γραφή και ανάγνωση" toggleGroup="$group4" />
+                    <JFXRadioButton fx:id="check14" layoutX="865.0" layoutY="1634.0" text="Τελείωσε τριτάξιο γυμνάσιο" toggleGroup="$group4" />
+                    <JFXRadioButton fx:id="check15" layoutX="865.0" layoutY="1662.0" text="Έχει απολυτήριο λυκείου ή ισότιμο" toggleGroup="$group4" />
+                    <JFXRadioButton fx:id="check16" layoutX="866.0" layoutY="1690.0" text="Έχει πτυχίο ΑΕΙ ή ΤΕΙ" toggleGroup="$group4" />
+                    <Label layoutX="21.0" layoutY="1736.0" text="20.Αριθμός άδειας γάμου άνδρα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field82" layoutX="330.0" layoutY="1727.0" prefHeight="27.0" prefWidth="124.0" />
+                    <Label layoutX="469.0" layoutY="1734.0" text="Ιεράς Μητροπόλεως">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field83" layoutX="648.0" layoutY="1724.0" prefHeight="27.0" prefWidth="124.0" />
+                    <Label layoutX="48.0" layoutY="1765.0" text="Αριθμός άδειας γάμου γυναίκας">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field84" layoutX="330.0" layoutY="1756.0" prefHeight="27.0" prefWidth="124.0" />
+                    <Label layoutX="470.0" layoutY="1763.0" text="Ιεράς Μητροπόλεως">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field85" layoutX="652.0" layoutY="1753.0" prefHeight="27.0" prefWidth="124.0" />
+                    <Label layoutX="24.0" layoutY="1810.0" text="21.Αριθμός παραβόλου γάμου άνδρα">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field86" layoutX="370.0" layoutY="1797.0" prefHeight="27.0" prefWidth="164.0" />
+                    <Label layoutX="51.0" layoutY="1839.0" text="Αριθμός παραβόλου γάμου γυναίκας">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field87" layoutX="372.0" layoutY="1829.0" prefHeight="27.0" prefWidth="163.0" />
+                    <Label layoutX="95.0" layoutY="1896.0" text="Οι Σύζυγοι">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="540.0" layoutY="1896.0" text="Οι Παράνυμφοι">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="993.0" layoutY="1896.0" text="Ο Ιερέας">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="90.0" layoutY="1917.0" text="(υπογραφή)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="556.0" layoutY="1915.0" text="(υπογραφή)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="930.0" layoutY="1913.0" text="(υπογραφή και σφραγίδα)">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="803.0" layoutY="2051.0" text="Αριθμός τηλεφώνου:">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="field88" layoutX="993.0" layoutY="2038.0" prefHeight="27.0" prefWidth="163.0" />
+                    <Line endX="100.0" layoutX="151.0" layoutY="2006.0" startX="-100.0" />
+                    <Line endX="100.0" layoutX="607.0" layoutY="2006.0" startX="-100.0" />
+                    <Line endX="177.908447265625" layoutX="993.0" layoutY="2006.0" startX="-100.0" />
+                </children>
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+</children>
 </AnchorPane>
