@@ -22,7 +22,7 @@
     </TableView>
     <JFXButton fx:id="create_new_btn" layoutX="96.0" layoutY="38.0" onAction="#create_new" stylesheets="@style.css" text="Δημιουργία Δήλωσης" textFill="WHITE" />
     <JFXButton id="view_btn" fx:id="view_btn" layoutX="282.0" layoutY="38.0" onAction="#view" stylesheets="@style.css" text="Προβολή Δήλωσης" textFill="WHITE" />
-    <JFXButton id="edit_btn" fx:id="edit_btn" layoutX="454.0" layoutY="38.0" onAction="#edit" stylesheets="@style.css" text="Επεξεργασία Δήλωσης" textFill="WHITE" />
+    <JFXButton id="edit_btn" fx:id="edit_btn" layoutX="454.0" layoutY="38.0" onAction="#edit" stylesheets="@style.css" text="Επεξεργασία Δήλωσης" textFill="WHITE" ></JFXButton>
     <JFXButton id="delete_btn" fx:id="delete_btn" layoutX="650.0" layoutY="38.0" onAction="#delete" stylesheets="@style.css" text="Διαγραφή Δήλωσης" textFill="WHITE" />
     <JFXButton id="refresh_btn" fx:id="refresh_btn" layoutX="829.0" layoutY="38.0" onAction="#refresh" stylesheets="@style.css" text="Ανανέωση Πίνακα" textFill="WHITE" />
     <JFXButton fx:id="menu_btn" layoutX="996.0" layoutY="38.0" onAction="#main_menu" stylesheets="@style.css" text="Αρχικό Μενού" textFill="WHITE" />
