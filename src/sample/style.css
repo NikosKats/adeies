@@ -158,3 +158,10 @@
     -fx-font-size: 15px;
     -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
 }
+
+#print_btn
+{
+    -fx-font-family: SignPainter;
+    -fx-font-size: 15px;
+    -fx-background-color: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
