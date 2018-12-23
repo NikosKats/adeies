@@ -25,6 +25,10 @@
 
 
 }
+#anchorPanePrint
+{
+    -fx-background-image:url(../bg3.2.jpg);
+}
 
 #dhlBaptAnchor
 {
