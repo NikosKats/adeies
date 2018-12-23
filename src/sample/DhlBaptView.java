@@ -30,42 +30,10 @@ public class DhlBaptView implements Initializable {
     public JFXButton create_new_btn;
     public JFXButton print_btn;
     public AnchorPane anchorPanePrint;
+    public HTMLEditor htmlEditor2;
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
 
 
-    public JFXTextField field1;
-    public JFXTextField field2;
-    public JFXTextField field3;
-    public JFXTextField field4;
-    public JFXTextField field5;
-    public JFXTextField field6;
-    public JFXTextField field7;
-    public JFXTextField field8;
-    public JFXTextField field9;
-    public JFXTextField field10;
-    public JFXTextField field11;
-    public JFXTextField field12;
-    public JFXTextField field13;
-    public JFXTextField field14;
-    public JFXTextField field15;
-    public JFXTextField field16;
-    public JFXTextField field17;
-    public JFXTextField field18;
-    public JFXTextField field19;
-    public JFXTextField field20;
-    public JFXTextField field21;
-    public JFXTextField field22;
-    public JFXTextField field23;
-    public JFXTextField field24;
-    public JFXTextField field25;
-    public JFXTextField field26;
-    public JFXTextField field27;
-    public JFXTextField field28;
-    public JFXTextField field29;
-    public JFXTextField field30;
-    public JFXTextField field31;
-    @FXML
-    private JFXTextField textField;
 
     /*******************************
      //Σύνδεση με Βάση
@@ -136,37 +104,6 @@ public class DhlBaptView implements Initializable {
                 Field31 = rs.getString("Field31");
 
 
-                field1.setText(Field1);
-                field2.setText(Field2);
-                field3.setText(Field3);
-                field4.setText(Field4);
-                field5.setText(Field5);
-                field6.setText(Field6);
-                field7.setText(Field7);
-                field8.setText(Field8);
-                field9.setText(Field9);
-                field10.setText(Field10);
-                field11.setText(Field11);
-                field12.setText(Field12);
-                field13.setText(Field13);
-                field14.setText(Field14);
-                field15.setText(Field15);
-                field16.setText(Field16);
-                field17.setText(Field17);
-                field18.setText(Field18);
-                field19.setText(Field19);
-                field20.setText(Field20);
-                field21.setText(Field21);
-                field22.setText(Field22);
-                field23.setText(Field23);
-                field24.setText(Field24);
-                field25.setText(Field25);
-                field26.setText(Field26);
-                field27.setText(Field27);
-                field28.setText(Field28);
-                field29.setText(Field29);
-                field30.setText(Field30);
-                field31.setText(Field31);
 
 
 
@@ -346,6 +283,10 @@ public class DhlBaptView implements Initializable {
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
+        String INITIAL_TEXT_2 = "";
+
+        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
+
 
 
     }
@@ -370,7 +311,8 @@ public class DhlBaptView implements Initializable {
                 htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
             } else if (result.get() == buttonTypeTwo) {
-                job.printPage(anchorPanePrint);
+                htmlEditor2.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+
                 job.endJob();
             }
 

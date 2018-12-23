@@ -307,7 +307,82 @@ public class DhlGamouView implements Initializable {
 
 
 
-        String INITIAL_TEXT = "" ;
+        String INITIAL_TEXT = "<html>\n" +
+                "<head><meta http-equiv=Content-Type content=\"text/html; charset=UTF-8\">\n" +
+                "<style type=\"text/css\">\n" +
+                "<!--\n" +
+                "span.cls_002{font-family:\"Calibri\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "div.cls_002{font-family:\"Calibri\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "<script type=\"text/javascript\" src=\"41e5ff50-06fb-11e9-8f58-0cc47a792c0a_id_41e5ff50-06fb-11e9-8f58-0cc47a792c0a_files/wz_jsgraphics.js\"></script>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<div style=\"position:absolute;left:50%;margin-left:-297px;top:0px;width:595px;height:842px;border-style:outset;overflow:hidden\">\n" +
+                "<div style=\"position:absolute;left:0px;top:0px\">\n" +
+                "<img src=\"41e5ff50-06fb-11e9-8f58-0cc47a792c0a_id_41e5ff50-06fb-11e9-8f58-0cc47a792c0a_files/background1.jpg\" width=595 height=842></div>\n" +
+                "<div style=\"position:absolute;left:93.36px;top:71.52px\" class=\"cls_002\"><span class=\"cls_002\">ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ</span></div>\n" +
+                "<div style=\"position:absolute;left:72.00px;top:86.16px\" class=\"cls_002\"><span class=\"cls_002\">ΣΑΜΟΥ ΙΚΑΡΙΑΣ ΚΑΙ ΚΟΡΣΕΩΝ</span></div>\n" +
+                "<div style=\"position:absolute;left:72.00px;top:130.08px\" class=\"cls_002\"><span class=\"cls_002\">ΙΕΡΟΣ ΝΑΟΣ..u..</span></div>\n" +
+                "<div style=\"position:absolute;left:396.00px;top:130.08px\" class=\"cls_002\"><span class=\"cls_002\">Αριθμ.Πρωτ</span></div>\n" +
+                "<div style=\"position:absolute;left:469.92px;top:130.08px\" class=\"cls_002\"><span class=\"cls_002\">biu...</span></div>\n" +
+                "<div style=\"position:absolute;left:197.76px;top:174.00px\" class=\"cls_002\"><span class=\"cls_002\">Ὁ ὐπογεγραμμένος Ἷερεύς</span></div>\n" +
+                "<div style=\"position:absolute;left:344.88px;top:174.00px\" class=\"cls_002\"><span class=\"cls_002\">iubbu</span></div>\n" +
+                "<div style=\"position:absolute;left:198.72px;top:188.64px\" class=\"cls_002\"><span class=\"cls_002\">Εφημέριος τοῦ Ἷεροῦ Ναοῦ</span></div>\n" +
+                "<div style=\"position:absolute;left:350.64px;top:188.64px\" class=\"cls_002\"><span class=\"cls_002\">bui</span></div>\n" +
+                "<div style=\"position:absolute;left:169.92px;top:203.28px\" class=\"cls_002\"><span class=\"cls_002\">δηλῶ ὃτι σήμερον τἡν</span></div>\n" +
+                "<div style=\"position:absolute;left:293.28px;top:203.28px\" class=\"cls_002\"><span class=\"cls_002\">ibubiu</span></div>\n" +
+                "<div style=\"position:absolute;left:338.88px;top:203.28px\" class=\"cls_002\"><span class=\"cls_002\">τοῦ μηνός ...biu...</span></div>\n" +
+                "<div style=\"position:absolute;left:163.68px;top:217.92px\" class=\"cls_002\"><span class=\"cls_002\">τοῦ ἐτους</span></div>\n" +
+                "<div style=\"position:absolute;left:229.44px;top:217.92px\" class=\"cls_002\"><span class=\"cls_002\">ibu... ἠμέραν</span></div>\n" +
+                "<div style=\"position:absolute;left:308.40px;top:217.92px\" class=\"cls_002\"><span class=\"cls_002\">bu</span></div>\n" +
+                "<div style=\"position:absolute;left:336.00px;top:217.92px\" class=\"cls_002\"><span class=\"cls_002\">, εν τῶ Ἱερῶ Ναῶ ...</span></div>\n" +
+                "<div style=\"position:absolute;left:236.64px;top:232.56px\" class=\"cls_002\"><span class=\"cls_002\">...................u</span></div>\n" +
+                "<div style=\"position:absolute;left:273.36px;top:276.48px\" class=\"cls_002\"><span class=\"cls_002\">ΕΒΑΠΤΙΣΑ</span></div>\n" +
+                "<div style=\"position:absolute;left:138.48px;top:291.36px\" class=\"cls_002\"><span class=\"cls_002\">κατά τοὺς Ἱερούς Κανόνας τῆς Ὁρθοδόξου Ἁνατολικῆς Ἑκκλησίας</span></div>\n" +
+                "<div style=\"position:absolute;left:178.08px;top:320.64px\" class=\"cls_002\"><span class=\"cls_002\">τό τέκνον τοῦ</span></div>\n" +
+                "<div style=\"position:absolute;left:329.28px;top:320.64px\" class=\"cls_002\"><span class=\"cls_002\">ibiu</span></div>\n" +
+                "<div style=\"position:absolute;left:178.08px;top:335.28px\" class=\"cls_002\"><span class=\"cls_002\">καί τῆς</span></div>\n" +
+                "<div style=\"position:absolute;left:233.28px;top:335.28px\" class=\"cls_002\"><span class=\"cls_002\">iub</span></div>\n" +
+                "<div style=\"position:absolute;left:284.88px;top:335.28px\" class=\"cls_002\"><span class=\"cls_002\">τό γένος ...bui</span></div>\n" +
+                "<div style=\"position:absolute;left:168.96px;top:349.92px\" class=\"cls_002\"><span class=\"cls_002\">κατοίκων</span></div>\n" +
+                "<div style=\"position:absolute;left:238.80px;top:349.92px\" class=\"cls_002\"><span class=\"cls_002\">biubui</span></div>\n" +
+                "<div style=\"position:absolute;left:299.52px;top:349.92px\" class=\"cls_002\"><span class=\"cls_002\">όδὁς</span></div>\n" +
+                "<div style=\"position:absolute;left:347.28px;top:349.92px\" class=\"cls_002\"><span class=\"cls_002\">bui</span></div>\n" +
+                "<div style=\"position:absolute;left:151.44px;top:364.56px\" class=\"cls_002\"><span class=\"cls_002\">ἀριθμ</span></div>\n" +
+                "<div style=\"position:absolute;left:207.84px;top:364.56px\" class=\"cls_002\"><span class=\"cls_002\">biu</span></div>\n" +
+                "<div style=\"position:absolute;left:244.32px;top:364.56px\" class=\"cls_002\"><span class=\"cls_002\">, γεννηθέν τήν</span></div>\n" +
+                "<div style=\"position:absolute;left:332.40px;top:364.56px\" class=\"cls_002\"><span class=\"cls_002\">bui</span></div>\n" +
+                "<div style=\"position:absolute;left:377.52px;top:364.56px\" class=\"cls_002\"><span class=\"cls_002\">ἔν</span></div>\n" +
+                "<div style=\"position:absolute;left:406.56px;top:364.56px\" class=\"cls_002\"><span class=\"cls_002\">buib</span></div>\n" +
+                "<div style=\"position:absolute;left:105.12px;top:379.20px\" class=\"cls_002\"><span class=\"cls_002\">κατά τήν ύπ'ἀριθμ</span></div>\n" +
+                "<div style=\"position:absolute;left:225.84px;top:379.20px\" class=\"cls_002\"><span class=\"cls_002\">uiub</span></div>\n" +
+                "<div style=\"position:absolute;left:271.44px;top:379.20px\" class=\"cls_002\"><span class=\"cls_002\">τὁμος</span></div>\n" +
+                "<div style=\"position:absolute;left:330.24px;top:379.20px\" class=\"cls_002\"><span class=\"cls_002\">bu</span></div>\n" +
+                "<div style=\"position:absolute;left:372.72px;top:379.20px\" class=\"cls_002\"><span class=\"cls_002\">τοῦ...ubi... ἕτους πρᾶξιν</span></div>\n" +
+                "<div style=\"position:absolute;left:165.84px;top:393.84px\" class=\"cls_002\"><span class=\"cls_002\">Γεννήσεως τοῦ κ. Ληξιάρχου</span></div>\n" +
+                "<div style=\"position:absolute;left:356.16px;top:393.84px\" class=\"cls_002\"><span class=\"cls_002\">ubi</span></div>\n" +
+                "<div style=\"position:absolute;left:269.04px;top:423.12px\" class=\"cls_002\"><span class=\"cls_002\">Ὀνομασθέν</span></div>\n" +
+                "<div style=\"position:absolute;left:214.08px;top:452.40px\" class=\"cls_002\"><span class=\"cls_002\">.....................bui</span></div>\n" +
+                "<div style=\"position:absolute;left:117.36px;top:467.04px\" class=\"cls_002\"><span class=\"cls_002\">ὐπό του/ης ἀναδεξαμένου/ης αὐτό ἕκ τῆς Ἱερᾶς Κολυμβήθρας</span></div>\n" +
+                "<div style=\"position:absolute;left:188.16px;top:481.68px\" class=\"cls_002\"><span class=\"cls_002\">................................ubi</span></div>\n" +
+                "<div style=\"position:absolute;left:171.36px;top:496.32px\" class=\"cls_002\"><span class=\"cls_002\">κατοίκου ..buibiu</span></div>\n" +
+                "<div style=\"position:absolute;left:273.60px;top:496.32px\" class=\"cls_002\"><span class=\"cls_002\">όδὁς</span></div>\n" +
+                "<div style=\"position:absolute;left:318.48px;top:496.32px\" class=\"cls_002\"><span class=\"cls_002\">bui</span></div>\n" +
+                "<div style=\"position:absolute;left:346.08px;top:496.32px\" class=\"cls_002\"><span class=\"cls_002\">ἀριθμ</span></div>\n" +
+                "<div style=\"position:absolute;left:402.00px;top:496.32px\" class=\"cls_002\"><span class=\"cls_002\">ubi..</span></div>\n" +
+                "<div style=\"position:absolute;left:165.84px;top:510.96px\" class=\"cls_002\"><span class=\"cls_002\">Ἐφ᾽ὥ συνετάγη το παρόν καί ὑπογράφεται ώς ἕπεται:</span></div>\n" +
+                "<div style=\"position:absolute;left:261.36px;top:540.24px\" class=\"cls_002\"><span class=\"cls_002\">Ο ΕΦΗΜΕΡΙΟΣ</span></div>\n" +
+                "<div style=\"position:absolute;left:251.52px;top:569.52px\" class=\"cls_002\"><span class=\"cls_002\">.........iubbu</span></div>\n" +
+                "<div style=\"position:absolute;left:168.96px;top:598.80px\" class=\"cls_002\"><span class=\"cls_002\">Ο ΠΑΤΗΡ ΚΑΙ Η ΜΗΤΗΡ ΤΟΥ ΒΑΠΤΙΣΘΕΝΤΟΣ ΝΗΠΙΟΥ</span></div>\n" +
+                "<div style=\"position:absolute;left:267.12px;top:628.08px\" class=\"cls_002\"><span class=\"cls_002\">......ibiu</span></div>\n" +
+                "<div style=\"position:absolute;left:265.44px;top:657.36px\" class=\"cls_002\"><span class=\"cls_002\">.......iub</span></div>\n" +
+                "<div style=\"position:absolute;left:264.00px;top:686.64px\" class=\"cls_002\"><span class=\"cls_002\">Ο ΑΝΑΔΟΧΟΣ</span></div>\n" +
+                "<div style=\"position:absolute;left:268.56px;top:716.16px\" class=\"cls_002\"><span class=\"cls_002\">.......ubi</span></div>\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>\n" ;
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
