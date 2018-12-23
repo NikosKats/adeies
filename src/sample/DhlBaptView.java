@@ -333,17 +333,13 @@ public class DhlBaptView implements Initializable {
                 "<div style=\"text-align: center;\">Ἐ&phi;᾽ὥ &sigma;&upsilon;&nu;&epsilon;&tau;ά&gamma;&eta; &tau;&omicron; &pi;&alpha;&rho;ό&nu; &kappa;&alpha;ί ὑ&pi;&omicron;&gamma;&rho;ά&phi;&epsilon;&tau;&alpha;&iota; ώ&sigmaf; ἕ&pi;&epsilon;&tau;&alpha;&iota;:&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\"><strong>&Omicron; &Epsilon;&Phi;&Eta;&Mu;&Epsilon;&Rho;&Iota;&Omicron;&Sigma;&nbsp;</strong></div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">&nbsp;"+Field28+"&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\"><strong>&Omicron; &Pi;&Alpha;&Tau;&Eta;&Rho; &Kappa;&Alpha;&Iota; &Eta; &Mu;&Eta;&Tau;&Eta;&Rho; &Tau;&Omicron;&Upsilon; &Beta;&Alpha;&Pi;&Tau;&Iota;&Sigma;&Theta;&Epsilon;&Nu;&Tau;&Omicron;&Sigma; &Nu;&Eta;&Pi;&Iota;&Omicron;&Upsilon;</strong>&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">"+Field29+"&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">"+Field30+"&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\"><strong>&Omicron; &Alpha;&Nu;&Alpha;&Delta;&Omicron;&Chi;&Omicron;&Sigma;</strong>&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">"+Field31+"&nbsp;</div>\n" +
                 "<div style=\"text-align: center;\">&nbsp;</div>" ;
 
