@@ -307,68 +307,93 @@ public class DhlGamouView implements Initializable {
 
 
 
-        String INITIAL_TEXT = "<h3><span style=\"font-size: medium;\">&Iota;&Epsilon;&Rho;&Alpha; </span>&Mu;&Eta;&Tau;&Rho;&Omicron;&Pi;&Omicron;&Lambda;&Eta;....&xi;&kappa;&beta;.... &nbsp; &nbsp;<span style=\"font-size: medium;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&Alpha;&rho;&iota;&theta;&mu;.&lambda;&eta;&xi;.&pi;&rho;ά&xi;&eta; &gamma;ά&mu;&omicron;&upsilon;...&xi;&kappa;&xi;&kappa;&iota;&theta;...&Tau;ό&mu;&omicron;&sigmaf;...&xi;&kappa;...έ&tau;&omicron;&sigmaf;...&xi;&kappa;...</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &Iota;&Epsilon;&Rho;&Omicron;&Sigma; &Nu;&Alpha;&Omicron;&Sigma;....&nu;&xi;.... &nbsp; &nbsp; (&Alpha;&nu;&alpha;&gamma;&rho;ά&phi;&epsilon;&tau;&alpha;&iota; &alpha;&pi;ό &tau;&omicron; &Lambda;&eta;&xi;ί&alpha;&rho;&chi;&omicron;)&nbsp;</h3>\n" +
-                "<h3>&nbsp; &nbsp; &Delta;&Eta;&Mu;&Omicron;&Tau;&Iota;&Kappa;&Omicron;/&Tau;&Omicron;&Pi;&Iota;&Kappa;&Omicron; &Delta;&Iota;&Alpha;&Mu;&Epsilon;&Rho;&Iota;&Sigma;&Mu;&Alpha;....&nu;&xi;&kappa;&xi;&kappa;&nu;....&nbsp; <span style=\"font-size: medium;\">&Omicron; &gamma;ά&mu;&omicron;&sigmaf; &delta;&eta;&lambda;ώ&nu;&epsilon;&tau;&alpha;&iota; &sigma;&tau;&omicron; &Lambda;&eta;&xi;&iota;&alpha;&rho;&chi;&epsilon;ί&omicron;, &mu;έ&sigma;&alpha; &sigma;&epsilon; (40) &sigma;&alpha;&rho;ά&nu;&tau;&alpha; &eta;&mu;έ&rho;&epsilon;&sigmaf;</span>&nbsp;</h3>\n" +
-                "<h3>&nbsp; &Delta;&Eta;&Mu;&Omicron;&Sigma;/&Delta;&Eta;&Mu;&Omicron;&Tau;&Iota;&Kappa;&Eta; &Epsilon;&Nu;&Omicron;&Tau;&Eta;&Tau;&Alpha;....&nu;&xi;&kappa;.... &alpha;&pi;ό &tau;&eta;&nu; &tau;έ&lambda;&epsilon;&sigma;ή &tau;&omicron;&upsilon;, &sigma;ύ&mu;&phi;&omega;&nu;&alpha; &mu;&epsilon; &tau;&omicron; ά&rho;&theta;&rho;&omicron; 29,&pi;&alpha;&rho;&alpha;&gamma;&rho;. 1 &tau;&omicron;&upsilon; &Nu;.</h3>\n" +
-                "<h3>&Delta;&Eta;&Mu;&Omicron;&Sigma;/&Delta;&Eta;&Mu;&Omicron;&Tau;&Iota;&Kappa;&Eta; &Epsilon;&Nu;&Omicron;&Tau;&Eta;&Tau;&Alpha;....&nu;&xi;&kappa;....</h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&Nu;&Omicron;&Mu;&Omicron;&Sigma;....&nu;&kappa;&xi;.... 344/1976 </span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&Alpha;&rho;&iota;&theta;&mu;. &Beta;&iota;&beta;&lambda;....&nu;&xi;&kappa;.... </span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&Delta;&Eta;&Lambda;&Omega;&Sigma;&Eta; &Tau;&Epsilon;&Lambda;&Epsilon;&Sigma;&Eta;&Sigma; &Theta;&Rho;&Eta;&Sigma;&Kappa;&Epsilon;&Upsilon;&Tau;&Iota;&Kappa;&Omicron;&Upsilon; &Gamma;&Alpha;&Mu;&Omicron;&Upsilon;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&Omicron; &upsilon;&pi;&omicron;&gamma;&epsilon;&gamma;&rho;&alpha;&mu;&mu;έ&nu;&omicron;&sigmaf; &iota;&epsilon;&rho;έ&alpha;&sigmaf; ........&nu;&xi;&kappa;&nu;........ &tau;&eta;&sigmaf; &epsilon;&nu;&omicron;&rho;ί&alpha;&sigmaf; &tau;&omicron;&upsilon; &Iota;&epsilon;&rho;&omicron;&upsilon; &Nu;&alpha;&omicron;ύ........&xi;&kappa;&nu;&xi;&kappa;........&delta;&eta;&lambda;ώ&nu;&omega;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">ό&tau;&iota; &sigma;ή&mu;&epsilon;&rho;&alpha; &sigma;&tau;&iota;&sigmaf; ........&nu;&kappa;&xi;........&tau;&omicron;&upsilon; &mu;ή&nu;&alpha;........&nu;&xi;&kappa;........&tau;&omicron;&upsilon; έ&tau;&omicron;&upsilon;&sigmaf;...&nu;&kappa;&xi;...&kappa;&alpha;&iota; ώ&rho;&alpha;...&nu;&kappa;&xi;&nu;...&tau;έ&lambda;&epsilon;&sigma;&alpha;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&sigma;&tau; ........&xi;&kappa;&nu;&kappa;&xi;........&kappa;&alpha;&iota; &sigma;&tau;&omicron;&nu; &omega;&sigmaf; ά&nu;&omega; &Iota;&epsilon;&rho;ό &nu;&alpha;ό &kappa;&alpha;&tau;ά &tau;&omicron; &delta;ό&gamma;&mu;&alpha;........&nu;&xi;&kappa;........&tau;&omicron;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&mu;&upsilon;&sigma;&tau;ή&rho;&iota;&omicron; &tau;&omicron;&upsilon; &gamma;ά&mu;&omicron;&upsilon; &tau;&omega;&nu; &kappa;&alpha;&tau;&omega;&tau;έ&rho;&omega; &sigma;&upsilon;&zeta;ύ&gamma;&omega;&nu;:</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&Sigma;&Tau;&Omicron;&Iota;&Chi;&Epsilon;&Iota;&Alpha; &nbsp; &nbsp; &nbsp; &Tau;&Omicron;&Upsilon; &Sigma;&Upsilon;&Zeta;&Upsilon;&Gamma;&Omicron;&Upsilon; &Tau;&Eta;&Sigma; &Sigma;&Upsilon;&Zeta;&Upsilon;&Gamma;&Omicron;&Upsilon;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">1.&Epsilon;&pi;ώ&nu;&upsilon;&mu;&omicron;* &nu;&kappa;&xi; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&kappa;&xi;&nu;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">2.Ό&nu;&omicron;&mu;&alpha; &kappa;&nu;&xi; &nbsp; &nbsp; &nbsp; &nbsp;&kappa;&xi;&nu;&kappa;&nu;&xi;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">3.&Epsilon;&pi;ά&gamma;&gamma;&epsilon;&lambda;&mu;&alpha; (&pi;&rho;&omicron; &tau;&omicron;&upsilon; &gamma;ά&mu;&omicron;&upsilon;) &kappa;&xi;&nu; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&kappa;&xi;&nu;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">4.&Theta;&rho;ή&sigma;&kappa;&epsilon;&upsilon;&mu;&alpha; &kappa;&alpha;&iota; &delta;ό&gamma;&mu;&alpha;. &nu;&kappa;&xi; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nu;&kappa;&xi;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">5.&Iota;&theta;&alpha;&gamma;έ&nu;&epsilon;&iota;&alpha; (&pi;&rho;&omicron; &tau;&omicron;&upsilon; &gamma;ά&mu;&omicron;&upsilon;) &nbsp;&kappa;&nu;&xi; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nu;&kappa;&xi;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">6.&Alpha;&Phi;&Mu;. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nu;&kappa;&xi;&nu;&xi;&kappa; &nbsp; &nbsp; &nbsp; &nbsp; &nu;&kappa;&xi;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">7.&Alpha;&Mu;&Kappa;&Alpha; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&kappa;&nu;&xi; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nu;&kappa;&xi;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">8.&Phi;&omicron;&rho;&epsilon;ί&sigmaf; &Alpha;&sigma;&phi;ά&lambda;&iota;&sigma;&eta;&sigmaf; &nu;&xi;&kappa; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nu;&xi;&kappa;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">9.&Tau;ό&pi;&omicron;&sigmaf; &Gamma;έ&nu;&nu;&eta;&sigma;&eta;&sigmaf; &nu;&kappa;&xi;&nu;&xi;&kappa; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &xi;&nu;&kappa;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Nu;&omicron;&mu;ό&sigmaf; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nu;&xi;&kappa; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nu;&xi;&kappa;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Delta;ή&mu;&omicron;&sigmaf;/&Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή &Epsilon;&nu;ό&tau;&eta;&tau;&alpha; &xi;&nu;&kappa;&nu;&xi;&kappa; &nbsp; &nbsp; &nbsp; &nbsp;&nu;&xi;&kappa;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή/&Tau;&omicron;&pi;&iota;&kappa;ή &Kappa;&omicron;&iota;&nu;ό&tau;&eta;&tau;&alpha; &nu;&xi;&kappa; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&xi;&nu;&kappa;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Chi;ώ&rho;&alpha;/&Pi;ό&lambda;&eta; &epsilon;&xi;&omega;&tau;&epsilon;&rho;&iota;&kappa;&omicron;ύ &nu;&xi; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">10.&Chi;&rho;&omicron;&nu;&omicron;&lambda;&omicron;&gamma;ί&alpha; &Gamma;έ&nu;&nu;&eta;&sigma;&eta;&sigmaf; &iota;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">11.&Mu;ό&nu;&iota;&mu;&eta; &Kappa;&alpha;&tau;&omicron;&iota;&kappa;ί&alpha; (&pi;&rho;&omicron; &gamma;ά&mu;&omicron;&upsilon;) &nbsp;&iota;&theta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &beta;&iota;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Nu;&omicron;&mu;ό&sigmaf; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&iota;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Delta;ή&mu;&omicron;&sigmaf;/&Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή &Epsilon;&nu;ό&tau;&eta;&tau;&alpha; &iota;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&theta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή/&Tau;&omicron;&pi;&iota;&kappa;ή &Kappa;&omicron;&iota;&nu;ό&tau;&eta;&tau;&alpha; &beta;&iota;&theta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Chi;ώ&rho;&alpha;/&Pi;ό&lambda;&eta; &epsilon;&xi;&omega;&tau;&epsilon;&rho;&iota;&kappa;&omicron;ύ &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&iota;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&omicron;&theta;&iota;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">12.&Delta;&eta;&mu;ό&tau;&eta;&sigmaf;:&Delta;ή&mu;&omicron;&sigmaf;/&Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή &Epsilon;&nu;ό&tau;&eta;&tau;&alpha; &beta;&theta;&iota; &omicron;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Nu;&omicron;&mu;ό&sigmaf; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&theta;&omicron;&beta; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&iota;&omicron;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Alpha;&rho;&iota;&theta;&mu;. &Delta;&eta;&mu;&omicron;&tau;&omicron;&lambda;&omicron;&gamma;ί&omicron;&upsilon; &iota;&omicron;&theta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&beta;&iota;&omicron;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">13.Ό&nu;&omicron;&mu;&alpha; &kappa;&alpha;&iota; &Epsilon;&pi;ώ&nu;&upsilon;&mu;&omicron; &tau;&omicron;&upsilon; &pi;&alpha;&tau;έ&rho;&alpha; &theta;&beta;&iota; &nbsp; &nbsp; &nbsp; &nbsp;&omicron;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">14.Ό&nu;&omicron;&mu;&alpha; &kappa;&alpha;&iota; &Epsilon;&pi;ώ&nu;&upsilon;&mu;&omicron; &tau;&eta;&sigmaf; &mu;&eta;&tau;έ&rho;&alpha;&sigmaf; &iota;&omicron;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&omicron;&theta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">15.&Sigma;&tau;&omicron;&iota;&chi;&epsilon;ί&alpha; &zeta;&epsilon;ύ&gamma;&omicron;&upsilon;&sigmaf; &nbsp;&beta;&iota;&omicron;&theta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Mu;ό&nu;&iota;&mu;&eta; &Kappa;&alpha;&tau;&omicron;&iota;&kappa;ί&alpha; &iota;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&omicron;&theta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Nu;&omicron;&mu;ό&sigmaf; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&beta;&iota;&omicron;&theta; &nbsp; &nbsp; &nbsp; &nbsp;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Delta;ή&mu;&omicron;&sigmaf;/&Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή &Epsilon;&nu;ό&tau;&eta;&tau;&alpha; &iota;&omicron;&theta;&beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&iota;&omicron;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Delta;&eta;&mu;&omicron;&tau;&iota;&kappa;ή/&Tau;&omicron;&pi;&iota;&kappa;ή &Kappa;&omicron;&iota;&nu;ό&tau;&eta;&tau;&alpha; &iota;&omicron;&theta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&beta;&iota;&omicron;&theta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Chi;ώ&rho;&alpha;/&Pi;ό&lambda;&eta; &epsilon;&xi;&omega;&tau;&epsilon;&rho;&iota;&kappa;&omicron;ύ &beta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &iota;&omicron;&theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">16.&Epsilon;&pi;ώ&nu;&upsilon;&mu;&omicron; &tau;έ&kappa;&nu;&omega;&nu; &iota;&omicron;&theta; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&beta;&iota;&omicron;&theta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">17.&Omicron;&iota;&kappa;&omicron;&gamma;&epsilon;&nu;&epsilon;&iota;&alpha;&kappa;ή &kappa;&alpha;&tau;ά&sigma;&tau;&alpha;&sigma;&eta; (&pi;&rho;&omicron; &tau;&omicron;&upsilon; &gamma;ά&mu;&omicron;&upsilon;) &Chi;ή&rho;&omicron;&sigmaf; &Chi;ή&rho;&alpha;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">18.&Beta;&alpha;&theta;&mu;ό&sigmaf; &gamma;ά&mu;&omicron;&upsilon; (&pi;&rho;ώ&tau;&omicron;&sigmaf;,&delta;&epsilon;ύ&tau;&epsilon;&rho;&omicron;&sigmaf;,&tau;&rho;ί&tau;&omicron;&sigmaf;) &beta;&iota; &theta;&beta;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">19.&Epsilon;&kappa;&pi;&alpha;ί&delta;&epsilon;&upsilon;&sigma;&eta; έ&chi;&epsilon;&iota; &pi;&tau;&upsilon;&chi;ί&omicron; &Alpha;&Epsilon;&Iota; ή &Tau;&Epsilon;&Iota; έ&chi;&epsilon;&iota; &alpha;&pi;&omicron;&lambda;&upsilon;&tau;ή&rho;&iota;&omicron; &lambda;&upsilon;&kappa;&epsilon;ί&omicron;&upsilon; ή &iota;&sigma;ό&tau;&iota;&mu;&omicron;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">20.&Alpha;&rho;&iota;&theta;&mu;ό&sigmaf; ά&delta;&epsilon;&iota;&alpha;&sigmaf; &gamma;ά&mu;&omicron;&upsilon; ά&nu;&delta;&rho;&alpha;...&beta;&iota;...&Iota;&epsilon;&rho;ά&sigmaf; &Mu;&eta;&tau;&rho;&omicron;&pi;ό&lambda;&epsilon;&omega;&sigmaf;...&theta;&beta;...</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &nbsp;&Alpha;&rho;&iota;&theta;&mu;ό&sigmaf; ά&delta;&epsilon;&iota;&alpha;&sigmaf; &gamma;ά&mu;&omicron;&upsilon; &gamma;&upsilon;&nu;&alpha;ί&kappa;&alpha;&sigmaf;...&iota;&theta;&beta;...&Iota;&epsilon;&rho;ά&sigmaf; &Mu;&eta;&tau;&rho;&omicron;&pi;ό&lambda;&epsilon;&omega;&sigmaf;...&iota;&theta;...</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">21.&Alpha;&rho;&iota;&theta;&mu;ό&sigmaf; &pi;&alpha;&rho;&alpha;&beta;ό&lambda;&omicron;&upsilon; &gamma;ά&mu;&omicron;&upsilon; ά&nu;&delta;&rho;&alpha;...&beta;&iota;&theta;...</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &nbsp;&Alpha;&rho;&iota;&theta;&mu;ό&sigmaf; &pi;&alpha;&rho;&alpha;&beta;ό&lambda;&omicron;&upsilon; &gamma;ά&mu;&omicron;&upsilon; &gamma;&upsilon;&nu;&alpha;ί&kappa;&alpha;&sigmaf;...&beta;...</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span>&Omicron;&iota; &Sigma;ύ&zeta;&upsilon;&gamma;&omicron;&iota; &Omicron;&iota; &Pi;&alpha;&rho;ά&nu;&upsilon;&mu;&phi;&omicron;&iota; &Omicron; &Iota;&epsilon;&rho;έ&alpha;&sigmaf;&nbsp;</h3>\n" +
-                "<h3><span style=\"font-size: medium;\">(&upsilon;&pi;&omicron;&gamma;&rho;&alpha;&phi;ή) (&upsilon;&pi;&omicron;&gamma;&rho;&alpha;&phi;ή) &nbsp; &nbsp; &nbsp;(&Upsilon;&pi;&omicron;&gamma;&rho;&alpha;&phi;ή &kappa;&alpha;&iota; &sigma;&phi;&rho;&alpha;&gamma;ί&delta;&alpha;)&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp;</span></h3>\n" +
-                "<h3><span style=\"font-size: medium;\">&nbsp; &Alpha;&rho;&iota;&theta;&mu;. &tau;&eta;&lambda;&epsilon;&phi;.......&iota;&theta;&beta;......</span></h3>\n" +
-                "<p>&nbsp;</p>" ;
+        String INITIAL_TEXT = "<html>\n" +
+                "<head><meta http-equiv=Content-Type content=\"text/html; charset=UTF-8\">\n" +
+                "<style type=\"text/css\">\n" +
+                "<!--\n" +
+                "span.cls_002{font-family:\"DejaVu Serif Bold\",serif;font-size:24.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "div.cls_002{font-family:\"DejaVu Serif Bold\",serif;font-size:24.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "span.cls_003{font-family:\"DejaVu Serif Bold\",serif;font-size:16.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "div.cls_003{font-family:\"DejaVu Serif Bold\",serif;font-size:16.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "span.cls_004{font-family:\"DejaVu Sans Condensed Bold\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "div.cls_004{font-family:\"DejaVu Sans Condensed Bold\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "span.cls_005{font-family:\"DejaVu Sans Condensed\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "div.cls_005{font-family:\"DejaVu Sans Condensed\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "span.cls_007{font-family:\"DejaVu Sans Condensed Bold\",serif;font-size:16.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "div.cls_007{font-family:\"DejaVu Sans Condensed Bold\",serif;font-size:16.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "span.cls_008{font-family:\"DejaVu Serif Bold\",serif;font-size:13.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "div.cls_008{font-family:\"DejaVu Serif Bold\",serif;font-size:13.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "span.cls_009{font-family:\"DejaVu Serif Bold\",serif;font-size:13.1px;color:rgb(73,168,255);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "div.cls_009{font-family:\"DejaVu Serif Bold\",serif;font-size:13.1px;color:rgb(73,168,255);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "span.cls_010{font-family:\"DejaVu Serif Bold\",serif;font-size:13.1px;color:rgb(73,168,255);font-weight:bold;font-style:normal;text-decoration: underline}\n" +
+                "div.cls_010{font-family:\"DejaVu Serif Bold\",serif;font-size:13.1px;color:rgb(73,168,255);font-weight:bold;font-style:normal;text-decoration: none}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "<script type=\"text/javascript\" src=\"bd32dd0a-06be-11e9-8f58-0cc47a792c0a_id_bd32dd0a-06be-11e9-8f58-0cc47a792c0a_files/wz_jsgraphics.js\"></script>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<div style=\"position:absolute;left:50%;margin-left:-306px;top:0px;width:612px;height:792px;border-style:outset;overflow:hidden\">\n" +
+                "<div style=\"position:absolute;left:0px;top:0px\">\n" +
+                "<img src=\"../bd32dd0a-06be-11e9-8f58-0cc47a792c0a_id_bd32dd0a-06be-11e9-8f58-0cc47a792c0a_files/background1.jpg\" width=612 height=792></div>\n" +
+                "<div style=\"position:absolute;left:98.00px;top:92.00px\" class=\"cls_002\"><span class=\"cls_002\">Sean Sarantos's Workout Log -</span></div>\n" +
+                "<div style=\"position:absolute;left:182.50px;top:121.00px\" class=\"cls_002\"><span class=\"cls_002\">Bodybuilding.com</span></div>\n" +
+                "<div style=\"position:absolute;left:258.00px;top:161.00px\" class=\"cls_003\"><span class=\"cls_003\">Shoulders</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:257.00px\" class=\"cls_004\"><span class=\"cls_004\">DAY:</span></div>\n" +
+                "<div style=\"position:absolute;left:196.00px;top:257.00px\" class=\"cls_004\"><span class=\"cls_004\">DAT E:</span></div>\n" +
+                "<div style=\"position:absolute;left:373.00px;top:257.00px\" class=\"cls_004\"><span class=\"cls_004\">T IME:</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:272.00px\" class=\"cls_005\"><span class=\"cls_005\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:196.00px;top:272.00px\" class=\"cls_005\"><span class=\"cls_005\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:373.00px;top:272.00px\" class=\"cls_005\"><span class=\"cls_005\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:551.00px;top:272.00px\" class=\"cls_004\"><span class=\"cls_004\">am/pm</span></div>\n" +
+                "<div style=\"position:absolute;left:206.50px;top:302.00px\" class=\"cls_005\"><span class=\"cls_005\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:384.00px;top:302.00px\" class=\"cls_005\"><span class=\"cls_005\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:309.00px\" class=\"cls_004\"><span class=\"cls_004\">CARDIO T ODAY?</span><span class=\"cls_005\">  YES NO</span></div>\n" +
+                "<div style=\"position:absolute;left:257.50px;top:317.00px\" class=\"cls_005\"><span class=\"cls_005\">EXERCISE</span></div>\n" +
+                "<div style=\"position:absolute;left:432.00px;top:317.00px\" class=\"cls_005\"><span class=\"cls_005\">DURATION</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:347.00px\" class=\"cls_004\"><span class=\"cls_004\">LENGT H OF WORKOUT:      WEIGHT:</span></div>\n" +
+                "<div style=\"position:absolute;left:373.00px;top:347.00px\" class=\"cls_004\"><span class=\"cls_004\">LOCATION:</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:362.00px\" class=\"cls_004\"><span class=\"cls_004\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:196.00px;top:362.00px\" class=\"cls_004\"><span class=\"cls_004\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:373.00px;top:362.00px\" class=\"cls_004\"><span class=\"cls_004\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:407.00px\" class=\"cls_004\"><span class=\"cls_004\">MOOD WHEN STARTING:</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:422.00px\" class=\"cls_004\"><span class=\"cls_004\">__________________________</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:464.00px\" class=\"cls_005\"><span class=\"cls_005\">Instructions: In the white spaces below, fill in the weight you used and the number of reps you</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:479.00px\" class=\"cls_005\"><span class=\"cls_005\">performed. If you did 100 pounds for 10 reps, you would write \"100 X</span></div>\n" +
+                "<div style=\"position:absolute;left:436.00px;top:479.00px\" class=\"cls_005\"><span class=\"cls_005\">10\". The gray bo*es below</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:494.00px\" class=\"cls_005\"><span class=\"cls_005\">are not used.</span></div>\n" +
+                "<div style=\"position:absolute;left:390.00px;top:522.00px\" class=\"cls_007\"><span class=\"cls_007\">Set</span></div>\n" +
+                "<div style=\"position:absolute;left:446.50px;top:522.00px\" class=\"cls_007\"><span class=\"cls_007\">Set</span></div>\n" +
+                "<div style=\"position:absolute;left:503.50px;top:522.00px\" class=\"cls_007\"><span class=\"cls_007\">Set</span></div>\n" +
+                "<div style=\"position:absolute;left:561.50px;top:522.00px\" class=\"cls_007\"><span class=\"cls_007\">Set</span></div>\n" +
+                "<div style=\"position:absolute;left:150.50px;top:531.00px\" class=\"cls_007\"><span class=\"cls_007\">EXERCISE</span></div>\n" +
+                "<div style=\"position:absolute;left:387.50px;top:541.00px\" class=\"cls_007\"><span class=\"cls_007\">#1</span></div>\n" +
+                "<div style=\"position:absolute;left:444.50px;top:541.00px\" class=\"cls_007\"><span class=\"cls_007\">#2</span></div>\n" +
+                "<div style=\"position:absolute;left:501.00px;top:541.00px\" class=\"cls_007\"><span class=\"cls_007\">#3</span></div>\n" +
+                "<div style=\"position:absolute;left:559.00px;top:541.00px\" class=\"cls_007\"><span class=\"cls_007\">#4</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:562.00px\" class=\"cls_007\"><span class=\"cls_007\">Superset:</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:583.00px\" class=\"cls_007\"><span class=\"cls_007\">Seated Arnold press: 4 sets of 15</span></div>\n" +
+                "<div style=\"position:absolute;left:10.00px;top:602.00px\" class=\"cls_007\"><span class=\"cls_007\">reps</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:623.00px\" class=\"cls_007\"><span class=\"cls_007\">Side Lateral raises: 4 sets of 20 reps</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:644.00px\" class=\"cls_007\"><span class=\"cls_007\">Superset:</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:665.00px\" class=\"cls_007\"><span class=\"cls_007\">Front dumbbell raises: 4 sets of 12</span></div>\n" +
+                "<div style=\"position:absolute;left:10.00px;top:684.00px\" class=\"cls_007\"><span class=\"cls_007\">reps, each arm</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:705.00px\" class=\"cls_007\"><span class=\"cls_007\">Reverse flyes: 4 sets of 20 reps</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:726.00px\" class=\"cls_007\"><span class=\"cls_007\">Triple Set:</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:755.00px\" class=\"cls_007\"><span class=\"cls_007\">One-arm side lateral raises: 4 sets of</span></div>\n" +
+                "</div>\n" +
+                "<div style=\"position:absolute;left:50%;margin-left:-306px;top:802px;width:612px;height:792px;border-style:outset;overflow:hidden\">\n" +
+                "<div style=\"position:absolute;left:0px;top:0px\">\n" +
+                "<img src=\"bd32dd0a-06be-11e9-8f58-0cc47a792c0a_id_bd32dd0a-06be-11e9-8f58-0cc47a792c0a_files/background2.jpg\" width=612 height=792></div>\n" +
+                "<div style=\"position:absolute;left:10.00px;top:0.00px\" class=\"cls_007\"><span class=\"cls_007\">15 reps</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:20.00px\" class=\"cls_007\"><span class=\"cls_007\">Upright barbell rows: 4 sets of 10</span></div>\n" +
+                "<div style=\"position:absolute;left:10.00px;top:39.00px\" class=\"cls_007\"><span class=\"cls_007\">reps</span></div>\n" +
+                "<div style=\"position:absolute;left:16.00px;top:60.00px\" class=\"cls_007\"><span class=\"cls_007\">Front plate raises: 4 sets to failure</span></div>\n" +
+                "<div style=\"position:absolute;left:19.00px;top:104.00px\" class=\"cls_004\"><span class=\"cls_004\">T RAINING, NUT RIT ION & SU99LEMENT NOT ES:</span></div>\n" +
+                "<div style=\"position:absolute;left:8.00px;top:267.00px\" class=\"cls_008\"><span class=\"cls_008\">Back to the</span><span class=\"cls_009\"> </span><A HREF=\"http://www.bodybuilding.com/fun/printlogs.htm\">Printable Logs   ain Page</A> </span><span class=\"cls_008\">.</span></div>\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>\n" ;
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
