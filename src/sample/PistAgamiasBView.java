@@ -69,6 +69,7 @@ public class PistAgamiasBView implements Initializable {
     public JFXTextField field36;
     public JFXTextField field37;
     public JFXTextField field38;
+    public HTMLEditor htmlEditor2;
 
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
     String Field32, Field33, Field34, Field35, Field36, Field37, Field38;
@@ -365,6 +366,10 @@ public class PistAgamiasBView implements Initializable {
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
+
+
+        String INITIAL_TEXT_2 = "";
+        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
     }
 
     public void print(ActionEvent actionEvent) throws Exception{
