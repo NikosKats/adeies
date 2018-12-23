@@ -10,6 +10,7 @@ import javafx.print.Printer;
 import javafx.print.PrinterJob;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
@@ -17,6 +18,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.prefs.Preferences;
 
@@ -27,8 +29,41 @@ public class DhlBaptView implements Initializable {
     public JFXButton menu_btn;
     public JFXButton create_new_btn;
     public JFXButton print_btn;
+    public AnchorPane anchorPane;
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
 
+
+    public JFXTextField field1;
+    public JFXTextField field2;
+    public JFXTextField field3;
+    public JFXTextField field4;
+    public JFXTextField field5;
+    public JFXTextField field6;
+    public JFXTextField field7;
+    public JFXTextField field8;
+    public JFXTextField field9;
+    public JFXTextField field10;
+    public JFXTextField field11;
+    public JFXTextField field12;
+    public JFXTextField field13;
+    public JFXTextField field14;
+    public JFXTextField field15;
+    public JFXTextField field16;
+    public JFXTextField field17;
+    public JFXTextField field18;
+    public JFXTextField field19;
+    public JFXTextField field20;
+    public JFXTextField field21;
+    public JFXTextField field22;
+    public JFXTextField field23;
+    public JFXTextField field24;
+    public JFXTextField field25;
+    public JFXTextField field26;
+    public JFXTextField field27;
+    public JFXTextField field28;
+    public JFXTextField field29;
+    public JFXTextField field30;
+    public JFXTextField field31;
     @FXML
     private JFXTextField textField;
 
@@ -99,6 +134,39 @@ public class DhlBaptView implements Initializable {
                 Field29 = rs.getString("Field29");
                 Field30 = rs.getString("Field30");
                 Field31 = rs.getString("Field31");
+
+
+                field1.setText(Field1);
+                field2.setText(Field2);
+                field3.setText(Field3);
+                field4.setText(Field4);
+                field5.setText(Field5);
+                field6.setText(Field6);
+                field7.setText(Field7);
+                field8.setText(Field8);
+                field9.setText(Field9);
+                field10.setText(Field10);
+                field11.setText(Field11);
+                field12.setText(Field12);
+                field13.setText(Field13);
+                field14.setText(Field14);
+                field15.setText(Field15);
+                field16.setText(Field16);
+                field17.setText(Field17);
+                field18.setText(Field18);
+                field19.setText(Field19);
+                field20.setText(Field20);
+                field21.setText(Field21);
+                field22.setText(Field22);
+                field23.setText(Field23);
+                field24.setText(Field24);
+                field25.setText(Field25);
+                field26.setText(Field26);
+                field27.setText(Field27);
+                field28.setText(Field28);
+                field29.setText(Field29);
+                field30.setText(Field30);
+                field31.setText(Field31);
 
 
 
@@ -232,8 +300,52 @@ public class DhlBaptView implements Initializable {
 
 
 
-        String INITIAL_TEXT = "<h3> ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ <br>"+ Field1+ "</h3>\n" +
-                "<h3>ΙΕΡΟΣ ΝΑΟΣ "+ Field2+ "</h3><t" ;
+        String INITIAL_TEXT = "<div style=\"text-align: center;\">&nbsp;<strong>&Iota;&Epsilon;&Rho;&Alpha; &Mu;&Eta;&Tau;&Rho;&Omicron;&Pi;&Omicron;&Lambda;&Iota;&Sigma;</strong></div>\n" +
+                "<div style=\"text-align: center;\">"+Field1+"</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&Iota;&Epsilon;&Rho;&Omicron;&Sigma; &Nu;&Alpha;&Omicron;&Sigma;</strong> "+Field2+" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong>&Alpha;&rho;&iota;&theta;&mu;.&Pi;&rho;&omega;&tau;.</strong> "+Field3+"</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">Ὁ ὐ&pi;&omicron;&gamma;&epsilon;&gamma;&rho;&alpha;&mu;&mu;έ&nu;&omicron;&sigmaf; Ἷ&epsilon;&rho;&epsilon;ύ&sigmaf; "+Field4+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&Epsilon;&phi;&eta;&mu;έ&rho;&iota;&omicron;&sigmaf; &tau;&omicron;ῦ Ἷ&epsilon;&rho;&omicron;ῦ &Nu;&alpha;&omicron;ῦ "+Field5+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&delta;&eta;&lambda;ῶ ὃ&tau;&iota; &sigma;ή&mu;&epsilon;&rho;&omicron;&nu; &tau;ἡ&nu; "+Field6+" &tau;&omicron;ῦ &mu;&eta;&nu;ό&sigmaf; "+Field7+"</div>\n" +
+                "<div style=\"text-align: center;\">&tau;&omicron;ῦ ἐ&tau;&omicron;&upsilon;&sigmaf; "+Field8+" ἠ&mu;έ&rho;&alpha;&nu; "+Field9+", &epsilon;&nu; &tau;ῶ Ἱ&epsilon;&rho;ῶ &Nu;&alpha;ῶ  &nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">"+Field10+"</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\"><strong>&Epsilon;&Beta;&Alpha;&Pi;&Tau;&Iota;&Sigma;&Alpha;&nbsp;</strong></div>\n" +
+                "<div style=\"text-align: center;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &kappa;&alpha;&tau;ά &tau;&omicron;ὺ&sigmaf; Ἱ&epsilon;&rho;&omicron;ύ&sigmaf; &Kappa;&alpha;&nu;ό&nu;&alpha;&sigmaf; &tau;ῆ&sigmaf; Ὁ&rho;&theta;&omicron;&delta;ό&xi;&omicron;&upsilon; Ἁ&nu;&alpha;&tau;&omicron;&lambda;&iota;&kappa;ῆ&sigmaf; Ἑ&kappa;&kappa;&lambda;&eta;&sigma;ί&alpha;&sigmaf;&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&tau;ό &tau;έ&kappa;&nu;&omicron;&nu; &tau;&omicron;ῦ "+Field11+"</div>\n" +
+                "<div style=\"text-align: center;\">&kappa;&alpha;ί &tau;ῆ&sigmaf; "+Field12+" &tau;ό &gamma;έ&nu;&omicron;&sigmaf; "+Field13+"</div>\n" +
+                "<div style=\"text-align: center;\">&kappa;&alpha;&tau;&omicron;ί&kappa;&omega;&nu; "+Field14+" ό&delta;ὁ&sigmaf; "+Field15+"</div>\n" +
+                "<div style=\"text-align: center;\">ἀ&rho;&iota;&theta;&mu;. "+Field16+", &gamma;&epsilon;&nu;&nu;&eta;&theta;έ&nu; &tau;ή&nu;"+Field17+" ἔ&nu;"+Field18+"</div>\n" +
+                "<div style=\"text-align: center;\">&kappa;&alpha;&tau;ά &tau;ή&nu; ύ&pi;'ἀ&rho;&iota;&theta;&mu;. "+Field19+" &tau;ὁ&mu;&omicron;&sigmaf; "+Field20+" &tau;&omicron;ῦ "+Field21+" ἕ&tau;&omicron;&upsilon;&sigmaf; &pi;&rho;ᾶ&xi;&iota;&nu;</div>\n" +
+                "<div style=\"text-align: center;\">&Gamma;&epsilon;&nu;&nu;ή&sigma;&epsilon;&omega;&sigmaf; &tau;&omicron;ῦ &kappa;. &Lambda;&eta;&xi;&iota;ά&rho;&chi;&omicron;&upsilon; "+Field22+"</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\"><strong>Ὀ&nu;&omicron;&mu;&alpha;&sigma;&theta;έ&nu;&nbsp;</strong></div>\n" +
+                "<div style=\"text-align: center;\"> "+Field23+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">ὐ&pi;ό &tau;&omicron;&upsilon;/&eta;&sigmaf; ἀ&nu;&alpha;&delta;&epsilon;&xi;&alpha;&mu;έ&nu;&omicron;&upsilon;/&eta;&sigmaf; &alpha;ὐ&tau;ό ἕ&kappa; &tau;ῆ&sigmaf; Ἱ&epsilon;&rho;ᾶ&sigmaf; &Kappa;&omicron;&lambda;&upsilon;&mu;&beta;ή&theta;&rho;&alpha;&sigmaf; </div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;"+Field24+"</div>\n" +
+                "<div style=\"text-align: center;\">&kappa;&alpha;&tau;&omicron;ί&kappa;&omicron;&upsilon; "+Field25+" ό&delta;ὁ&sigmaf; "+Field26+" ἀ&rho;&iota;&theta;&mu;. "+Field27+"</div>\n" +
+                "<div style=\"text-align: center;\">Ἐ&phi;᾽ὥ &sigma;&upsilon;&nu;&epsilon;&tau;ά&gamma;&eta; &tau;&omicron; &pi;&alpha;&rho;ό&nu; &kappa;&alpha;ί ὑ&pi;&omicron;&gamma;&rho;ά&phi;&epsilon;&tau;&alpha;&iota; ώ&sigmaf; ἕ&pi;&epsilon;&tau;&alpha;&iota;:&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\"><strong>&Omicron; &Epsilon;&Phi;&Eta;&Mu;&Epsilon;&Rho;&Iota;&Omicron;&Sigma;&nbsp;</strong></div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;"+Field28+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\"><strong>&Omicron; &Pi;&Alpha;&Tau;&Eta;&Rho; &Kappa;&Alpha;&Iota; &Eta; &Mu;&Eta;&Tau;&Eta;&Rho; &Tau;&Omicron;&Upsilon; &Beta;&Alpha;&Pi;&Tau;&Iota;&Sigma;&Theta;&Epsilon;&Nu;&Tau;&Omicron;&Sigma; &Nu;&Eta;&Pi;&Iota;&Omicron;&Upsilon;</strong>&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">"+Field29+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">"+Field30+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\"><strong>&Omicron; &Alpha;&Nu;&Alpha;&Delta;&Omicron;&Chi;&Omicron;&Sigma;</strong>&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">"+Field31+"&nbsp;</div>\n" +
+                "<div style=\"text-align: center;\">&nbsp;</div>" ;
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
@@ -245,8 +357,27 @@ public class DhlBaptView implements Initializable {
     public void print(ActionEvent actionEvent) throws Exception{
         PrinterJob job = PrinterJob.createPrinterJob();
         if(job != null){
-            job.printPage(htmlEditor);
-            job.endJob();
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Επιλογή Άδειας Για Εκτύπωση.");
+            alert.setHeaderText("Θέλετε να εκτυπώσετε την άδεια από το αριστερό ή από το δεξί παράθυρο;");
+            alert.setContentText("Επιλέξτε.");
+
+            ButtonType buttonTypeOne = new ButtonType("Εκτύπωση άδειας αριστερού παραθύρου");
+            ButtonType buttonTypeTwo = new ButtonType("Εκτύπωση άδειας δεξιού παραθύρου");
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeOne) {
+                htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+
+            } else if (result.get() == buttonTypeTwo) {
+                job.printPage(anchorPane);
+                job.endJob();
+            }
+
         }
 
 
