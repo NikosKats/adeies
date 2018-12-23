@@ -28,37 +28,7 @@ public class PistAgamiasAView implements Initializable {
     public JFXButton view_btn;
     public JFXButton menu_btn;
     public HTMLEditor htmlEditor;
-    public JFXTextField field1;
-    public JFXTextField field2;
-    public JFXTextField field3;
-    public JFXTextField field4;
-    public JFXTextField field5;
-    public JFXTextField field6;
-    public JFXTextField field7;
-    public JFXTextField field8;
-    public JFXTextField field9;
-    public JFXTextField field10;
-    public JFXTextField field11;
-    public JFXTextField field12;
-    public JFXTextField field13;
-    public JFXTextField field14;
-    public JFXTextField field15;
-    public JFXTextField field16;
-    public JFXTextField field17;
-    public JFXTextField field18;
-    public JFXTextField field19;
-    public JFXTextField field20;
-    public JFXTextField field21;
-    public JFXTextField field22;
-    public JFXTextField field23;
-    public JFXTextField field24;
-    public JFXTextField field25;
-    public JFXTextField field26;
-    public JFXTextField field27;
-    public JFXTextField field28;
-    public JFXTextField field29;
-    public JFXTextField field30;
-    public JFXTextField field31;
+
     public AnchorPane anchorPanePrint;
     public HTMLEditor htmlEditor2;
 
@@ -127,33 +97,6 @@ public class PistAgamiasAView implements Initializable {
                 Field23 = rs.getString("Field23");
                 Field24 = rs.getString("Field24");
                 Field25 = rs.getString("Field25");
-
-
-                field1.setText(Field1);
-                field2.setText(Field2);
-                field3.setText(Field3);
-                field4.setText(Field4);
-                field5.setText(Field5);
-                field6.setText(Field6);
-                field7.setText(Field7);
-                field8.setText(Field8);
-                field9.setText(Field9);
-                field10.setText(Field10);
-                field11.setText(Field11);
-                field12.setText(Field12);
-                field13.setText(Field13);
-                field14.setText(Field14);
-                field15.setText(Field15);
-                field16.setText(Field16);
-                field17.setText(Field17);
-                field18.setText(Field18);
-                field19.setText(Field19);
-                field20.setText(Field20);
-                field21.setText(Field21);
-                field22.setText(Field22);
-                field23.setText(Field23);
-                field24.setText(Field24);
-                field25.setText(Field25);
 
 
 
