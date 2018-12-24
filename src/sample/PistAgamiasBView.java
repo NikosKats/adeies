@@ -295,7 +295,207 @@ public class PistAgamiasBView implements Initializable {
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
 
-        String INITIAL_TEXT_2 = "";
+        String INITIAL_TEXT_2 = "<html>\n" +
+                "\n" +
+                "<head>\n" +
+                "<meta http-equiv=Content-Type content=\"text/html; charset=utf-8\">\n" +
+                "<meta name=Generator content=\"Microsoft Word 15 (filtered)\">\n" +
+                "<style>\n" +
+                "<!--\n" +
+                " /* Font Definitions */\n" +
+                " @font-face\n" +
+                "\t{font-family:\"Cambria Math\";\n" +
+                "\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Calibri;\n" +
+                "\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n" +
+                " /* Style Definitions */\n" +
+                " p.MsoNormal, li.MsoNormal, div.MsoNormal\n" +
+                "\t{margin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                ".MsoChpDefault\n" +
+                "\t{font-family:\"Calibri\",sans-serif;}\n" +
+                "@page WordSection1\n" +
+                "\t{size:595.0pt 842.0pt;\n" +
+                "\tmargin:72.0pt 72.0pt 72.0pt 72.0pt;}\n" +
+                "div.WordSection1\n" +
+                "\t{page:WordSection1;}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "\n" +
+                "</head>\n" +
+                "\n" +
+                "<body lang=EN-US>\n" +
+                "\n" +
+                "<div class=WordSection1>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ΣΑΜΟΥ ΙΚΑΡΙΑΣ ΚΑΙ\n" +
+                "ΚΟΡΣΕΩΝ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>ΕΝΟΡΙΑΚΟΣ Ι.ΝΑΟΣ.....................\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>Αριθμ.Πρωτ. ....................................\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>         ΠΙΣΤΟΠΟΙΗΤΙΚΟΝ ΑΓΑΜΙΑΣ\n" +
+                "(ΤΥΠΟΣ Β΄) </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>Ὁ ὑπογεγραμμένος...........................................................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>Ἐφημέριος τοῦ Ἱεροῦ Ναοῦ \n" +
+                "...........................................................  </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>βεβαιῶ ὃτι\n" +
+                "προσελθ...............................ἐνώπιόν μου ὁ ἢ ἡ..............</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>τοῦ .............................\n" +
+                "καί τῆς ............................................τό γένος</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'> .................................................\n" +
+                "γεννηθει .....</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>iun</span><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>.. ἐν........................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'> ......................................τό\n" +
+                "ἒτος........................................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>καί ἐν τῆ ἡμετέρα ἐνορία διαμέν\n" +
+                "...............................ἀπό τοῦ ἒτους </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>..............................................................(ὁδός....................................\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>…………………………………………………….ἀρ....................)</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>ἐτῶν .................................\n" +
+                "ἐπαγγέλματος .........................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>καί χριστιαν ...........ὀρθόδοξος,ὑπέγραψε\n" +
+                "τήν συνημμένην δήλωσιν </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>τοῦ περί τῆς κατοικίας καί ἀγαμίας\n" +
+                "..................................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>Ὡσαύτως προσῆλθαν οἱ ὑπογράφοντες\n" +
+                "κατωτέρω μάρτυρες:</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>(πλήρη στοιχεία ταυτότητος)</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>1........................................................................................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>2. Ἁριθμός Ταυτότητος..............................Ἀστυν.Τμῆμα................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>3........................................................................................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>4. Ἁριθμός Ταυτότητος.... ................Ἀστυν.Τμῆμα...\n" +
+                "................</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>....</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>οἲτινες προέβησαν εἰς τήν δήλωσιν:</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>Δηλοῦμεν ὑπευθύνως καί ἐν γνώσει τῶν\n" +
+                "συνεπειῶν τοῦ Νόμου περί</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'> ψευδοῦς δηλώσεως ὃτι ὁ ἢ ἡ ἀνωτέρω\n" +
+                "μνημονευθ…………………. </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>...................διαμένει................καί\n" +
+                "ἐπί τῆς ὁδοῦ ..................................   </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>τυγχάνει δέ ἂγαμος ............................\n" +
+                "καί δύναται νά συνάψη γάμον</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>...............................</span><span\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>.............................................</span><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>.................................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>ΟΙ ΜΑΡΤΥΡΕΣ:(Ὑπογραφαί)1. ....</span><span\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>..........</span><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>....... 2.\n" +
+                "...</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>.......................</span><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>...</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'> Πάντα τά ἀνωτέρω κατετέθησαν καί ἐδηλώθησαν\n" +
+                "ἐνώπιόν μου, </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>χορηγεῖται δέ τό παρόν διά τήνἒκδοσιν\n" +
+                "ἀδείας γάμου τ …………..   </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>         Ἐν .....................    \n" +
+                "τῆ ...........................      20......</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>                                    </span><span\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>Ο ΕΦΗΜΕΡΙΟΣ</span></p>\n" +
+                "\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "\n" +
+                "</html>\n";
 
 
         htmlEditor2.setHtmlText(INITIAL_TEXT_2);
