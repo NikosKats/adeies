@@ -13,6 +13,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -30,7 +32,9 @@ public class PistAgamiasAView implements Initializable {
     public HTMLEditor htmlEditor;
 
     public AnchorPane anchorPanePrint;
-    public HTMLEditor htmlEditor2;
+
+    public WebView webView;
+    private WebEngine webEngine;
 
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25;
 
@@ -221,40 +225,6 @@ public class PistAgamiasAView implements Initializable {
         }
     }
 
-    public void print(ActionEvent actionEvent) throws Exception{
-        PrinterJob job = PrinterJob.createPrinterJob();
-        if(job != null){
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Επιλογή Άδειας Για Εκτύπωση.");
-            alert.setHeaderText("Θέλετε να εκτυπώσετε την άδεια από το αριστερό ή από το δεξί παράθυρο;");
-            alert.setContentText("Επιλέξτε.");
-
-            ButtonType buttonTypeOne = new ButtonType("Εκτύπωση άδειας αριστερού παραθύρου");
-            ButtonType buttonTypeTwo = new ButtonType("Εκτύπωση άδειας δεξιού παραθύρου");
-
-            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
-
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.get() == buttonTypeOne) {
-                htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
-
-            } else if (result.get() == buttonTypeTwo) {
-                job.printPage(anchorPanePrint);
-                job.endJob();
-            }
-        }
-
-
-//        try{
-//            htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
-//        }
-//        catch (RuntimeException ex)
-//        {
-//            ex.printStackTrace();
-//        }
-
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -301,9 +271,49 @@ public class PistAgamiasAView implements Initializable {
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
-        String INITIAL_TEXT_2 = "";
+        webEngine = webView.getEngine();
 
-        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
+        webEngine.load("http://www.google.com");
+        // webEngine.loadContent("");
         
     }
+
+
+
+    public void print(ActionEvent actionEvent) throws Exception{
+        PrinterJob job = PrinterJob.createPrinterJob();
+        if(job != null){
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Επιλογή Άδειας Για Εκτύπωση.");
+            alert.setHeaderText("Θέλετε να εκτυπώσετε την άδεια από το αριστερό ή από το δεξί παράθυρο;");
+            alert.setContentText("Επιλέξτε.");
+
+            ButtonType buttonTypeOne = new ButtonType("Εκτύπωση άδειας αριστερού παραθύρου");
+            ButtonType buttonTypeTwo = new ButtonType("Εκτύπωση άδειας δεξιού παραθύρου");
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeOne) {
+                htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+
+            } else if (result.get() == buttonTypeTwo) {
+                job.printPage(anchorPanePrint);
+                job.endJob();
+            }
+        }
+
+
+//        try{
+//            htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+//        }
+//        catch (RuntimeException ex)
+//        {
+//            ex.printStackTrace();
+//        }
+
+    }
+
+
 }
