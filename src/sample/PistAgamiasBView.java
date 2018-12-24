@@ -33,6 +33,7 @@ public class PistAgamiasBView implements Initializable {
 
 
     public WebView webView;
+    public HTMLEditor htmlEditor2;
     private WebEngine webEngine;
 
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
@@ -294,9 +295,15 @@ public class PistAgamiasBView implements Initializable {
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
 
-        webEngine = webView.getEngine();
+        String INITIAL_TEXT_2 = "";
 
-        webEngine.load("http://www.google.com");
+
+        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
+
+
+//        webEngine = webView.getEngine();
+//
+//        webEngine.load("http://www.google.com");
         // webEngine.loadContent("");
     }
 
