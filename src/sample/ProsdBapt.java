@@ -81,7 +81,7 @@ public class ProsdBapt {
      //*******************************/
 
     public void insert(String Field1,String Field2,String Field3,String Field4,String Field5,String Field6,String Field7,String Field8,String Field9,String Field10,String Field11,String Field12,String Field13,String Field14,String Field15,String Field16,String Field17,String Field18,String Field19,String Field20,String Field21,String Field22,String Field23,String Field24,String Field25,String Field26,String Field27,String Field28,String Field29,String Field30,String Field31) {
-        String sql = "INSERT INTO dataBaptisis(Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10,Field11,Field12,Field13,Field14,Field15,Field16,Field17,Field18,Field19,Field20,Field21,Field22,Field23,Field24,Field25,Field26,Field27,Field28,Field29,Field30,Field31) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO dataProsdBaptisis(Field1,Field2,Field3,Field4,Field5,Field6,Field7,Field8,Field9,Field10,Field11,Field12,Field13,Field14,Field15,Field16,Field17,Field18,Field19,Field20,Field21,Field22,Field23,Field24,Field25,Field26,Field27,Field28,Field29,Field30,Field31) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -170,7 +170,7 @@ public class ProsdBapt {
 
 
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptTable.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("prosdBaptTable.fxml"));
 
             AnchorPane pane = loader.load();
 
@@ -285,7 +285,7 @@ public class ProsdBapt {
 
 
                 try {
-                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("dhlBaptTable.fxml"));
+                    FXMLLoader loader = new FXMLLoader(Main.class.getResource("prosdBaptTable.fxml"));
 
                     AnchorPane pane = loader.load();
 
