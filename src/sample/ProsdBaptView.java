@@ -410,7 +410,7 @@ public class ProsdBaptView implements Initializable {
                 "την <b>"+Field1+" </b>…του μηνός<b> "+Field1+" </b> .του έτους "+Field1+" .εμφανίσθησαν\n" +
                 "ενώπιον εμού του Εφημερίου του ως άνω Ιερού Ναού,οι υπογεγραμμένοι γονείς: </span></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)…<b> "+Field1+" </b>&nbsp;\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)<b> "+Field1+" </b>&nbsp;\n" +
                 "Αρ.δελτ .αστ. ταυτοτητος "+Field1+" .χρο.εκδ "+Field1+" .εκδ. Αρχ. "+Field1+"\n" +
                 "</span></p>\n" +
                 "\n" +
