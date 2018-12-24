@@ -36,6 +36,7 @@ public class DhlGamouView implements Initializable {
     public JFXButton menu_btn;
 
     public WebView webView;
+    public HTMLEditor htmlEditor2;
     private WebEngine webEngine;
 
     String CheckBox1, CheckBox2, CheckBox3, CheckBox4;
@@ -1032,9 +1033,779 @@ public class DhlGamouView implements Initializable {
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
-        webEngine = webView.getEngine();
+        String INITIAL_TEXT_2 = "<html>\n" +
+                "\n" +
+                "<head>\n" +
+                "<meta http-equiv=Content-Type content=\"text/html; charset=unicode\">\n" +
+                "<meta name=Generator content=\"Microsoft Word 15 (filtered)\">\n" +
+                "<style>\n" +
+                "<!--\n" +
+                " /* Font Definitions */\n" +
+                " @font-face\n" +
+                "\t{font-family:\"Cambria Math\";\n" +
+                "\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Calibri;\n" +
+                "\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n" +
+                " /* Style Definitions */\n" +
+                " p.MsoNormal, li.MsoNormal, div.MsoNormal\n" +
+                "\t{margin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.msonormal0, li.msonormal0, div.msonormal0\n" +
+                "\t{mso-style-name:msonormal;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Times New Roman\",serif;}\n" +
+                "p.msochpdefault, li.msochpdefault, div.msochpdefault\n" +
+                "\t{mso-style-name:msochpdefault;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                ".MsoChpDefault\n" +
+                "\t{font-size:10.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "@page WordSection1\n" +
+                "\t{size:595.0pt 842.0pt;\n" +
+                "\tmargin:72.0pt 72.0pt 72.0pt 72.0pt;}\n" +
+                "div.WordSection1\n" +
+                "\t{page:WordSection1;}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "\n" +
+                "</head>\n" +
+                "\n" +
+                "<body lang=EN-US>\n" +
+                "\n" +
+                "<div class=WordSection1>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt;text-indent:36.0pt'><span lang=EL\n" +
+                "style='font-family:\"Times New Roman\",serif'>Αριθμ.ληξ.πράξη\n" +
+                "γάμου........Τόμος...... ...έτος............</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span\n" +
+                "style='font-family:\"Times New Roman\",serif'> </span><span style='font-family:\n" +
+                "\"Times New Roman\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span\n" +
+                "style='font-family:\"Times New Roman\",serif'> </span><span style='font-family:\n" +
+                "\"Times New Roman\",serif'>&nbsp;&nbsp;</span><span lang=EL style='font-family:\n" +
+                "\"Times New Roman\",serif'>(Αναγράφεται από το Ληξίαρχο)</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΙΕΡΑ\n" +
+                "ΜΗΤΡΟΠΟΛΗ..............................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:144.0pt;text-indent:-144.0pt'><span\n" +
+                "lang=EL style='font-family:\"Times New Roman\",serif'>ΙΕΡΟΣ\n" +
+                "ΝΑΟΣ......................\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ο\n" +
+                "γάμος δηλώνεται στο Ληξιαρχείο, </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:144.0pt;text-align:justify;text-indent:\n" +
+                "-144.0pt'><span lang=EL style='font-family:\"Times New Roman\",serif'>ΔΗΜΟΤΙΚΟ/ΤΟΠΙΚΟ\n" +
+                "ΔΙΑΜΕΡΙΣΜΑ.............. μέσα σε (40) σαράντα ημέρες από την </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΔΗΜΟΣ/ΔΗΜΟΤΙΚΗ\n" +
+                "ΕΝΟΤΗΤΑ<span style='color:black'>.....................</span> τέλεσή του,\n" +
+                "σύμφωνα με το άρθρο 29,</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΝΟΜΟΣ.................................&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;παραγρ.\n" +
+                "1 του Ν.344/1976</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>Αριθμ.\n" +
+                "Βιβλ.......................</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;ΔΗΛΩΣΗ ΤΕΛΕΣΗΣ ΘΡΗΣΚΕΥΤΙΚΟΥ ΓΑΜΟΥ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>     \n" +
+                "Ο υπογεγραμμένος ιερέας ................... της ενορίας του Ιερου Ναού…..…………</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>     \n" +
+                "δηλώνω ότι σήμερα στις ...................του μήνα..................του\n" +
+                "έτους..................και </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>     \n" +
+                "ώρα....…...τέλεσα στ ...............και στον ως άνω Ιερό ναό κατά το δόγμα……..…</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>     \n" +
+                "το μυστήριο του γάμου των κατωτέρω συζύγων:</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
+                "\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=614\n" +
+                " style='width:460.45pt;margin-left:-.25pt;border-collapse:collapse'>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΣΤΟΙΧΕΙΑ</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border:solid windowtext 1.0pt;\n" +
+                "  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΤΟΥ\n" +
+                "  ΣΥΖΥΓΟΥ</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border:solid windowtext 1.0pt;\n" +
+                "  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΤΗΣ\n" +
+                "  ΣΥΖΥΓΟΥ</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>1.Επώνυμο*</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>2.Όνομα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>3.Επάγγελμα\n" +
+                "  (προ του γάμου)</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>4.Θρήσκευμα\n" +
+                "  και δόγμα.</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>5.Ιθαγένεια\n" +
+                "  (προ του γάμου)</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>6.ΑΦΜ.</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>7.ΑΜΚΑ</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>8.Φορείς\n" +
+                "  Ασφάλισης </span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>9.Τόπος\n" +
+                "  Γέννησης</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;</span><span\n" +
+                "  lang=EL style='font-family:\"Times New Roman\",serif'>Νομός</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;</span><span\n" +
+                "  lang=EL style='font-family:\"Times New Roman\",serif'>Δήμος/Δημοτική Ενότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Δημοτική/Τοπική Κοινότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Χώρα/Πόλη εξωτερικού</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>10.Χρονολογία\n" +
+                "  Γέννησης</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>11.Μόνιμη\n" +
+                "  Κατοικία (προ γάμου)</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Νομός</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Δήμος/Δημοτική Ενότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Δημοτική/Τοπική Κοινότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Χώρα/Πόλη εξωτερικού</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>12.Δημότης:Δήμος/Δημοτική\n" +
+                "  Ενότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Νομός</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Αριθμ. Δημοτολογίου</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>13.Όνομα\n" +
+                "  και Επώνυμο του πατέρα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>14.Όνομα\n" +
+                "  και Επώνυμο της μητέρας</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>15.Στοιχεία\n" +
+                "  ζεύγους</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Μόνιμη Κατοικία</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Νομός</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Δήμος/Δημοτική Ενότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Δημοτική/Τοπική Κοινότητα</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;\n" +
+                "  Χώρα/Πόλη εξωτερικού</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>16.Επώνυμο\n" +
+                "  τέκνων</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>17.Οικογενειακή\n" +
+                "  κατάσταση (προ του γάμου)</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:13.65pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>18.Βαθμός\n" +
+                "  γάμου (πρώτος,δεύτερος,τρίτος)</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                " <tr style='height:14.1pt'>\n" +
+                "  <td width=236 valign=top style='width:177.2pt;border:solid windowtext 1.0pt;\n" +
+                "  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>19.Εκπαίδευση</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:141.5pt;border-top:none;border-left:\n" +
+                "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                "  <td width=189 valign=top style='width:5.0cm;border-top:none;border-left:none;\n" +
+                "  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
+                "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  </td>\n" +
+                " </tr>\n" +
+                "</table>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
+                "\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>20.Αριθμός\n" +
+                "άδειας γάμου άνδρα.............................Ιεράς Μητροπόλεως……………..</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;\n" +
+                "Αριθμός άδειας γάμου γυναίκας......……………Ιεράς Μητροπόλεως………………</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>21.Αριθμός\n" +
+                "παραβόλου γάμου άνδρα... ……………………………………………….</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>Αριθμός\n" +
+                "παραβόλου γάμου γυναίκας<span style='color:black'>...............................……………………………...</span></span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>Οι\n" +
+                "Σύζυγοι\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;Οι Παράνυμφοι\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;Ο Ιερέας </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>(υπογραφή)\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;(υπογραφή) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Υπογραφή και σφραγίδα) </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>____________&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span><span style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span><span lang=EL style='font-family:\"Times New Roman\",serif'>____________</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-family:\"Times New Roman\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:252.0pt;text-indent:36.0pt'><span\n" +
+                "style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:252.0pt;text-indent:36.0pt'><span\n" +
+                "style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:252.0pt;text-indent:36.0pt'><span\n" +
+                "style='font-family:\"Times New Roman\",serif'>&nbsp;Αριθμ.\n" +
+                "τηλεφ......................</span></p>\n" +
+                "\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "\n" +
+                "</html>\n";
 
-        webEngine.load("http://www.google.com");
+        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
+
+//        webEngine = webView.getEngine();
+//
+//        webEngine.load("http://www.google.com");
         // webEngine.loadContent("");
 
 
