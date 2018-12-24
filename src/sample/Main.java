@@ -425,6 +425,8 @@ public class Main extends Application {
 
         createNewDatabase("adeies.db");   //Δημιουργία βάσης
 
+        createDataProsdBaptisis();           //Δημιουργία Πίνακα
+
         createDataBaptisis();           //Δημιουργία Πίνακα
 
         createDataGamou();          //Δημιουργία Πίνακα
@@ -432,6 +434,7 @@ public class Main extends Application {
         createDataAgamiasA();          //Δημιουργία Πίνακα
 
         createDataAgamiasB();          //Δημιουργία Πίνακα
+
 
                 this.primaryStage=primaryStage;
                 mainWindow();
