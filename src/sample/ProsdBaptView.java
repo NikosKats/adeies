@@ -451,7 +451,7 @@ public class ProsdBaptView implements Initializable {
                 "\n" +
                 "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
                 "\"Palatino Linotype\",serif'>&nbsp;</span><b><span lang=EL style='font-family:\n" +
-                "Genesis'>&nbsp;ΕΝ </span></b><b><span lang=EL>……………………………………….</span></b><b><span\n" +
+                "Genesis'>&nbsp;ΕΝ </span></b><b><span lang=EL></span></b><b><span\n" +
                 "lang=EL style='font-family:Genesis'>"+Field1+" τη</span></b><b><span lang=EL></span></b><b><span\n" +
                 "lang=EL style='font-family:Genesis'> "+Field1+" 2"+Field1+" </span></b></p>\n" +
                 "\n" +
@@ -462,10 +462,10 @@ public class ProsdBaptView implements Initializable {
                 "ΟΙ ΔΗΛΟΥΝΤΕΣ ΓΟΝΕΙΣ</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
-                "1……………………………………</span></p>\n" +
+                "1."+Field1+"</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
-                "2……………………………………</span></p>\n" +
+                "2. "+Field1+"</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
                 "\n" +
