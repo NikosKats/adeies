@@ -10,9 +10,9 @@
     <TableView fx:id="tableView" layoutY="102.0" prefHeight="700.0" prefWidth="1200.0">
         <columns>
             <TableColumn fx:id="col1" prefWidth="60.47230672836304" text="ID" />
-            <TableColumn fx:id="col2" prefWidth="104.12532424926758" text="Ιερός Ναός" />
-            <TableColumn fx:id="col3" prefWidth="186.45164489746094" text="Αριθμός Πρωτοκόλλου" />
-            <TableColumn fx:id="col4" prefWidth="96.73968505859375" text="Εφημέριος" />
+            <TableColumn fx:id="col2" prefWidth="139.0556182861328" text="Ιερά Μητρόπολη" />
+            <TableColumn fx:id="col4" prefWidth="95.94435119628906" text="Ιερός Ναός" />
+            <TableColumn fx:id="col3" prefWidth="153.69570922851562" text="Αριθμός Πρωτοκόλλου" />
             <TableColumn fx:id="col5" prefWidth="87.92745971679688" text="Ημέρα" />
             <TableColumn fx:id="col6" minWidth="9.9075927734375" prefWidth="103.08355712890625" text="Μήνας" />
             <TableColumn fx:id="col7" prefWidth="66.45166015625" text="Έτος" />
