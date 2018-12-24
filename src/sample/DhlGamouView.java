@@ -34,7 +34,9 @@ public class DhlGamouView implements Initializable {
     public JFXButton create_new_btn;
     public JFXButton view_btn;
     public JFXButton menu_btn;
-    public HTMLEditor htmlEditor2;
+
+    public WebView webView;
+    private WebEngine webEngine;
 
     String CheckBox1, CheckBox2, CheckBox3, CheckBox4;
 
@@ -501,6 +503,10 @@ public class DhlGamouView implements Initializable {
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
+        webEngine = webView.getEngine();
+
+        webEngine.load("http://www.google.com");
+        // webEngine.loadContent("");
 
 
 
