@@ -533,11 +533,12 @@ public class DhlGamouView implements Initializable {
                 htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
             } else if (result.get() == buttonTypeTwo) {
-
+                job.printPage(webView);
                 job.endJob();
             }
 
         }
+
 
 
 //        try{

@@ -316,8 +316,7 @@ public class DhlBaptView implements Initializable {
                 htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
             } else if (result.get() == buttonTypeTwo) {
-                htmlEditor2.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
-
+                job.printPage(webView);
                 job.endJob();
             }
 
