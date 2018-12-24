@@ -396,9 +396,9 @@ public class ProsdBaptView implements Initializable {
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;\n" +
-                "ΙΕΡΟΣ ΝΑΟΣ "+Field1+" </span></b></p>\n" +
+                "ΙΕΡΟΣ ΝΑΟΣ "+Field2+" </span></b></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Αριθμ.Πρωτ……"+Field1+" ……</span></b></p>\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Αριθμ.Πρωτ."+Field3+"</span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><b><i><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "ΠΡΑΞΙΣ ΠΡΟΣΔΙΟΡΙΣΜΟΥ</span></i></b></p>\n" +
@@ -407,38 +407,38 @@ public class ProsdBaptView implements Initializable {
                 "ΤΕΛΕΣΕΩΣ&nbsp; ΤΟΥ ΜΥΣΤΗΡΙΟΥ ΤΟΥ ΒΑΠΤΙΣΜΑΤΟΣ</span></i></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Σήμερον\n" +
-                "την <b>"+Field1+" </b>…του μηνός<b> "+Field1+" </b> .του έτους "+Field1+" .εμφανίσθησαν\n" +
+                "την <b>"+Field4+" </b>…του μηνός<b> "+Field5+" </b> .του έτους "+Field6+" .εμφανίσθησαν\n" +
                 "ενώπιον εμού του Εφημερίου του ως άνω Ιερού Ναού,οι υπογεγραμμένοι γονείς: </span></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)<b> "+Field1+" </b>&nbsp;\n" +
-                "Αρ.δελτ .αστ. ταυτοτητος "+Field1+" .χρο.εκδ "+Field1+" .εκδ. Αρχ. "+Field1+"\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)<b> "+Field7+" </b>&nbsp;\n" +
+                "Αρ.δελτ .αστ. ταυτοτητος "+Field8+" .χρο.εκδ "+Field9+" .εκδ. Αρχ. "+Field10+"\n" +
                 "</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>2)\n" +
-                ""+Field1+" . Αρ.δελτ αστ. Ταυτοτητος"+Field1+"χρον.εκδ\n" +
-                ""+Field1+" εκδ.Αρχη</span></p>\n" +
+                ""+Field11+" . Αρ.δελτ αστ. Ταυτοτητος"+Field12+"χρον.εκδ\n" +
+                ""+Field13+" εκδ.Αρχη</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "και εδήλωσαν&nbsp; ότι: </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Α)τοΤέκνο\n" +
-                "τους(αγόρι- κορίτσι) γεννηθέν "+Field1+"  του μηνός "+Field1+"  του\n" +
-                "έτους "+Field1+" στ"+Field1+" νοσοκομειο.και εγεγραμμένο στο Ληξιαρχείο "+Field1+"  με αριθμό\n" +
-                "πράξης "+Field1+" Τομο "+Field1+" έτος "+Field1+" </span></p>\n" +
+                "τους(αγόρι- κορίτσι) γεννηθέν "+Field14+"  του μηνός "+Field15+"  του\n" +
+                "έτους "+Field16+" στ"+Field17+" νοσοκομειο.και εγεγραμμένο στο Ληξιαρχείο "+Field18+"  με αριθμό\n" +
+                "πράξης "+Field19+" Τομο "+Field20+" έτος "+Field21+" </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;ΕΠΙΘΥΜΟΥΝ\n" +
-                "να το ΒΑΠΤΙΣΟΥΝ με το όνομα <b>"+Field1+" </b> την "+Field1+" του\n" +
-                "μήνος&nbsp;&nbsp; "+Field1+" του έτους "+Field1+"  &nbsp;&nbsp;και ώρα\n" +
+                "να το ΒΑΠΤΙΣΟΥΝ με το όνομα <b>"+Field22+" </b> την "+Field23+" του\n" +
+                "μήνος&nbsp;&nbsp; "+Field24+" του έτους "+Field25+"  &nbsp;&nbsp;και ώρα\n" +
                 ""+Field1+" </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;\n" +
                 "σύμφωνα με το τυπικό της Ορθοδόξου Χριστιανικής Εκκλησίας.</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Β)ως\n" +
-                "ΑΝΑΔΟΧΟΣ θα παρίσταται ο-η "+Field1+"  Ορθόδοξος Χριστιανός ο οποίος ετέλεσε\n" +
-                "ορθόδοξο γάμο κατά την&nbsp; χρονολογία "+Field1+"  στον Ιερό&nbsp;\n" +
-                "Ναό "+Field1+" &nbsp;&nbsp; </span></p>\n" +
+                "ΑΝΑΔΟΧΟΣ θα παρίσταται ο-η "+Field26+"  Ορθόδοξος Χριστιανός ο οποίος ετέλεσε\n" +
+                "ορθόδοξο γάμο κατά την&nbsp; χρονολογία "+Field27+"  στον Ιερό&nbsp;\n" +
+                "Ναό "+Field28+" &nbsp;&nbsp; </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Γ)Οι\n" +
                 "γονείς εδήλωσαν ότι αποδέχονται τις σχετικές με το Βαπτισμα οδηγίες,οι οποίες\n" +
@@ -452,8 +452,8 @@ public class ProsdBaptView implements Initializable {
                 "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
                 "\"Palatino Linotype\",serif'>&nbsp;</span><b><span lang=EL style='font-family:\n" +
                 "Genesis'>&nbsp;ΕΝ </span></b><b><span lang=EL></span></b><b><span\n" +
-                "lang=EL style='font-family:Genesis'>"+Field1+" τη</span></b><b><span lang=EL></span></b><b><span\n" +
-                "lang=EL style='font-family:Genesis'> "+Field1+" 2"+Field1+" </span></b></p>\n" +
+                "lang=EL style='font-family:Genesis'>"+Field29+" τη</span></b><b><span lang=EL></span></b><b><span\n" +
+                "lang=EL style='font-family:Genesis'> "+Field30+" 2"+Field31+" </span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
                 "\n" +
