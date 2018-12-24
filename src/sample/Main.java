@@ -38,6 +38,59 @@ public class Main extends Application {
     }
 
     /***************************************************
+     //Δημιουργία συνάρτησης για να φτίαξω πίνακα στη Βάση
+     //***************************************************/
+
+    public static void createDataProsdBaptisis() {
+        // SQLite connection string
+        String url = "jdbc:sqlite:adeies.db";
+
+        // SQL statement for creating a new table
+        String sql = "CREATE TABLE IF NOT EXISTS `dataProsdBaptisis` (\n" +
+                "\t`id`\tINTEGER PRIMARY KEY AUTOINCREMENT,\n" +
+                "\t`Field1`\tTEXT,\n" +
+                "\t`Field2`\tTEXT,\n" +
+                "\t`Field3`\tTEXT,\n" +
+                "\t`Field4`\tTEXT,\n" +
+                "\t`Field5`\tTEXT,\n" +
+                "\t`Field6`\tTEXT,\n" +
+                "\t`Field7`\tTEXT,\n" +
+                "\t`Field8`\tTEXT,\n" +
+                "\t`Field9`\tTEXT,\n" +
+                "\t`Field10`\tTEXT,\n" +
+                "\t`Field11`\tTEXT,\n" +
+                "\t`Field12`\tTEXT,\n" +
+                "\t`Field13`\tTEXT,\n" +
+                "\t`Field14`\tTEXT,\n" +
+                "\t`Field15`\tTEXT,\n" +
+                "\t`Field16`\tTEXT,\n" +
+                "\t`Field17`\tTEXT,\n" +
+                "\t`Field18`\tTEXT,\n" +
+                "\t`Field19`\tTEXT,\n" +
+                "\t`Field20`\tTEXT,\n" +
+                "\t`Field21`\tTEXT,\n" +
+                "\t`Field22`\tTEXT,\n" +
+                "\t`Field23`\tTEXT,\n" +
+                "\t`Field24`\tTEXT,\n" +
+                "\t`Field25`\tTEXT,\n" +
+                "\t`Field26`\tTEXT,\n" +
+                "\t`Field27`\tTEXT,\n" +
+                "\t`Field28`\tTEXT,\n" +
+                "\t`Field29`\tTEXT,\n" +
+                "\t`Field30`\tTEXT,\n" +
+                "\t`Field31`\tTEXT\n" +
+                ");";
+
+        try (Connection conn = DriverManager.getConnection(url);
+             Statement stmt = conn.createStatement()) {
+            // create a new table
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    /***************************************************
     //Δημιουργία συνάρτησης για να φτίαξω πίνακα στη Βάση
     //***************************************************/
 
