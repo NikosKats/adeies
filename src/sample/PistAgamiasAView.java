@@ -299,7 +299,7 @@ public class PistAgamiasAView implements Initializable {
                 htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
             } else if (result.get() == buttonTypeTwo) {
-                job.printPage(anchorPanePrint);
+                job.printPage(webView);
                 job.endJob();
             }
         }
