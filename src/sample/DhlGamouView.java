@@ -329,7 +329,7 @@ public class DhlGamouView implements Initializable {
                 "\n" +
                 "<p class=MsoNormal style='margin-left:108.0pt;text-indent:36.0pt'><span\n" +
                 "style='font-family:\"Times New Roman\",serif'>Αριθμ.ληξ.πράξη\n" +
-                "γάμου...φδ...Τόμος...ξω ...έτος...θη ...</span></p>\n" +
+                "γάμου "+Field1+" Τόμος "+Field1+" έτος "+Field1+" </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span style='font-family:\"Times New Roman\",serif'>                                    \n" +
                 "                                   </span><span lang=EL style='font-family:\n" +
@@ -338,24 +338,24 @@ public class DhlGamouView implements Initializable {
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΙΕΡΑ\n" +
-                "ΜΗΤΡΟΠΟΛΗ....βηξηξβ....</span></p>\n" +
+                "ΜΗΤΡΟΠΟΛΗ "+Field1+"</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal style='margin-left:144.0pt;text-indent:-144.0pt'><span\n" +
-                "lang=EL style='font-family:\"Times New Roman\",serif'>ΙΕΡΟΣ ΝΑΟΣ....η....                                                   Ο\n" +
+                "lang=EL style='font-family:\"Times New Roman\",serif'>ΙΕΡΟΣ ΝΑΟΣ "+Field1+"                                                   Ο\n" +
                 "γάμος δηλώνεται στο Ληξιαρχείο, </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal style='margin-left:144.0pt;text-indent:-144.0pt'><span\n" +
                 "lang=EL style='font-family:\"Times New Roman\",serif'>ΔΗΜΟΤΙΚΟ/ΤΟΠΙΚΟ\n" +
-                "ΔΙΑΜΕΡΙΣΜΑ....ηξβ....      μέσα σε (40) σαράντα ημέρες από την </span></p>\n" +
+                "ΔΙΑΜΕΡΙΣΜΑ "+Field1+"      μέσα σε (40) σαράντα ημέρες από την </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΔΗΜΟΣ/ΔΗΜΟΤΙΚΗ\n" +
-                "ΕΝΟΤΗΤΑ....ηβξ....             τέλεσή του, σύμφωνα με το άρθρο 29,</span></p>\n" +
+                "ΕΝΟΤΗΤΑ "+Field1+"             τέλεσή του, σύμφωνα με το άρθρο 29,</span></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΝΟΜΟΣ....β....                                                           παραγρ.\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>ΝΟΜΟΣ "+Field1+"                                                           παραγρ.\n" +
                 "1 του Ν.344/1976</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>Αριθμ.\n" +
-                "Βιβλ....ξηβ....</span></p>\n" +
+                "Βιβλ. "+Field1+"</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>                             \n" +
                 "                   </span></p>\n" +
@@ -367,14 +367,14 @@ public class DhlGamouView implements Initializable {
                 "ΓΑΜΟΥ</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal style='margin-left:72.0pt'><span lang=EL style='font-family:\n" +
-                "\"Times New Roman\",serif'>Ο υπογεγραμμένος ιερέας ........ξ........ της ενορίας\n" +
-                "του Ιερου Ναού........ξκκξ........δηλώνω ότι σήμερα στις ........ξκ........του\n" +
-                "μήνα........νξ........του έτους...νξ...και ώρα...ξ...τέλεσα στ\n" +
-                "........νξκ........</span></p>\n" +
+                "\"Times New Roman\",serif'>Ο υπογεγραμμένος ιερέας "+Field1+" της ενορίας\n" +
+                "του Ιερου Ναού "+Field1+" δηλώνω ότι σήμερα στις "+Field1+" του\n" +
+                "μήνα "+Field1+" του έτους "+Field1+" και ώρα "+Field1+" τέλεσα στ\n" +
+                ""+Field1+"</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal style='margin-left:72.0pt'><span lang=EL style='font-family:\n" +
                 "\"Times New Roman\",serif'>και στον ως άνω Ιερό ναό κατά το\n" +
-                "δόγμα........νξκνξκ........το</span></p>\n" +
+                "δόγμα "+Field1+" το</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
                 "\"Times New Roman\",serif'>            μυστήριο του γάμου των κατωτέρω συζύγων:</span></p>\n" +
@@ -408,12 +408,12 @@ public class DhlGamouView implements Initializable {
                 "  <td width=180 valign=top style='width:134.65pt;border-top:none;border-left:\n" +
                 "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
                 "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
-                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>"+Field1+"</span></p>\n" +
                 "  </td>\n" +
                 "  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:\n" +
                 "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
                 "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
-                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>"+Field1+"</span></p>\n" +
                 "  </td>\n" +
                 " </tr>\n" +
                 " <tr style='height:13.65pt'>\n" +
@@ -424,12 +424,12 @@ public class DhlGamouView implements Initializable {
                 "  <td width=180 valign=top style='width:134.65pt;border-top:none;border-left:\n" +
                 "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
                 "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
-                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>"+Field1+"</span></p>\n" +
                 "  </td>\n" +
                 "  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:\n" +
                 "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
                 "  padding:0cm 5.4pt 0cm 5.4pt;height:13.65pt'>\n" +
-                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>"+Field1+"</span></p>\n" +
                 "  </td>\n" +
                 " </tr>\n" +
                 " <tr style='height:14.1pt'>\n" +
@@ -441,12 +441,12 @@ public class DhlGamouView implements Initializable {
                 "  <td width=180 valign=top style='width:134.65pt;border-top:none;border-left:\n" +
                 "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
                 "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
-                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>"+Field1+"</span></p>\n" +
                 "  </td>\n" +
                 "  <td width=170 valign=top style='width:127.6pt;border-top:none;border-left:\n" +
                 "  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;\n" +
                 "  padding:0cm 5.4pt 0cm 5.4pt;height:14.1pt'>\n" +
-                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "  <p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>"+Field1+"</span></p>\n" +
                 "  </td>\n" +
                 " </tr>\n" +
                 " <tr style='height:13.65pt'>\n" +
