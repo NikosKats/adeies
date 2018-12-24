@@ -13,6 +13,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,8 +31,11 @@ public class DhlBaptView implements Initializable {
     public JFXButton menu_btn;
     public JFXButton create_new_btn;
     public JFXButton print_btn;
-    public AnchorPane anchorPanePrint;
+
     public HTMLEditor htmlEditor2;
+    public WebView webView;
+
+    private WebEngine webEngine;
     String Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17, Field18, Field19, Field20, Field21, Field22, Field23, Field24, Field25, Field26, Field27, Field28, Field29, Field30, Field31;
 
 
@@ -283,11 +288,11 @@ public class DhlBaptView implements Initializable {
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
-        String INITIAL_TEXT_2 = "";
 
-        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
+        webEngine = webView.getEngine();
 
-
+        webEngine.load("http://www.google.com");
+       // webEngine.loadContent("");
 
     }
 
