@@ -4,22 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class ProsdBaptisisTableData {
     SimpleStringProperty id;
-    private final SimpleStringProperty field2,field3,field4,field6,field7,field8,field11,field12,field23,field31;
-
-    public ProsdBaptisisTableData(String id, String field2,String field3,String field4,String field6,String field7,String field8,String field11,String field12,String field23,String field31)
-    {
-        this.id = new SimpleStringProperty(id);
-        this.field2 = new SimpleStringProperty(field2);
-        this.field3 = new SimpleStringProperty(field3);
-        this.field4 = new SimpleStringProperty(field4);
-        this.field6 = new SimpleStringProperty(field6);
-        this.field7 = new SimpleStringProperty(field7);
-        this.field8 = new SimpleStringProperty(field8);
-        this.field11 = new SimpleStringProperty(field11);
-        this.field12 = new SimpleStringProperty(field12);
-        this.field23 = new SimpleStringProperty(field23);
-        this.field31 = new SimpleStringProperty(field31);
-    }
+    private final SimpleStringProperty field1,field2,field3,field4,field5,field6,field7,field10,field21,field26;
 
     public String getId() {
         return id.get();
@@ -31,6 +16,18 @@ public class ProsdBaptisisTableData {
 
     public void setId(String id) {
         this.id.set(id);
+    }
+
+    public String getField1() {
+        return field1.get();
+    }
+
+    public SimpleStringProperty field1Property() {
+        return field1;
+    }
+
+    public void setField1(String field1) {
+        this.field1.set(field1);
     }
 
     public String getField2() {
@@ -69,6 +66,18 @@ public class ProsdBaptisisTableData {
         this.field4.set(field4);
     }
 
+    public String getField5() {
+        return field5.get();
+    }
+
+    public SimpleStringProperty field5Property() {
+        return field5;
+    }
+
+    public void setField5(String field5) {
+        this.field5.set(field5);
+    }
+
     public String getField6() {
         return field6.get();
     }
@@ -93,63 +102,56 @@ public class ProsdBaptisisTableData {
         this.field7.set(field7);
     }
 
-    public String getField8() {
-        return field8.get();
+    public String getField10() {
+        return field10.get();
     }
 
-    public SimpleStringProperty field8Property() {
-        return field8;
+    public SimpleStringProperty field10Property() {
+        return field10;
     }
 
-    public void setField8(String field8) {
-        this.field8.set(field8);
+    public void setField10(String field10) {
+        this.field10.set(field10);
     }
 
-    public String getField11() {
-        return field11.get();
+    public String getField21() {
+        return field21.get();
     }
 
-    public SimpleStringProperty field11Property() {
-        return field11;
+    public SimpleStringProperty field21Property() {
+        return field21;
     }
 
-    public void setField11(String field11) {
-        this.field11.set(field11);
+    public void setField21(String field21) {
+        this.field21.set(field21);
     }
 
-    public String getField12() {
-        return field12.get();
+    public String getField26() {
+        return field26.get();
     }
 
-    public SimpleStringProperty field12Property() {
-        return field12;
+    public SimpleStringProperty field26Property() {
+        return field26;
     }
 
-    public void setField12(String field12) {
-        this.field12.set(field12);
+    public void setField26(String field26) {
+        this.field26.set(field26);
     }
 
-    public String getField23() {
-        return field23.get();
+    public ProsdBaptisisTableData(String id, String field1, String field2, String field3, String field4, String field5, String field6, String field7, String field10, String field21, String field26)
+    {
+        this.id = new SimpleStringProperty(id);
+        this.field1 = new SimpleStringProperty(field2);
+        this.field2 = new SimpleStringProperty(field3);
+        this.field3 = new SimpleStringProperty(field4);
+        this.field4 = new SimpleStringProperty(field6);
+        this.field5 = new SimpleStringProperty(field5);
+        this.field6 = new SimpleStringProperty(field6);
+        this.field7 = new SimpleStringProperty(field7);
+        this.field10 = new SimpleStringProperty(field10);
+        this.field21 = new SimpleStringProperty(field21);
+        this.field26 = new SimpleStringProperty(field26);
     }
 
-    public SimpleStringProperty field23Property() {
-        return field23;
-    }
 
-    public void setField23(String field23) {
-        this.field23.set(field23);
-    }
-
-    public String getField31() {
-        return field31.get();
-    }
-
-    public SimpleStringProperty field31Property() {
-        return field31;
-    }
-
-    public void setField31(String field31) {
-        this.field31.set(field31);
-    }
 }
