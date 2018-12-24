@@ -510,10 +510,307 @@ public class ProsdBaptView implements Initializable {
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
+        /***********************************--HTMLEDITOR 2--***********************************/
 
-        webEngine = webView.getEngine();
+        String INITIAL_TEXT_2 = "<html>\n" +
+                "\n" +
+                "<head>\n" +
+                "<meta http-equiv=Content-Type content=\"text/html; charset=unicode\">\n" +
+                "<meta name=Generator content=\"Microsoft Word 15 (filtered)\">\n" +
+                "<style>\n" +
+                "<!--\n" +
+                " /* Font Definitions */\n" +
+                " @font-face\n" +
+                "\t{font-family:\"Cambria Math\";\n" +
+                "\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Calibri;\n" +
+                "\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:\"Palatino Linotype\";\n" +
+                "\tpanose-1:2 4 5 2 5 5 5 3 3 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Genesis;\n" +
+                "\tpanose-1:2 11 6 4 2 2 2 2 2 4;}\n" +
+                " /* Style Definitions */\n" +
+                " p.MsoNormal, li.MsoNormal, div.MsoNormal\n" +
+                "\t{margin-top:0cm;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-bottom:10.0pt;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tline-height:115%;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.MsoHeader, li.MsoHeader, div.MsoHeader\n" +
+                "\t{mso-style-link:\"Header Char\";\n" +
+                "\tmargin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.MsoFooter, li.MsoFooter, div.MsoFooter\n" +
+                "\t{mso-style-link:\"Footer Char\";\n" +
+                "\tmargin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.msonormal0, li.msonormal0, div.msonormal0\n" +
+                "\t{mso-style-name:msonormal;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Times New Roman\",serif;}\n" +
+                "span.HeaderChar\n" +
+                "\t{mso-style-name:\"Header Char\";\n" +
+                "\tmso-style-link:Header;}\n" +
+                "span.FooterChar\n" +
+                "\t{mso-style-name:\"Footer Char\";\n" +
+                "\tmso-style-link:Footer;}\n" +
+                "p.msochpdefault, li.msochpdefault, div.msochpdefault\n" +
+                "\t{mso-style-name:msochpdefault;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.msopapdefault, li.msopapdefault, div.msopapdefault\n" +
+                "\t{mso-style-name:msopapdefault;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-bottom:10.0pt;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tline-height:115%;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Times New Roman\",serif;}\n" +
+                ".MsoChpDefault\n" +
+                "\t{font-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                ".MsoPapDefault\n" +
+                "\t{margin-bottom:10.0pt;\n" +
+                "\tline-height:115%;}\n" +
+                "@page WordSection1\n" +
+                "\t{size:595.3pt 841.9pt;\n" +
+                "\tmargin:72.0pt 90.0pt 72.0pt 90.0pt;}\n" +
+                "div.WordSection1\n" +
+                "\t{page:WordSection1;}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "\n" +
+                "</head>\n" +
+                "\n" +
+                "<body lang=EN-US>\n" +
+                "\n" +
+                "<div class=WordSection1>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:26.25pt'><b><span lang=EL\n" +
+                "style='font-family:\"Palatino Linotype\",serif'>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ΣΑΜΟΥ ΚΑΙ\n" +
+                "ΙΚΑΡΙΑΣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:26.25pt'><b><span lang=EL\n" +
+                "style='font-family:\"Palatino Linotype\",serif'>ΟΔΗΓΙΕΣ ΤΕΛΕΣΕΩΣ ΤΟΥ ΜΥΣΤΗΡΙΟ ΤΟΥ\n" +
+                "ΒΑΠΤΙΣΜΑΤΟΣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:26.25pt'><span lang=EL style='font-family:\n" +
+                "\"Palatino Linotype\",serif'>Αγαπητοί\n" +
+                "γονείς,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;\n" +
+                "Σε λίγες μέρες θα ζήσετε στο σπιτικό σας μια ξεχωριστή στιγμή που\n" +
+                "θα&nbsp;&nbsp; συνοδεύει το παιδί σας για όλη του την ζωή !</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;\n" +
+                "Ένας&nbsp; νέος χριστιανός ορθόδοξος θα πλαισιώσει την Εκκλησία μας. Από την πλευρά\n" +
+                "μας νοιώθουμε την ανάγκη να σας υπενθυμίσουμε και να σας παρακαλέσουμε για την\n" +
+                "τήρηση των πιο κάτω&nbsp; σημείων τα οποία βοηθούν στην καλλίτερη συμμέτοχη του\n" +
+                "Μυστήριου.&nbsp;&nbsp; </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1.Το\n" +
+                "Βάπτισμα δεν είναι μια απλή κοινωνική εκδήλωση και&nbsp; υποχρέωση ,ούτε ένα\n" +
+                "κοινωνικό γεγονός .Είναι το πρώτο βασικό Μυστήριο της Εκκλησιάς μας και η\n" +
+                "σφραγίδα της πίστεως μας .Με&nbsp; το βάπτισμα απαλλάσσεται ο βαπτιζόμενος από\n" +
+                "το προπατορικό αμάρτημα και εντάσσεται στο Σώμα της Εκκλησιάς του Χριστού μας\n" +
+                ".Αξίζει λοιπόν οι γονείς να έχουν βαθειά συνείδηση&nbsp; και επίγνωση της\n" +
+                "ιερότητας του Μυστήριου. </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;2.\n" +
+                "Απαραίτητη προϋπόθεση για την τέλεση του Μυστήριου είναι η συμφωνία &nbsp;και η\n" +
+                "παρουσία των γονέων του βαπτιζόμενου, που θα αποδεικνύεται με την υπογραφή τους\n" +
+                "στην δήλωση Βαπτίσεως την ημέρα του Μυστήριου.\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;3.Ο\n" +
+                "Ανάδοχος πρέπει μα είναι Ορθόδοξος Χριστιανός .Απαγγέλει κατά την διάρκεια του\n" +
+                "Μυστήριου το Σύμβολο της Πίστεως και είναι εγγυητής &nbsp;στην Εκκλησία για την\n" +
+                "Ορθόδοξη πιστή του Βαπτιζόμενου. Έχει δε την υποχρέωση να βοηθήσει το παΐδι\n" +
+                ",όταν ενηλικιωθεί να γνωρίσει την ορθόδοξη πιστή του. Δεν επιτρέπεται να είναι\n" +
+                "αλλόθρησκος ή αλλού δόγματος (Ρωμαιοκαθολικός, Προτεστάντης κα)ή άνθρωπος ο\n" +
+                "οποίος αρνείται την ορθόδοξη πιστή και ομολόγει Αθεΐα. Απαγορεύεται&nbsp;\n" +
+                "επίσης ο ανάδοχος να έχει τελέσει μόνο&nbsp; πολίτικο γάμο.\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>4.Οφειλουν\n" +
+                "ιδιαιτέρως&nbsp; η Ανάδοχος και η μητέρα του βρέφους να είναι ευπρεπώς\n" +
+                "ενδεδυμένες .Ο απαραίτητος σεβασμός στην ιερότητα του χώρου εκδηλώνεται και με\n" +
+                "την ευπρεπή και σεμνή παρουσία μας.&nbsp;&nbsp; </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>5.\n" +
+                "Ο&nbsp; στολισμός μπορεί να περιλαμβάνει μια ή δυο ανθοστήλες (όχι Μίκυ-Μαους\n" +
+                "κ.τ.λ)και δεν επιτρέπεται το στόλισμα της κολυμβήθρας</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>6.&nbsp;\n" +
+                "Το λαδί&nbsp; που θα χρησιμοποιηθεί θα πρέπει να είναι αγνό ελαιόλαδο.</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>7.\n" +
+                "Τα ρούχα του βαπτιζόμενου πρέπει να είναι απαραιτήτως λεύκα.\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>8.\n" +
+                "Για οποιαδήποτε άλλο που δεν αναφέρεται στο παρόν σημείωμα&nbsp; οι γονείς θα\n" +
+                "πρέπει να έρθουν σε συνείδηση προηγουμένως με τον Εφημέριο του Ιερού Ναού&nbsp;\n" +
+                "οπού θα τελεσθεί το\n" +
+                "Μυστήριο.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>9.\n" +
+                "Τέλος οφείλουν οι γονείς οι ανάδοχοι και οι συγγενείς να επιδείξουν κατά την\n" +
+                "διάρκεια της ακολουθίας του Μυστήριου τον πρέποντα&nbsp; σεβασμό με την σιωπή\n" +
+                "τους και την συμμέτοχη τους στην ακολουθία του Μυστηρίου&nbsp; </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span><b><i><span lang=EL style='font-size:10.0pt;line-height:115%;font-family:\n" +
+                "\"Palatino Linotype\",serif'>Ευχόμαστε&nbsp; ο Κύριος να σας χαρίζει οικογενειακή\n" +
+                "υγεία και πρόοδο!!!!!</span></i></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:26.25pt'><b><i><span lang=EL\n" +
+                "style='font-size:10.0pt;line-height:115%;font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></i></b><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>ΕΛΛΗΝΙΚΗ\n" +
+                "ΔΗΜΟΚΡΑΤΙΑ</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ΣΑΜΟΥ ΚΑΙ\n" +
+                "ΙΚΑΡΙΑΣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;\n" +
+                "ΙΕΡΟΣ ΝΑΟΣ ΚΟΙΜΗΣΕΩΣ ΤΗΣ ΘΕΟΤΟΚΟΥ ΚΟΝΤΑΚΑΙΙΚΩΝ</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Αριθμ.Πρωτ……13/2018……………</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><i><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "ΠΡΑΞΙΣ ΠΡΟΣΔΙΟΡΙΣΜΟΥ</span></i></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><i><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "ΤΕΛΕΣΕΩΣ&nbsp; ΤΟΥ ΜΥΣΤΗΡΙΟΥ ΤΟΥ ΒΑΠΤΙΣΜΑΤΟΣ</span></i></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Σήμερον\n" +
+                "την <b>…………………</b>…του μηνός<b>………………..</b> .του έτους…………..εμφανίσθησαν\n" +
+                "ενώπιον εμού του Εφημερίου του ως άνω Ιερού Ναού,οι υπογεγραμμένοι γονείς: </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)…<b>………………………………………….</b>&nbsp;\n" +
+                "Αρ.δελτ .αστ. ταυτοτητος<b>………..</b>.χρο.εκδ<b>…………..</b>.εκδ. Αρχ…<b>…………….</b>……\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>2)…\n" +
+                "<b>………………………………………………………………….. </b>Αρ.δελτ αστ. Ταυτοτητος…<b>…..</b>χρον.<b>εκδ\n" +
+                "…………εκδ</b>.Αρχη</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "και εδήλωσαν&nbsp; ότι: </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Α)τοΤέκνο\n" +
+                "τους(αγόρι- κορίτσι) γεννηθέν <b>………... του</b> μηνός<b>…….</b>… του\n" +
+                "έτους………στ…. νοσοκομειο.και εγεγραμμένο στο Ληξιαρχείο …<b>…..</b>……. με αριθμό\n" +
+                "πράξης…….Τομο..έτος…<b>….</b>……...</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;ΕΠΙΘΥΜΟΥΝ\n" +
+                "να το ΒΑΠΤΙΣΟΥΝ με το όνομα…<b>……………………………….</b>………………… την……………του\n" +
+                "μήνος&nbsp;&nbsp; <b>……………</b>…..του έτους <b>…….</b> &nbsp;&nbsp;και ώρα\n" +
+                "……………..</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;\n" +
+                "σύμφωνα με το τυπικό της Ορθοδόξου Χριστιανικής Εκκλησίας.</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Β)ως\n" +
+                "ΑΝΑΔΟΧΟΣ θα παρίσταται ο-η…<b>…………</b> Ορθόδοξος Χριστιανός ο οποίος ετέλεσε\n" +
+                "ορθόδοξο γάμο κατά την&nbsp; χρονολογία<b>…………. </b>στον Ιερό&nbsp;\n" +
+                "Ναό…………&nbsp;&nbsp; </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Γ)Οι\n" +
+                "γονείς εδήλωσαν ότι αποδέχονται τις σχετικές με το Βαπτισμα οδηγίες,οι οποίες\n" +
+                "αναφέρονται δε ειδικό έντυπο το οποίο έλαβαν μαζί\n" +
+                "τους.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
+                "\"Palatino Linotype\",serif'>&nbsp;</span><b><span lang=EL style='font-family:\n" +
+                "Genesis'>&nbsp;ΕΝ </span></b><b><span lang=EL>……………………………………….</span></b><b><span\n" +
+                "lang=EL style='font-family:Genesis'>………τη</span></b><b><span lang=EL>….</span></b><b><span\n" +
+                "lang=EL style='font-family:Genesis'>…………………2…………</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Ο&nbsp;\n" +
+                "ΕΦΗΜΕΡΙΟΣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "ΟΙ ΔΗΛΟΥΝΤΕΣ ΓΟΝΕΙΣ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "1……………………………………</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "2……………………………………</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "</span></p>\n" +
+                "\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "\n" +
+                "</html>\n";
 
-        webEngine.load("http://www.google.com");
+        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
+
+
+//        webEngine = webView.getEngine();
+//
+//        webEngine.load("http://www.google.com");
         // webEngine.loadContent("");
 
     }
