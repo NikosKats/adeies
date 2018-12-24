@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.print.Printer;
 import javafx.print.PrinterJob;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.Stage;
@@ -16,6 +18,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.prefs.Preferences;
 
@@ -26,6 +29,7 @@ public class DhlGamouView implements Initializable {
     public JFXButton create_new_btn;
     public JFXButton view_btn;
     public JFXButton menu_btn;
+    public HTMLEditor htmlEditor2;
     String CheckBox1, CheckBox2, CheckBox3, CheckBox4;
 
 
@@ -307,7 +311,28 @@ public class DhlGamouView implements Initializable {
 
 
 
-        String INITIAL_TEXT = "" ;
+        String INITIAL_TEXT = "<html>\n" +
+                "<head><meta http-equiv=Content-Type content=\"text/html; charset=UTF-8\">\n" +
+                "<style type=\"text/css\">\n" +
+                "<!--\n" +
+                "span.cls_002{font-family:Times,serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "div.cls_002{font-family:Times,serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "span.cls_003{font-family:\"Calibri\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "div.cls_003{font-family:\"Calibri\",serif;font-size:12.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "<script type=\"text/javascript\" src=\"2d885f3c-0767-11e9-8f58-0cc47a792c0a_id_2d885f3c-0767-11e9-8f58-0cc47a792c0a_files/wz_jsgraphics.js\"></script>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "<div style=\"position:absolute;left:50%;margin-left:-297px;top:0px;width:595px;height:842px;border-style:outset;overflow:hidden\">\n" +
+                "<div style=\"position:absolute;left:0px;top:0px\">\n" +
+                "<img src=\"2d885f3c-0767-11e9-8f58-0cc47a792c0a_id_2d885f3c-0767-11e9-8f58-0cc47a792c0a_files/background1.jpg\" width=595 height=842></div>\n" +
+                "<div style=\"position:absolute;left:126.24px;top:71.04px\" class=\"cls_002\"><span class=\"cls_002\">ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ</span></div>\n" +
+                "<div style=\"position:absolute;left:108.00px;top:85.20px\" class=\"cls_003\"><span class=\"cls_003\">ΣΑΜΟΥ ΙΚΑΡΙΑΣ ΚΑΙ ΚΟΡΣΕΩΝ</span></div>\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>\n" ;
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
@@ -315,15 +340,35 @@ public class DhlGamouView implements Initializable {
         String INITIAL_TEXT_2 = "" ;
 
 
-        htmlEditor.setHtmlText(INITIAL_TEXT_2);
+        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
     }
 
 
     public void print(ActionEvent actionEvent) throws Exception{
         PrinterJob job = PrinterJob.createPrinterJob();
         if(job != null){
-            htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
-            job.endJob();
+
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Επιλογή Άδειας Για Εκτύπωση.");
+            alert.setHeaderText("Θέλετε να εκτυπώσετε την άδεια από το αριστερό ή από το δεξί παράθυρο;");
+            alert.setContentText("Επιλέξτε.");
+
+            ButtonType buttonTypeOne = new ButtonType("Εκτύπωση άδειας αριστερού παραθύρου");
+            ButtonType buttonTypeTwo = new ButtonType("Εκτύπωση άδειας δεξιού παραθύρου");
+
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == buttonTypeOne) {
+                htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+
+            } else if (result.get() == buttonTypeTwo) {
+                htmlEditor2.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
+
+                job.endJob();
+            }
+
         }
 
 
