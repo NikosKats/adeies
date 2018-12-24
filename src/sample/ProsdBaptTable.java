@@ -181,7 +181,7 @@ public class ProsdBaptTable implements Initializable {
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
             stage.setResizable(false);
-            stage.setTitle("Δήλωση Βαπτίσεως");
+            stage.setTitle("Προσδιορισμός Βαπτίσεως");
             stage.setScene(scene);
             stage.show();
 
@@ -273,7 +273,7 @@ public class ProsdBaptTable implements Initializable {
                 scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
                 stage.setResizable(false);
-                stage.setTitle("Προβολή Δήλωσης");
+                stage.setTitle("Προβολή Προσδιορισμού Βαπτίσεως");
 
                 stage.setScene(scene);
                 stage.show();
@@ -322,7 +322,7 @@ public class ProsdBaptTable implements Initializable {
                 scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
                 stage.setResizable(false);
-                stage.setTitle("Επεξεργασία Δήλωσης Βαπτίσεως");
+                stage.setTitle("Επεξεργασία Προσδιορισμού Βαπτίσεως");
 
                 stage.setScene(scene);
                 stage.show();
@@ -384,7 +384,7 @@ public class ProsdBaptTable implements Initializable {
                     scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
                     stage.setResizable(false);
-                    stage.setTitle("Προβολή Λίστας Δηλώσεων");
+                    stage.setTitle("Προβολή Λίστας Προσδιορισμού Βαπτίσεως");
 
                     stage.setScene(scene);
                     stage.show();
@@ -417,7 +417,7 @@ public class ProsdBaptTable implements Initializable {
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
             stage.setResizable(false);
-            stage.setTitle("Προβολή Λίστας Δηλώσεων");
+            stage.setTitle("Προβολή Λίστας Προσδιορισμού Βαπτίσεως");
 
             stage.setScene(scene);
             stage.show();
