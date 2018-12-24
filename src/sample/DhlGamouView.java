@@ -289,15 +289,219 @@ public class DhlGamouView implements Initializable {
         selectRow(id);
 
 
-        String INITIAL_TEXT = "";
+        String INITIAL_TEXT = "<html>\n" +
+                "\n" +
+                "<head>\n" +
+                "<meta http-equiv=Content-Type content=\"text/html; charset=utf-8\">\n" +
+                "<meta name=Generator content=\"Microsoft Word 15 (filtered)\">\n" +
+                "<style>\n" +
+                "<!--\n" +
+                " /* Font Definitions */\n" +
+                " @font-face\n" +
+                "\t{font-family:\"Cambria Math\";\n" +
+                "\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Calibri;\n" +
+                "\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:-webkit-standard;\n" +
+                "\tpanose-1:2 11 6 4 2 2 2 2 2 4;}\n" +
+                " /* Style Definitions */\n" +
+                " p.MsoNormal, li.MsoNormal, div.MsoNormal\n" +
+                "\t{margin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:12.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.MsoAcetate, li.MsoAcetate, div.MsoAcetate\n" +
+                "\t{mso-style-link:\"Balloon Text Char\";\n" +
+                "\tmargin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:9.0pt;\n" +
+                "\tfont-family:\"Times New Roman\",serif;}\n" +
+                "span.BalloonTextChar\n" +
+                "\t{mso-style-name:\"Balloon Text Char\";\n" +
+                "\tmso-style-link:\"Balloon Text\";\n" +
+                "\tfont-family:\"Times New Roman\",serif;}\n" +
+                "span.apple-converted-space\n" +
+                "\t{mso-style-name:apple-converted-space;}\n" +
+                ".MsoChpDefault\n" +
+                "\t{font-family:\"Calibri\",sans-serif;}\n" +
+                "@page WordSection1\n" +
+                "\t{size:595.0pt 842.0pt;\n" +
+                "\tmargin:72.0pt 72.0pt 72.0pt 72.0pt;}\n" +
+                "div.WordSection1\n" +
+                "\t{page:WordSection1;}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "\n" +
+                "</head>\n" +
+                "\n" +
+                "<body lang=EN-US>\n" +
+                "\n" +
+                "<div class=WordSection1>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>   \n" +
+                "                     </span><span lang=EL style='font-size:14.0pt;font-family:\n" +
+                "\"Times New Roman\",serif'>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif'>ΣΑΜΟΥ ΙΚΑΡΙΑΣ ΚΑΙ ΚΟΡΣΕΩΝ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>ΙΕΡΟΣ\n" +
+                "ΝΑΟΣ                                                                </span></b><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif'>Άριθμ.Πρωτ.                \n" +
+                "</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><span lang=EL style='font-family:\n" +
+                "\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"-webkit-standard\",serif;\n" +
+                "color:black'>Ὁ ὐπογεγραμμένος Ἷερεύς </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"-webkit-standard\",serif;\n" +
+                "color:black'>Εφημέριος τοῦ Ἷεροῦ Ναοῦ </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"-webkit-standard\",serif;\n" +
+                "color:black'>δηλῶ ὃτι σήμερον τἡν  τοῦ μηνός </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"-webkit-standard\",serif;\n" +
+                "color:black'>τοῦ ἐτους ἠμέραν, εν τῶ Ἱερῶ Ναῶ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
+                "\"-webkit-standard\",serif;color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><span lang=EL style='font-family:\n" +
+                "\"-webkit-standard\",serif;color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><b><span lang=EL\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:72.0pt;text-indent:36.0pt'><b><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'> \n" +
+                "                       ΕΒΑΠΤΙΣΑ</span></b><b><span style='font-size:14.0pt;\n" +
+                "font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'> </span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'> </span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'> </span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'> </span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><b><span lang=EL\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'> </span></b><b><span\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></b><b><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>\n" +
+                "κατά τοὺς Ἱερούς Κανόνας τῆς Ὁρθοδόξου Ἁνατολικῆς Ἑκκλησίας</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Times New Roman\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>τό τέκνον τοῦ </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>καί τῆς  τό γένος </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>κατοίκων  όδὁς </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>ἀριθμ. , γεννηθέν την  ἔν </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>κατά τήν ύπ'ἀριθμ.  τὁμος  τοῦ  ἕτους πρᾶξιν</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>Γεννήσεως τοῦ κ. Ληξιάρχου </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:144.0pt;text-indent:36.0pt'><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>     \n" +
+                "Ὀνομασθέν</span><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:36.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif;color:black'>         ὐπό του/ης\n" +
+                "ἀναδεξαμένου/ης αὐτό ἕκ τῆς Ἱερᾶς Κολυμβήθρας</span><span style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span><span lang=EL style='font-size:14.0pt;font-family:\n" +
+                "\"Times New Roman\",serif;color:black'>        </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'> κατοίκου  όδὁς  ἀριθμ. </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'> Ἐφ᾽ὥ συνετάγη το παρόν καί ὑπογράφεται ώς ἕπεται:</span><span\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:108.0pt;text-indent:36.0pt'><b><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>       \n" +
+                "</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:108.0pt;text-indent:36.0pt'><b><span\n" +
+                "lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>          \n" +
+                "Ο ΕΦΗΜΕΡΙΟΣ</span></b><b><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span><span lang=EL style='font-size:14.0pt;font-family:\n" +
+                "\"Times New Roman\",serif;color:black'>                                   </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:36.0pt'><b><span lang=EL\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>     Ο\n" +
+                "ΠΑΤΗΡ ΚΑΙ Η ΜΗΤΗΡ ΤΟΥ ΒΑΠΤΙΣΘΕΝΤΟΣ ΝΗΠΙΟΥ</span></b><span style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif;color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:180.0pt'><b><span lang=EL\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>   </span></b><b><span\n" +
+                "style='font-size:14.0pt;font-family:\"Times New Roman\",serif;color:black'>Ο\n" +
+                "ΑΝΑΔΟΧΟΣ</span></b><span style='font-size:14.0pt;font-family:\"Times New Roman\",serif;\n" +
+                "color:black'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='margin-left:180.0pt'><span lang=EL style='font-size:\n" +
+                "14.0pt;font-family:\"Times New Roman\",serif;color:black'>          </span></p>\n" +
+                "\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "\n" +
+                "</html>\n";
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
 
-        String INITIAL_TEXT_2 = "";
 
-
-        htmlEditor2.setHtmlText(INITIAL_TEXT_2);
 
 
     }
@@ -323,7 +527,6 @@ public class DhlGamouView implements Initializable {
                 htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
             } else if (result.get() == buttonTypeTwo) {
-                htmlEditor2.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
                 job.endJob();
             }
