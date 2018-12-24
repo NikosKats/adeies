@@ -184,7 +184,7 @@ public class ProsdBapt {
             scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
             stage.setResizable(false);
-            stage.setTitle("Προβολή Λίστας Δηλώσεων");
+            stage.setTitle("Προβολή Λίστας Δηλώσεων Προσδιορισμού Βαπτίσεως");
             stage.setScene(scene);
             stage.show();
 
@@ -299,7 +299,7 @@ public class ProsdBapt {
                     scene.getStylesheets().addAll(Main.class.getResource("style.css").toExternalForm());
 
                     stage.setResizable(false);
-                    stage.setTitle("Προβολή Δηλώσεων");
+                    stage.setTitle("Προβολή Δηλώσεων Προσδιορισμού Βαπτίσεως");
                     stage.setScene(scene);
                     stage.show();
 
