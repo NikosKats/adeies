@@ -136,16 +136,16 @@ public class ProsdBaptTable implements Initializable {
 
 
                 col1.setCellValueFactory(new PropertyValueFactory<>("id"));
-                col2.setCellValueFactory(new PropertyValueFactory<>("Field2"));
-                col3.setCellValueFactory(new PropertyValueFactory<>("Field3"));
-                col4.setCellValueFactory(new PropertyValueFactory<>("Field4"));
-                col5.setCellValueFactory(new PropertyValueFactory<>("Field6"));
-                col6.setCellValueFactory(new PropertyValueFactory<>("Field7"));
-                col7.setCellValueFactory(new PropertyValueFactory<>("Field8"));
-                col8.setCellValueFactory(new PropertyValueFactory<>("Field11"));
-                col9.setCellValueFactory(new PropertyValueFactory<>("Field12"));
-                col10.setCellValueFactory(new PropertyValueFactory<>("Field23"));
-                col11.setCellValueFactory(new PropertyValueFactory<>("Field31"));
+                col2.setCellValueFactory(new PropertyValueFactory<>("Field1"));
+                col3.setCellValueFactory(new PropertyValueFactory<>("Field2"));
+                col4.setCellValueFactory(new PropertyValueFactory<>("Field3"));
+                col5.setCellValueFactory(new PropertyValueFactory<>("Field4"));
+                col6.setCellValueFactory(new PropertyValueFactory<>("Field5"));
+                col7.setCellValueFactory(new PropertyValueFactory<>("Field6"));
+                col8.setCellValueFactory(new PropertyValueFactory<>("Field7"));
+                col9.setCellValueFactory(new PropertyValueFactory<>("Field10"));
+                col10.setCellValueFactory(new PropertyValueFactory<>("Field21"));
+                col11.setCellValueFactory(new PropertyValueFactory<>("Field26"));
 
                 tableView.setItems(obList);
 
