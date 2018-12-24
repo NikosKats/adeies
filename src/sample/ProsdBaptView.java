@@ -214,48 +214,221 @@ public class ProsdBaptView implements Initializable {
         selectRow(id);
 
 
-        String INITIAL_TEXT = "<div style=\"text-align: center;\">&nbsp;<strong>&Iota;&Epsilon;&Rho;&Alpha; &Mu;&Eta;&Tau;&Rho;&Omicron;&Pi;&Omicron;&Lambda;&Iota;&Sigma;</strong></div>\n" +
-                "<div style=\"text-align: center;\">" + Field1 + "</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&Iota;&Epsilon;&Rho;&Omicron;&Sigma; &Nu;&Alpha;&Omicron;&Sigma;</strong> " + Field2 + " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong>&Alpha;&rho;&iota;&theta;&mu;.&Pi;&rho;&omega;&tau;.</strong> " + Field3 + "</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">Ὁ ὐ&pi;&omicron;&gamma;&epsilon;&gamma;&rho;&alpha;&mu;&mu;έ&nu;&omicron;&sigmaf; Ἷ&epsilon;&rho;&epsilon;ύ&sigmaf; " + Field4 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&Epsilon;&phi;&eta;&mu;έ&rho;&iota;&omicron;&sigmaf; &tau;&omicron;ῦ Ἷ&epsilon;&rho;&omicron;ῦ &Nu;&alpha;&omicron;ῦ " + Field5 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&delta;&eta;&lambda;ῶ ὃ&tau;&iota; &sigma;ή&mu;&epsilon;&rho;&omicron;&nu; &tau;ἡ&nu; " + Field6 + " &tau;&omicron;ῦ &mu;&eta;&nu;ό&sigmaf; " + Field7 + "</div>\n" +
-                "<div style=\"text-align: center;\">&tau;&omicron;ῦ ἐ&tau;&omicron;&upsilon;&sigmaf; " + Field8 + " ἠ&mu;έ&rho;&alpha;&nu; " + Field9 + ", &epsilon;&nu; &tau;ῶ Ἱ&epsilon;&rho;ῶ &Nu;&alpha;ῶ  &nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">" + Field10 + "</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\"><strong>&Epsilon;&Beta;&Alpha;&Pi;&Tau;&Iota;&Sigma;&Alpha;&nbsp;</strong></div>\n" +
-                "<div style=\"text-align: center;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &kappa;&alpha;&tau;ά &tau;&omicron;ὺ&sigmaf; Ἱ&epsilon;&rho;&omicron;ύ&sigmaf; &Kappa;&alpha;&nu;ό&nu;&alpha;&sigmaf; &tau;ῆ&sigmaf; Ὁ&rho;&theta;&omicron;&delta;ό&xi;&omicron;&upsilon; Ἁ&nu;&alpha;&tau;&omicron;&lambda;&iota;&kappa;ῆ&sigmaf; Ἑ&kappa;&kappa;&lambda;&eta;&sigma;ί&alpha;&sigmaf;&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&tau;ό &tau;έ&kappa;&nu;&omicron;&nu; &tau;&omicron;ῦ " + Field11 + "</div>\n" +
-                "<div style=\"text-align: center;\">&kappa;&alpha;ί &tau;ῆ&sigmaf; " + Field12 + " &tau;ό &gamma;έ&nu;&omicron;&sigmaf; " + Field13 + "</div>\n" +
-                "<div style=\"text-align: center;\">&kappa;&alpha;&tau;&omicron;ί&kappa;&omega;&nu; " + Field14 + " ό&delta;ὁ&sigmaf; " + Field15 + "</div>\n" +
-                "<div style=\"text-align: center;\">ἀ&rho;&iota;&theta;&mu;. " + Field16 + ", &gamma;&epsilon;&nu;&nu;&eta;&theta;έ&nu; &tau;ή&nu;" + Field17 + " ἔ&nu;" + Field18 + "</div>\n" +
-                "<div style=\"text-align: center;\">&kappa;&alpha;&tau;ά &tau;ή&nu; ύ&pi;'ἀ&rho;&iota;&theta;&mu;. " + Field19 + " &tau;ὁ&mu;&omicron;&sigmaf; " + Field20 + " &tau;&omicron;ῦ " + Field21 + " ἕ&tau;&omicron;&upsilon;&sigmaf; &pi;&rho;ᾶ&xi;&iota;&nu;</div>\n" +
-                "<div style=\"text-align: center;\">&Gamma;&epsilon;&nu;&nu;ή&sigma;&epsilon;&omega;&sigmaf; &tau;&omicron;ῦ &kappa;. &Lambda;&eta;&xi;&iota;ά&rho;&chi;&omicron;&upsilon; " + Field22 + "</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\"><strong>Ὀ&nu;&omicron;&mu;&alpha;&sigma;&theta;έ&nu;&nbsp;</strong></div>\n" +
-                "<div style=\"text-align: center;\"> " + Field23 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">ὐ&pi;ό &tau;&omicron;&upsilon;/&eta;&sigmaf; ἀ&nu;&alpha;&delta;&epsilon;&xi;&alpha;&mu;έ&nu;&omicron;&upsilon;/&eta;&sigmaf; &alpha;ὐ&tau;ό ἕ&kappa; &tau;ῆ&sigmaf; Ἱ&epsilon;&rho;ᾶ&sigmaf; &Kappa;&omicron;&lambda;&upsilon;&mu;&beta;ή&theta;&rho;&alpha;&sigmaf; </div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;" + Field24 + "</div>\n" +
-                "<div style=\"text-align: center;\">&kappa;&alpha;&tau;&omicron;ί&kappa;&omicron;&upsilon; " + Field25 + " ό&delta;ὁ&sigmaf; " + Field26 + " ἀ&rho;&iota;&theta;&mu;. " + Field27 + "</div>\n" +
-                "<div style=\"text-align: center;\">Ἐ&phi;᾽ὥ &sigma;&upsilon;&nu;&epsilon;&tau;ά&gamma;&eta; &tau;&omicron; &pi;&alpha;&rho;ό&nu; &kappa;&alpha;ί ὑ&pi;&omicron;&gamma;&rho;ά&phi;&epsilon;&tau;&alpha;&iota; ώ&sigmaf; ἕ&pi;&epsilon;&tau;&alpha;&iota;:&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\"><strong>&Omicron; &Epsilon;&Phi;&Eta;&Mu;&Epsilon;&Rho;&Iota;&Omicron;&Sigma;&nbsp;</strong></div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;" + Field28 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\"><strong>&Omicron; &Pi;&Alpha;&Tau;&Eta;&Rho; &Kappa;&Alpha;&Iota; &Eta; &Mu;&Eta;&Tau;&Eta;&Rho; &Tau;&Omicron;&Upsilon; &Beta;&Alpha;&Pi;&Tau;&Iota;&Sigma;&Theta;&Epsilon;&Nu;&Tau;&Omicron;&Sigma; &Nu;&Eta;&Pi;&Iota;&Omicron;&Upsilon;</strong>&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">" + Field29 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">" + Field30 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\"><strong>&Omicron; &Alpha;&Nu;&Alpha;&Delta;&Omicron;&Chi;&Omicron;&Sigma;</strong>&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">" + Field31 + "&nbsp;</div>\n" +
-                "<div style=\"text-align: center;\">&nbsp;</div>";
+        String INITIAL_TEXT = "<html>\n" +
+                "\n" +
+                "<head>\n" +
+                "<meta http-equiv=Content-Type content=\"text/html; charset=utf-8\">\n" +
+                "<meta name=Generator content=\"Microsoft Word 15 (filtered)\">\n" +
+                "<style>\n" +
+                "<!--\n" +
+                " /* Font Definitions */\n" +
+                " @font-face\n" +
+                "\t{font-family:\"Cambria Math\";\n" +
+                "\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Calibri;\n" +
+                "\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:\"Palatino Linotype\";\n" +
+                "\tpanose-1:2 4 5 2 5 5 5 3 3 4;}\n" +
+                "@font-face\n" +
+                "\t{font-family:Genesis;\n" +
+                "\tpanose-1:2 11 6 4 2 2 2 2 2 4;}\n" +
+                " /* Style Definitions */\n" +
+                " p.MsoNormal, li.MsoNormal, div.MsoNormal\n" +
+                "\t{margin-top:0cm;\n" +
+                "\tmargin-right:0cm;\n" +
+                "\tmargin-bottom:10.0pt;\n" +
+                "\tmargin-left:0cm;\n" +
+                "\tline-height:115%;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.MsoHeader, li.MsoHeader, div.MsoHeader\n" +
+                "\t{mso-style-link:\"Header Char\";\n" +
+                "\tmargin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "p.MsoFooter, li.MsoFooter, div.MsoFooter\n" +
+                "\t{mso-style-link:\"Footer Char\";\n" +
+                "\tmargin:0cm;\n" +
+                "\tmargin-bottom:.0001pt;\n" +
+                "\tfont-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                "span.HeaderChar\n" +
+                "\t{mso-style-name:\"Header Char\";\n" +
+                "\tmso-style-link:Header;}\n" +
+                "span.FooterChar\n" +
+                "\t{mso-style-name:\"Footer Char\";\n" +
+                "\tmso-style-link:Footer;}\n" +
+                ".MsoChpDefault\n" +
+                "\t{font-size:11.0pt;\n" +
+                "\tfont-family:\"Calibri\",sans-serif;}\n" +
+                ".MsoPapDefault\n" +
+                "\t{margin-bottom:10.0pt;\n" +
+                "\tline-height:115%;}\n" +
+                " /* Page Definitions */\n" +
+                " @page WordSection1\n" +
+                "\t{size:595.3pt 841.9pt;\n" +
+                "\tmargin:72.0pt 90.0pt 72.0pt 90.0pt;}\n" +
+                "div.WordSection1\n" +
+                "\t{page:WordSection1;}\n" +
+                "-->\n" +
+                "</style>\n" +
+                "\n" +
+                "</head>\n" +
+                "\n" +
+                "<body lang=EN-US>\n" +
+                "\n" +
+                "<div class=WordSection1>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:26.25pt'><b><span lang=EL\n" +
+                "style='font-family:\"Palatino Linotype\",serif'>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ΣΑΜΟΥ ΚΑΙ\n" +
+                "ΙΚΑΡΙΑΣ                                            ΟΔΗΓΙΕΣ ΤΕΛΕΣΕΩΣ ΤΟΥ\n" +
+                "ΜΥΣΤΗΡΙΟ ΤΟΥ ΒΑΠΤΙΣΜΑΤΟΣ                </span></b><span lang=EL\n" +
+                "style='font-family:\"Palatino Linotype\",serif'>Αγαπητοί\n" +
+                "γονείς,                                                                                                                  \n" +
+                "Σε λίγες μέρες θα ζήσετε στο σπιτικό σας μια ξεχωριστή στιγμή που θα  \n" +
+                "συνοδεύει το παιδί σας για όλη του την ζωή !                                                           Ένας \n" +
+                "νέος χριστιανός ορθόδοξος θα πλαισιώσει την Εκκλησία μας. Από την πλευρά μας νοιώθουμε\n" +
+                "την ανάγκη να σας υπενθυμίσουμε και να σας παρακαλέσουμε για την τήρηση των πιο\n" +
+                "κάτω  σημείων τα οποία βοηθούν στην καλλίτερη συμμέτοχη του Μυστήριου.                                                                                                                              \n" +
+                "        1.Το Βάπτισμα δεν είναι μια απλή κοινωνική εκδήλωση και  υποχρέωση ,ούτε\n" +
+                "ένα κοινωνικό γεγονός .Είναι το πρώτο βασικό Μυστήριο της Εκκλησιάς μας και η σφραγίδα\n" +
+                "της πίστεως μας .Με  το βάπτισμα απαλλάσσεται ο βαπτιζόμενος από το προπατορικό\n" +
+                "αμάρτημα και εντάσσεται στο Σώμα της Εκκλησιάς του Χριστού μας .Αξίζει λοιπόν\n" +
+                "οι γονείς να έχουν βαθειά συνείδηση  και επίγνωση της ιερότητας του Μυστήριου.                                                                                                            \n" +
+                " 2. Απαραίτητη προϋπόθεση για την τέλεση του Μυστήριου είναι η συμφωνία  και η παρουσία\n" +
+                "των γονέων του βαπτιζόμενου, που θα αποδεικνύεται με την υπογραφή τους στην δήλωση\n" +
+                "Βαπτίσεως την ημέρα του Μυστήριου.                       3.Ο Ανάδοχος πρέπει μα\n" +
+                "είναι Ορθόδοξος Χριστιανός .Απαγγέλει κατά την διάρκεια του Μυστήριου το Σύμβολο\n" +
+                "της Πίστεως και είναι εγγυητής  στην Εκκλησία για την Ορθόδοξη πιστή του\n" +
+                "Βαπτιζόμενου. Έχει δε την υποχρέωση να βοηθήσει το παΐδι ,όταν ενηλικιωθεί να\n" +
+                "γνωρίσει την ορθόδοξη πιστή του. Δεν επιτρέπεται να είναι αλλόθρησκος ή αλλού\n" +
+                "δόγματος (Ρωμαιοκαθολικός, Προτεστάντης κα)ή άνθρωπος ο οποίος αρνείται την\n" +
+                "ορθόδοξη πιστή και ομολόγει Αθεΐα. Απαγορεύεται  επίσης ο ανάδοχος να έχει\n" +
+                "τελέσει μόνο  πολίτικο γάμο.                                                                                                       4.Οφειλουν\n" +
+                "ιδιαιτέρως  η Ανάδοχος και η μητέρα του βρέφους να είναι ευπρεπώς ενδεδυμένες\n" +
+                ".Ο απαραίτητος σεβασμός στην ιερότητα του χώρου εκδηλώνεται και με την ευπρεπή\n" +
+                "και σεμνή παρουσία μας.                                                                 \n" +
+                "  5. Ο  στολισμός μπορεί να περιλαμβάνει μια ή δυο ανθοστήλες (όχι Μίκυ-Μαους\n" +
+                "κ.τ.λ)και δεν επιτρέπεται το στόλισμα της κολυμβήθρας                                            \n" +
+                "6.  Το λαδί  που θα χρησιμοποιηθεί θα πρέπει να είναι αγνό\n" +
+                "ελαιόλαδο.                  7. Τα ρούχα του βαπτιζόμενου πρέπει να είναι απαραιτήτως\n" +
+                "λεύκα.                        8. Για οποιαδήποτε άλλο που δεν αναφέρεται στο\n" +
+                "παρόν σημείωμα  οι γονείς θα πρέπει να έρθουν σε συνείδηση προηγουμένως με τον\n" +
+                "Εφημέριο του Ιερού Ναού  οπού θα τελεσθεί το Μυστήριο.                                                                                        \n" +
+                " 9. Τέλος οφείλουν οι γονείς οι ανάδοχοι και οι συγγενείς να επιδείξουν κατά\n" +
+                "την διάρκεια της ακολουθίας του Μυστήριου τον πρέποντα  σεβασμό με την σιωπή\n" +
+                "τους και την συμμέτοχη τους στην ακολουθία του Μυστηρίου                     </span><b><i><span\n" +
+                "lang=EL style='font-size:10.0pt;line-height:115%;font-family:\"Palatino Linotype\",serif'>Ευχόμαστε \n" +
+                "ο Κύριος να σας χαρίζει οικογενειακή υγεία και πρόοδο!!!!!</span></i></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal style='text-indent:26.25pt'><b><i><span lang=EL\n" +
+                "style='font-size:10.0pt;line-height:115%;font-family:\"Palatino Linotype\",serif'>                                             \n" +
+                "</span></i></b><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>ΕΛΛΗΝΙΚΗ\n" +
+                "ΔΗΜΟΚΡΑΤΙΑ</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>                     \n" +
+                "ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ΣΑΜΟΥ ΚΑΙ ΙΚΑΡΙΑΣ          </span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>ΙΕΡΟΣ\n" +
+                "ΝΑΟΣ ΚΟΙΜΗΣΕΩΣ ΤΗΣ ΘΕΟΤΟΚΟΥ ΚΟΝΤΑΚΑΙΙΚΩΝ</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Αριθμ.Πρωτ……13/2018……………</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><i><span lang=EL style='font-family:\"Palatino Linotype\",serif'>                                            \n" +
+                "ΠΡΑΞΙΣ ΠΡΟΣΔΙΟΡΙΣΜΟΥ</span></i></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><b><i><span lang=EL style='font-family:\"Palatino Linotype\",serif'>                   \n" +
+                "ΤΕΛΕΣΕΩΣ  ΤΟΥ ΜΥΣΤΗΡΙΟΥ ΤΟΥ ΒΑΠΤΙΣΜΑΤΟΣ</span></i></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Σήμερον\n" +
+                "την <b>…………………</b>…του μηνός<b>………………..</b> .του έτους…………..εμφανίσθησαν\n" +
+                "ενώπιον εμού του Εφημερίου του ως άνω Ιερού Ναού,οι υπογεγραμμένοι γονείς: </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'> \n" +
+                "1)…<b>………………………………………….</b>                                                                           \n" +
+                "Αρ.δελτ .αστ. ταυτοτητος<b>………..</b>.χρο.εκδ<b>…………..</b>.εκδ. Αρχ…<b>…………….</b>……\n" +
+                "2)… <b>…………………………………………………………………..                           </b> Αρ.δελτ αστ.\n" +
+                "Ταυτοτητος…<b>…..</b>χρον.<b>εκδ …………εκδ</b>.Αρχη</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>       \n" +
+                "                                         και εδήλωσαν  ότι: </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Α)τοΤέκνο\n" +
+                "τους(αγόρι- κορίτσι) γεννηθέν <b>………... του</b> μηνός<b>…….</b>… του έτους………στ….\n" +
+                "νοσοκομειο.και εγεγραμμένο στο Ληξιαρχείο …<b>…..</b>……. με αριθμό πράξης…….Τομο..έτος…<b>….</b>……...\n" +
+                " ΕΠΙΘΥΜΟΥΝ να το ΒΑΠΤΙΣΟΥΝ με το όνομα…<b>……………………………….</b>………………… την……………του\n" +
+                "μήνος   <b>……………</b>…..του έτους <b>…….</b>   και ώρα ……………..</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>                   \n" +
+                "σύμφωνα με το τυπικό της Ορθοδόξου Χριστιανικής Εκκλησίας.</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Β)ως\n" +
+                "ΑΝΑΔΟΧΟΣ θα παρίσταται ο-η…<b>…………</b> Ορθόδοξος Χριστιανός ο οποίος ετέλεσε\n" +
+                "ορθόδοξο γάμο κατά την  χρονολογία<b>…………. </b>στον Ιερό  Ναό…………                                                 \n" +
+                "       Γ)Οι γονείς εδήλωσαν ότι αποδέχονται τις σχετικές με το Βαπτισμα οδηγίες,οι\n" +
+                "οποίες αναφέρονται δε ειδικό έντυπο το οποίο έλαβαν μαζί\n" +
+                "τους.                             </span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>        \n" +
+                "</span><b><span lang=EL style='font-family:Genesis'> ΕΝ </span><span lang=EL>……………………………………….</span></b><b><span\n" +
+                "lang=EL style='font-family:Genesis'>………τη</span><span lang=EL>….</span></b><b><span\n" +
+                "lang=EL style='font-family:Genesis'>…………………2…………</span></b></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Ο \n" +
+                "ΕΦΗΜΕΡΙΟΣ                                                    ΟΙ ΔΗΛΟΥΝΤΕΣ\n" +
+                "ΓΟΝΕΙΣ</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>                                                                               \n" +
+                "1……………………………………</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>                                                                               \n" +
+                "2……………………………………</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
+                "\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>-                                                                                                                                                       \n" +
+                "</span></p>\n" +
+                "\n" +
+                "</div>\n" +
+                "\n" +
+                "</body>\n" +
+                "\n" +
+                "</html>\n";
 
 
         htmlEditor.setHtmlText(INITIAL_TEXT);
