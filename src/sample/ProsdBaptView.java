@@ -689,13 +689,13 @@ public class ProsdBaptView implements Initializable {
                 "ΔΗΜΟΚΡΑΤΙΑ</span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
-                "ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ΣΑΜΟΥ ΚΑΙ\n" +
-                "ΙΚΑΡΙΑΣ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></p>\n" +
+                "ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ "+Field1+
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;\n" +
-                "ΙΕΡΟΣ ΝΑΟΣ ΚΟΙΜΗΣΕΩΣ ΤΗΣ ΘΕΟΤΟΚΟΥ ΚΟΝΤΑΚΑΙΙΚΩΝ</span></b></p>\n" +
+                "ΙΕΡΟΣ ΝΑΟΣ "+Field1+" </span></b></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Αριθμ.Πρωτ……13/2018……………</span></b></p>\n" +
+                "<p class=MsoNormal><b><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Αριθμ.Πρωτ……"+Field1+" ……</span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><b><i><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "ΠΡΑΞΙΣ ΠΡΟΣΔΙΟΡΙΣΜΟΥ</span></i></b></p>\n" +
@@ -704,38 +704,38 @@ public class ProsdBaptView implements Initializable {
                 "ΤΕΛΕΣΕΩΣ&nbsp; ΤΟΥ ΜΥΣΤΗΡΙΟΥ ΤΟΥ ΒΑΠΤΙΣΜΑΤΟΣ</span></i></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Σήμερον\n" +
-                "την <b>…………………</b>…του μηνός<b>………………..</b> .του έτους…………..εμφανίσθησαν\n" +
+                "την <b>"+Field1+" </b>…του μηνός<b> "+Field1+" </b> .του έτους "+Field1+" .εμφανίσθησαν\n" +
                 "ενώπιον εμού του Εφημερίου του ως άνω Ιερού Ναού,οι υπογεγραμμένοι γονείς: </span></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)…<b>………………………………………….</b>&nbsp;\n" +
-                "Αρ.δελτ .αστ. ταυτοτητος<b>………..</b>.χρο.εκδ<b>…………..</b>.εκδ. Αρχ…<b>…………….</b>……\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>1)…<b> "+Field1+" </b>&nbsp;\n" +
+                "Αρ.δελτ .αστ. ταυτοτητος "+Field1+" .χρο.εκδ "+Field1+" .εκδ. Αρχ. "+Field1+"\n" +
                 "</span></p>\n" +
                 "\n" +
-                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>2)…\n" +
-                "<b>………………………………………………………………….. </b>Αρ.δελτ αστ. Ταυτοτητος…<b>…..</b>χρον.<b>εκδ\n" +
-                "…………εκδ</b>.Αρχη</span></p>\n" +
+                "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>2)\n" +
+                ""+Field1+" . Αρ.δελτ αστ. Ταυτοτητος"+Field1+"χρον.εκδ\n" +
+                ""+Field1+" εκδ.Αρχη</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "και εδήλωσαν&nbsp; ότι: </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Α)τοΤέκνο\n" +
-                "τους(αγόρι- κορίτσι) γεννηθέν <b>………... του</b> μηνός<b>…….</b>… του\n" +
-                "έτους………στ…. νοσοκομειο.και εγεγραμμένο στο Ληξιαρχείο …<b>…..</b>……. με αριθμό\n" +
-                "πράξης…….Τομο..έτος…<b>….</b>……...</span></p>\n" +
+                "τους(αγόρι- κορίτσι) γεννηθέν "+Field1+"  του μηνός "+Field1+"  του\n" +
+                "έτους "+Field1+" στ"+Field1+" νοσοκομειο.και εγεγραμμένο στο Ληξιαρχείο "+Field1+"  με αριθμό\n" +
+                "πράξης "+Field1+" Τομο "+Field1+" έτος "+Field1+" </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;&nbsp;ΕΠΙΘΥΜΟΥΝ\n" +
-                "να το ΒΑΠΤΙΣΟΥΝ με το όνομα…<b>……………………………….</b>………………… την……………του\n" +
-                "μήνος&nbsp;&nbsp; <b>……………</b>…..του έτους <b>…….</b> &nbsp;&nbsp;και ώρα\n" +
-                "……………..</span></p>\n" +
+                "να το ΒΑΠΤΙΣΟΥΝ με το όνομα <b>"+Field1+" </b> την "+Field1+" του\n" +
+                "μήνος&nbsp;&nbsp; "+Field1+" του έτους "+Field1+"  &nbsp;&nbsp;και ώρα\n" +
+                ""+Field1+" </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;\n" +
                 "σύμφωνα με το τυπικό της Ορθοδόξου Χριστιανικής Εκκλησίας.</span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Β)ως\n" +
-                "ΑΝΑΔΟΧΟΣ θα παρίσταται ο-η…<b>…………</b> Ορθόδοξος Χριστιανός ο οποίος ετέλεσε\n" +
-                "ορθόδοξο γάμο κατά την&nbsp; χρονολογία<b>…………. </b>στον Ιερό&nbsp;\n" +
-                "Ναό…………&nbsp;&nbsp; </span></p>\n" +
+                "ΑΝΑΔΟΧΟΣ θα παρίσταται ο-η "+Field1+"  Ορθόδοξος Χριστιανός ο οποίος ετέλεσε\n" +
+                "ορθόδοξο γάμο κατά την&nbsp; χρονολογία "+Field1+"  στον Ιερό&nbsp;\n" +
+                "Ναό "+Field1+" &nbsp;&nbsp; </span></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>Γ)Οι\n" +
                 "γονείς εδήλωσαν ότι αποδέχονται τις σχετικές με το Βαπτισμα οδηγίες,οι οποίες\n" +
@@ -749,8 +749,8 @@ public class ProsdBaptView implements Initializable {
                 "<p class=MsoNormal style='margin-left:36.0pt'><span lang=EL style='font-family:\n" +
                 "\"Palatino Linotype\",serif'>&nbsp;</span><b><span lang=EL style='font-family:\n" +
                 "Genesis'>&nbsp;ΕΝ </span></b><b><span lang=EL>……………………………………….</span></b><b><span\n" +
-                "lang=EL style='font-family:Genesis'>………τη</span></b><b><span lang=EL>….</span></b><b><span\n" +
-                "lang=EL style='font-family:Genesis'>…………………2…………</span></b></p>\n" +
+                "lang=EL style='font-family:Genesis'>"+Field1+" τη</span></b><b><span lang=EL></span></b><b><span\n" +
+                "lang=EL style='font-family:Genesis'> "+Field1+" 2"+Field1+" </span></b></p>\n" +
                 "\n" +
                 "<p class=MsoNormal><span lang=EL style='font-family:\"Palatino Linotype\",serif'>&nbsp;</span></p>\n" +
                 "\n" +
