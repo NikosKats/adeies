@@ -1833,7 +1833,7 @@ public class DhlGamouView implements Initializable {
                 htmlEditor.print(PrinterJob.createPrinterJob(Printer.getDefaultPrinter()));
 
             } else if (result.get() == buttonTypeTwo) {
-                job.printPage(webView);
+                job.printPage(htmlEditor2);
                 job.endJob();
             }
 
