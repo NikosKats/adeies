@@ -87,22 +87,47 @@ export default function Help() {
         </Note>
       </Section>
 
-      {/* ── BUILD FROM SOURCE ────────────────────────────────────────────── */}
-      <Section icon={Wrench} title="Δημιουργία Installer από Πηγαίο Κώδικα (Για Προγραμματιστές)" accent="purple">
-        <Note type="info">
-          Χρειάζεστε: Node.js 20+, Git, και ενεργή σύνδεση internet.
+      {/* ── BUILD INSTALLERS ─────────────────────────────────────────────── */}
+      <Section icon={Wrench} title="Δημιουργία Installer από Πηγαίο Κώδικα" accent="purple">
+        <Note type="warn">
+          <strong>Σημαντικό:</strong> Μπορείτε να δημιουργήσετε installer μόνο για το λειτουργικό στο οποίο εργάζεστε.
+          Windows installer → σε Windows · macOS DMG → σε Mac · AppImage → σε Linux.
         </Note>
+
+        <p className="font-semibold text-gray-800 mt-3 mb-1">Προαπαιτούμενα</p>
+        <div className="grid grid-cols-3 gap-2 text-xs mb-3">
+          {[
+            ['Node.js', '20+', 'nodejs.org'],
+            ['Git', 'οποιαδήποτε', 'git-scm.com'],
+            ['sharp', 'αυτόματα', 'μέσω npm install'],
+          ].map(([tool, ver, note]) => (
+            <div key={tool} className="bg-gray-50 rounded-lg p-2.5">
+              <div className="font-semibold text-gray-800">{tool}</div>
+              <div className="text-gray-500">{ver}</div>
+              <div className="text-gray-400">{note}</div>
+            </div>
+          ))}
+        </div>
+
         <Step n={1}>
-          Κλωνοποιήστε και εγκαταστήστε:
+          Κλωνοποιήστε και εγκαταστήστε εξαρτήσεις:
           <Block>{'git clone https://github.com/NikosKats/adeies.git\ncd adeies/adeies-v2\ngit checkout claude/create-new-branch-S5Mo6\nnpm install'}</Block>
         </Step>
         <Step n={2}>
-          Δημιουργία installer για το τρέχον λειτουργικό:
-          <Block>{'# Windows (.exe)\nnpm run dist:win\n\n# macOS (.dmg)\nnpm run dist:mac\n\n# Linux (.AppImage)\nnpm run dist:linux'}</Block>
-          Τα αρχεία δημιουργούνται στο φάκελο <Code>dist-installer/</Code>.
+          Εκτελέστε την εντολή για το λειτουργικό σας:
+          <Block>{'# Windows → Adeies-Setup.exe\nnpm run dist:win\n\n# macOS → Adeies.dmg  (Intel + Apple Silicon)\nnpm run dist:mac\n\n# Linux → Adeies.AppImage\nnpm run dist:linux\n\n# Όλα μαζί (τρέχον λειτουργικό)\nnpm run dist'}</Block>
+          Τα αρχεία εξόδου βρίσκονται στο φάκελο <Code>dist-installer/</Code>.
         </Step>
-        <Note type="success">
-          Το <Code>npm run dist:win</Code> δημιουργεί αυτόματα το εικονίδιο, κάνει build και πακετάρει τον installer.
+
+        <p className="font-semibold text-gray-800 mt-3 mb-1">Τι κάνει κάθε εντολή εσωτερικά</p>
+        <div className="space-y-1 text-xs text-gray-600 ml-2">
+          <div><ChevronRight size={12} className="inline mr-1 text-purple-500" /><Code>npm run icon</Code> — δημιουργεί <Code>build/icon.png</Code> 1024×1024 (Ορθόδοξος σταυρός)</div>
+          <div><ChevronRight size={12} className="inline mr-1 text-purple-500" /><Code>electron-vite build</Code> — μεταγλωττίζει TypeScript + React → <Code>dist-electron/</Code></div>
+          <div><ChevronRight size={12} className="inline mr-1 text-purple-500" /><Code>electron-builder</Code> — πακετάρει σε NSIS .exe / DMG / AppImage</div>
+        </div>
+
+        <Note type="success" >
+          Μετά το build παραδώστε στον χρήστη: (1) το αρχείο installer + (2) το αντίστοιχο setup script βάσης δεδομένων από τον φάκελο <Code>scripts/</Code>.
         </Note>
       </Section>
 
