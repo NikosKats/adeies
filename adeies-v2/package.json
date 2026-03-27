@@ -4,7 +4,7 @@
   "description": "Greek Orthodox Church Records Management System",
   "main": "dist-electron/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev -- --no-sandbox",
+    "dev": "electron-vite dev",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
     "dist": "npm run build && electron-builder",
