@@ -45,7 +45,7 @@ npm run dist:linux
 Τα αρχεία δημιουργούνται στο φάκελο dist-installer/.
 Το npm run dist:win δημιουργεί αυτόματα το εικονίδιο, κάνει build και πακετάρει τον installer.
 
-#Εγκατάσταση σε Windows (Development)
+# Εγκατάσταση σε Windows (Development)
 1
 Εκτελέστε το scripts/setup-db-windows.ps1 ως Διαχειριστής.
 2
