@@ -1,9 +1,9 @@
 # adeies
-Βοήθεια & Οδηγίες
+#Βοήθεια & Οδηγίες
 
-Εγκατάσταση Production — Τελικός Χρήστης (Συνιστάται)
+#Εγκατάσταση Production — Τελικός Χρήστης (Συνιστάται)
 Αυτός είναι ο ευκολότερος τρόπος. Κατεβάστε τον έτοιμο installer και το script ρύθμισης.
-Windows (.exe installer)
+#Windows (.exe installer)
 1
 Κατεβάστε και εκτελέστε το setup-db-windows.ps1 ως Διαχειριστής:
 Δεξί κλικ στο αρχείο → "Εκτέλεση με PowerShell ως Διαχειριστής"
@@ -24,7 +24,7 @@ bash setup-db-mac.sh
 Ανοίξτε το Adeies, συνδεθείτε με admin / admin123.
 macOS: Αν εμφανιστεί "δεν μπορεί να ανοιχτεί", πηγαίνετε Ρυθμίσεις Συστήματος → Απόρρητο & Ασφάλεια → "Άνοιγμα Ούτως ή Άλλως".
 
-Δημιουργία Installer από Πηγαίο Κώδικα (Για Προγραμματιστές)
+#Δημιουργία Installer από Πηγαίο Κώδικα (Για Προγραμματιστές)
 Χρειάζεστε: Node.js 20+, Git, και ενεργή σύνδεση internet.
 1
 Κλωνοποιήστε και εγκαταστήστε:
@@ -45,7 +45,7 @@ npm run dist:linux
 Τα αρχεία δημιουργούνται στο φάκελο dist-installer/.
 Το npm run dist:win δημιουργεί αυτόματα το εικονίδιο, κάνει build και πακετάρει τον installer.
 
-Εγκατάσταση σε Windows (Development)
+#Εγκατάσταση σε Windows (Development)
 1
 Εκτελέστε το scripts/setup-db-windows.ps1 ως Διαχειριστής.
 2
@@ -57,7 +57,7 @@ git checkout claude/create-new-branch-S5Mo6
 npm install
 npm run dev
 
-Εγκατάσταση σε macOS (Development)
+#Εγκατάσταση σε macOS (Development)
 1
 bash scripts/setup-db-mac.sh
 2
@@ -67,7 +67,7 @@ git checkout claude/create-new-branch-S5Mo6
 npm install
 npm run dev
 
-Ρυθμίσεις Βάσης Δεδομένων
+#Ρυθμίσεις Βάσης Δεδομένων
 Τα προεπιλεγμένα στοιχεία σύνδεσης (μετά το setup script):
 Host: localhost
 Port: 5432
@@ -76,7 +76,7 @@ Username: adeies
 Password: adeies
 Πολλαπλοί χρήστες (LAN): Εγκαταστήστε PostgreSQL σε ένα μόνο PC (server). Στους υπόλοιπους υπολογιστές βάλτε την IP του server αντί για localhost. Παράδειγμα: 192.168.1.10
 
-Διαχείριση Χρηστών
+#Διαχείριση Χρηστών
 Δύο ρόλοι χρηστών:
 Διαχειριστής: Πλήρης πρόσβαση + δημιουργία/διαγραφή χρηστών
 Χρήστης: Καταχώρηση εγγραφών, επεξεργασία, εξαγωγή PDF
@@ -105,7 +105,7 @@ Password: adeies
 3
 Επιλέξτε φάκελο αποθήκευσης
 
-Μετάπτωση από Παλαιά Εφαρμογή (SQLite)
+#Μετάπτωση από Παλαιά Εφαρμογή (SQLite)
 Αν έχετε αρχείο adeies.db από την παλιά εφαρμογή Java:
 # Mac / Linux
 SQLITE_PATH=/path/to/adeies.db \
@@ -118,7 +118,7 @@ $env:DATABASE_URL="postgresql://adeies:adeies@localhost:5432/adeies"
 npm run migrate:sqlite
 Μεταφέρει αυτόματα όλα τα δεδομένα (βαπτίσεις, γάμοι, πιστοποιητικά) στη νέα PostgreSQL.
 
-Τεχνικές Πληροφορίες
+#Τεχνικές Πληροφορίες
 Framework
 Electron 28 + React 18
 Γλώσσα
