@@ -442,6 +442,67 @@ sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE adeies TO adeies;"</d
 
   <hr class="divider">
 
+  <!-- ══ BUILD INSTALLERS ═══════════════════════════════════════════════ -->
+  <div class="section-heading">🛠️ Δημιουργία Installer από Πηγαίο Κώδικα (Για Προγραμματιστές)</div>
+  <div class="note note-warn">
+    <strong>Σημαντικό:</strong> Μπορείτε να δημιουργήσετε installer <strong>μόνο για το λειτουργικό στο οποίο εργάζεστε</strong>.
+    Windows installer → σε Windows &nbsp;·&nbsp; macOS DMG → σε Mac &nbsp;·&nbsp; AppImage → σε Linux.
+  </div>
+
+  <p style="font-size:10pt; font-weight:bold; margin: 10px 0 6px;">Προαπαιτούμενα</p>
+  <table class="cred-table" style="margin-bottom:10px;">
+    <tr><th>Εργαλείο</th><th>Έκδοση</th><th>Πηγή</th></tr>
+    <tr><td>Node.js</td><td><code>20+</code></td><td>nodejs.org</td></tr>
+    <tr><td>Git</td><td>οποιαδήποτε</td><td>git-scm.com</td></tr>
+    <tr><td>sharp</td><td>αυτόματα</td><td>μέσω <code>npm install</code></td></tr>
+  </table>
+
+  <ol class="steps">
+    <li class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>Κλωνοποιήστε και εγκαταστήστε εξαρτήσεις:</strong>
+        <div class="code-block">git clone https://github.com/NikosKats/adeies.git
+cd adeies/adeies-v2
+git checkout claude/create-new-branch-S5Mo6
+npm install</div>
+      </div>
+    </li>
+    <li class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Εκτελέστε την εντολή για το λειτουργικό σας:</strong>
+        <div class="code-block"><span class="comment"># Windows → dist-installer\Adeies-Setup.exe</span>
+npm run dist:win
+
+<span class="comment"># macOS → dist-installer/Adeies.dmg  (Intel + Apple Silicon)</span>
+npm run dist:mac
+
+<span class="comment"># Linux → dist-installer/Adeies.AppImage</span>
+npm run dist:linux</div>
+        Τα αρχεία εξόδου βρίσκονται στο φάκελο <code>dist-installer/</code>.
+      </div>
+    </li>
+    <li class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Παραδώστε στον χρήστη:</strong><br>
+        · Το αρχείο installer (<code>Adeies-Setup.exe</code> / <code>Adeies.dmg</code> / <code>Adeies.AppImage</code>)<br>
+        · Το αντίστοιχο setup script από τον φάκελο <code>scripts/</code>
+      </div>
+    </li>
+  </ol>
+
+  <p style="font-size:10pt; font-weight:bold; margin: 10px 0 4px;">Τι κάνει κάθε εντολή εσωτερικά</p>
+  <table class="cred-table" style="margin-bottom:6px;">
+    <tr><th>Βήμα</th><th>Εντολή</th><th>Αποτέλεσμα</th></tr>
+    <tr><td>1</td><td><code>npm run icon</code></td><td>Δημιουργεί <code>build/icon.png</code> 1024×1024 (Ορθόδοξος σταυρός)</td></tr>
+    <tr><td>2</td><td><code>electron-vite build</code></td><td>Μεταγλωττίζει TypeScript + React → <code>dist-electron/</code></td></tr>
+    <tr><td>3</td><td><code>electron-builder</code></td><td>Πακετάρει σε NSIS .exe / DMG / AppImage</td></tr>
+  </table>
+
+  <hr class="divider">
+
   <!-- ══ MIGRATION ══════════════════════════════════════════════════════ -->
   <div class="section-heading">📦 Μετάπτωση από Παλαιά Εφαρμογή Java (SQLite)</div>
   <p style="font-size:10.5pt; margin-bottom:8px;">
