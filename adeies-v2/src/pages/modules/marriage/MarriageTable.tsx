@@ -11,12 +11,13 @@ const columns = [
 ]
 
 export default function MarriageTable() {
-  const { rows, loading, search, setSearch, remove } = useModuleList('marriage_declarations')
+  const { rows, totalRows, loading, search, setSearch, remove } = useModuleList('marriage_declarations')
 
   return (
     <div>
       <h2 className="page-title">Δηλώσεις Γάμου</h2>
-      <DataTable columns={columns} rows={rows} basePath="/marriage" onDelete={remove} loading={loading} searchValue={search} onSearch={setSearch} />
+      <DataTable columns={columns} rows={rows} basePath="/marriage" onDelete={remove} loading={loading} searchValue={search} onSearch={setSearch}
+        totalRows={totalRows} />
     </div>
   )
 }

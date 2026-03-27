@@ -11,12 +11,13 @@ const columns = [
 ]
 
 export default function BaptismSpecificationTable() {
-  const { rows, loading, search, setSearch, remove } = useModuleList('baptism_specifications')
+  const { rows, totalRows, loading, search, setSearch, remove } = useModuleList('baptism_specifications')
 
   return (
     <div>
       <h2 className="page-title">Προσδιορισμός Βαπτίσεως</h2>
-      <DataTable columns={columns} rows={rows} basePath="/baptism-specification" onDelete={remove} loading={loading} searchValue={search} onSearch={setSearch} />
+      <DataTable columns={columns} rows={rows} basePath="/baptism-specification" onDelete={remove} loading={loading} searchValue={search} onSearch={setSearch}
+        totalRows={totalRows} />
     </div>
   )
 }

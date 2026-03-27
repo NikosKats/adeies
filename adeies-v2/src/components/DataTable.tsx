@@ -15,9 +15,10 @@ interface Props {
   loading?: boolean
   searchValue?: string
   onSearch?: (v: string) => void
+  totalRows?: number
 }
 
-export default function DataTable({ columns, rows, basePath, onDelete, loading, searchValue, onSearch }: Props) {
+export default function DataTable({ columns, rows, basePath, onDelete, loading, searchValue, onSearch, totalRows }: Props) {
   const navigate = useNavigate()
 
   return (
@@ -48,8 +49,20 @@ export default function DataTable({ columns, rows, basePath, onDelete, loading, 
       ) : rows.length === 0 ? (
         <div className="card text-center py-16">
           <FileX size={40} className="text-gray-300 mx-auto mb-3" />
-          <p className="text-gray-500 font-medium">Δεν υπάρχουν εγγραφές</p>
-          <p className="text-gray-400 text-sm mt-1">Κλικ "+ Νέα Εγγραφή" για να ξεκινήσετε</p>
+          {searchValue ? (
+            <>
+              <p className="text-gray-500 font-medium">Δεν βρέθηκαν αποτελέσματα</p>
+              <p className="text-gray-400 text-sm mt-1">Δοκιμάστε διαφορετικούς όρους αναζήτησης</p>
+              <button onClick={() => onSearch?.('')} className="mt-3 text-sm text-blue-600 hover:underline">
+                Καθαρισμός αναζήτησης
+              </button>
+            </>
+          ) : (
+            <>
+              <p className="text-gray-500 font-medium">Δεν υπάρχουν εγγραφές</p>
+              <p className="text-gray-400 text-sm mt-1">Κλικ "+ Νέα Εγγραφή" για να ξεκινήσετε</p>
+            </>
+          )}
         </div>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm bg-white">
@@ -95,7 +108,9 @@ export default function DataTable({ columns, rows, basePath, onDelete, loading, 
             </tbody>
           </table>
           <div className="px-4 py-2.5 bg-gray-50 border-t border-gray-100 text-xs text-gray-400">
-            {rows.length} {rows.length === 1 ? 'εγγραφή' : 'εγγραφές'}
+            {searchValue && totalRows !== undefined && totalRows !== rows.length
+              ? `${rows.length} από ${totalRows} εγγραφές`
+              : `${rows.length} ${rows.length === 1 ? 'εγγραφή' : 'εγγραφές'}`}
           </div>
         </div>
       )}

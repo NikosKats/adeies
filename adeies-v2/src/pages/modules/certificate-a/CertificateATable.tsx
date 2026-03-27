@@ -10,12 +10,13 @@ const columns = [
 ]
 
 export default function CertificateATable() {
-  const { rows, loading, search, setSearch, remove } = useModuleList('certificates_a')
+  const { rows, totalRows, loading, search, setSearch, remove } = useModuleList('certificates_a')
 
   return (
     <div>
       <h2 className="page-title">Πιστοποιητικά Αγαμίας (Τύπος Α΄)</h2>
-      <DataTable columns={columns} rows={rows} basePath="/certificate-a" onDelete={remove} loading={loading} searchValue={search} onSearch={setSearch} />
+      <DataTable columns={columns} rows={rows} basePath="/certificate-a" onDelete={remove} loading={loading} searchValue={search} onSearch={setSearch}
+        totalRows={totalRows} />
     </div>
   )
 }

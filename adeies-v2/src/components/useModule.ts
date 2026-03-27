@@ -29,7 +29,7 @@ export function useModuleList(table: TableName) {
     ? rows.filter((r) => Object.values(r).some((v) => v?.toLowerCase().includes(search.toLowerCase())))
     : rows
 
-  return { rows: filtered, loading, search, setSearch, remove, navigate, reload: load }
+  return { rows: filtered, totalRows: rows.length, loading, search, setSearch, remove, navigate, reload: load }
 }
 
 export function useModuleForm(table: TableName) {

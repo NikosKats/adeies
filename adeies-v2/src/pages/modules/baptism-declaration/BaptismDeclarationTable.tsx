@@ -11,7 +11,7 @@ const columns = [
 ]
 
 export default function BaptismDeclarationTable() {
-  const { rows, loading, search, setSearch, remove } = useModuleList('baptism_declarations')
+  const { rows, totalRows, loading, search, setSearch, remove } = useModuleList('baptism_declarations')
 
   return (
     <div>
@@ -24,6 +24,7 @@ export default function BaptismDeclarationTable() {
         loading={loading}
         searchValue={search}
         onSearch={setSearch}
+        totalRows={totalRows}
       />
     </div>
   )
