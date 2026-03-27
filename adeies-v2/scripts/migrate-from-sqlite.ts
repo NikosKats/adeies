@@ -7,7 +7,7 @@
  *   npm run migrate:sqlite
  */
 
-import { Database } from 'bun:sqlite'  // or use better-sqlite3 if not using bun
+import Database from 'better-sqlite3'
 import { Pool } from 'pg'
 
 const SQLITE_PATH = process.env.SQLITE_PATH ?? '../adeies.db'

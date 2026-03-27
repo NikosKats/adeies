@@ -4,7 +4,7 @@
   "description": "Greek Orthodox Church Records Management System",
   "main": "dist-electron/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev",
+    "dev": "electron-vite dev -- --no-sandbox",
     "build": "electron-vite build",
     "preview": "electron-vite preview",
     "dist": "npm run build && electron-builder",
@@ -13,6 +13,9 @@
     "migrate:sqlite": "tsx scripts/migrate-from-sqlite.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^12.8.0",
     "drizzle-orm": "^0.29.3",
     "electron-store": "^8.1.0",
     "pg": "^8.11.3",
@@ -20,8 +23,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.3",
     "react-router-dom": "^6.21.1",
-    "zod": "^3.22.4",
-    "@hookform/resolvers": "^3.3.4"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
