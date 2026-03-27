@@ -1,4 +1,5 @@
 import { useModuleView } from '../../../components/useModule'
+import { pdfStyles } from '../../../utils/pdfStyles'
 
 function row(label: string, value: string | undefined) {
   return (
@@ -17,40 +18,90 @@ export default function CertificateBView() {
 
   const r = record
 
-  const generateHtml = () => `
-<!DOCTYPE html><html lang="el"><head><meta charset="UTF-8"/>
-<style>body{font-family:Arial,sans-serif;font-size:12pt;margin:2cm;}h1,h2{text-align:center;}.field{margin:8px 0;line-height:1.8;}</style>
+  const generateHtml = () => `<!DOCTYPE html>
+<html lang="el"><head><meta charset="UTF-8"/>
+<style>${pdfStyles}</style>
 </head><body>
-  <h2>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ${r.iera_mitropolis || ''}</h2>
-  <h2>ΕΝΟΡΙΑΚΟΣ ΙΕΡΟΣ ΝΑΟΣ ${r.ieros_naos || ''}</h2>
-  <p style="text-align:right">Αριθμ.Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></p>
-  <h1>ΠΙΣΤΟΠΟΙΗΤΙΚΟΝ ΑΓΑΜΙΑΣ (ΤΥΠΟΣ Β΄)</h1>
-  <div class="field">
+<div class="page">
+
+  <div class="header">
+    <span class="cross">✝</span>
+    <div class="mitropolis">Ιερά Μητρόπολις ${r.iera_mitropolis || ''}</div>
+    <div class="naos">Ενοριακός Ιερός Ναός ${r.ieros_naos || ''}</div>
+  </div>
+
+  <div class="protokolo">Αριθμ. Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></div>
+
+  <div class="doc-title">Πιστοποιητικόν Αγαμίας</div>
+  <div class="doc-subtitle">Τύπος Β΄</div>
+  <hr class="title-rule"/>
+
+  <p class="body-text">
     Ὁ ὑπογεγραμμένος <b>${r.efimerios || ''}</b>,
     Ἐφημέριος τοῦ Ἱεροῦ Ναοῦ <b>${r.efimerios_naou || ''}</b>,
-    βεβαιῶ ὃτι προσελθ <b>${r.proselthen || ''}</b> ἐνώπιόν μου
+    βεβαιῶ ὃτι προσελθ<b>${r.proselthen || ''}</b> ἐνώπιόν μου
     ὁ ἢ ἡ <b>${r.agamos_onoma || ''}</b>,
-  </div>
-  <div class="field">
+  </p>
+
+  <p class="body-text">
     τοῦ <b>${r.patros || ''}</b> καί τῆς <b>${r.mitros || ''}</b> τό γένος,
-    γεννηθεί <b>${r.gennitiki_imera || ''}</b> ἐν <b>${r.gennitiki_poli || ''}</b>,
-    τό ἒτος <b>${r.etos_genniseos || ''}</b>,
+    γεννηθείς/εῖσα <b>${r.gennitiki_imera || ''}</b> ἐν <b>${r.gennitiki_poli || ''}</b>,
+    τό ἔτος <b>${r.etos_genniseos || ''}</b>,
     ἐτῶν <b>${r.ilikia || ''}</b>, ἐπαγγέλματος <b>${r.epaggelma || ''}</b>.
+  </p>
+
+  <p class="body-text">
+    ὑπέγραψε τήν συνημμένην δήλωσιν <b>${r.dilosi_imera || ''}</b>
+  </p>
+
+  <div class="section">
+    <div class="section-title">Δήλωσις Μαρτύρων</div>
+    <p class="body-text" style="text-indent:0">
+      Δηλοῦμεν ὑπευθύνως ὃτι ὁ ἢ ἡ ἀνωτέρω διαμένει <b>${r.dilosi_katoikia || ''}</b>
+      καί ἐπί τῆς ὁδοῦ <b>${r.dilosi_odos || ''}</b>
+      τυγχάνει δέ ἄγαμος/η <b>${r.agamos_kata || ''}</b>
+      καί δύναται νά συνάψῃ γάμον <b>${r.dynatos_gamos || ''}</b>.
+    </p>
+    <table class="info-grid" style="margin-top:8px">
+      <tr>
+        <td class="lbl">Μάρτυρας 1</td>
+        <td><b>${r.martyras_1 || ''}</b></td>
+        <td class="lbl">Αρ. Ταυτ.</td>
+        <td>${r.martyras_1_id || ''} (${r.martyras_1_astynomia || ''})</td>
+      </tr>
+      <tr>
+        <td class="lbl">Μάρτυρας 2</td>
+        <td><b>${r.martyras_2 || ''}</b></td>
+        <td class="lbl">Αρ. Ταυτ.</td>
+        <td>${r.martyras_2_id || ''} (${r.martyras_2_astynomia || ''})</td>
+      </tr>
+    </table>
   </div>
-  <div class="field">ὑπέγραψε τήν συνημμένην δήλωσιν <b>${r.dilosi_imera || ''}</b></div>
-  <h3>Οἲτινες προέβησαν εἰς τήν δήλωσιν:</h3>
-  <div class="field">
-    Δηλοῦμεν ὑπευθύνως ὃτι ὁ ἢ ἡ ἀνωτέρω διαμένει <b>${r.dilosi_katoikia || ''}</b> καί ἐπί τῆς ὁδοῦ <b>${r.dilosi_odos || ''}</b>
-    τυγχάνει δέ ἂγαμος <b>${r.agamos_kata || ''}</b> καί δύναται νά συνάψη γάμον <b>${r.dynatos_gamos || ''}</b>.
+
+  <p class="body-text" style="margin-top:12px">
+    Χορηγεῖται τό παρόν διά τήν ἔκδοσιν ἀδείας γάμου τ<b>${r.ekdosi_adeia || ''}</b>.
+  </p>
+
+  <div class="doc-footer">
+    Ἐν <b>${r.topos_ekdosis || ''}</b>,
+    τῇ <b>${r.imera_ekdosis || ''}</b> 20<b>${r.etos_ekdosis || ''}</b>
   </div>
-  <div class="field">Χορηγεῖται τό παρόν διά τήν ἒκδοσιν ἀδείας γάμου τ <b>${r.ekdosi_adeia || ''}</b>.</div>
-  <div style="display:flex;justify-content:space-around;margin-top:30px;text-align:center">
-    <div>ΟΙ ΜΑΡΤΥΡΕΣ (Υπογραφαί)<br/>1. <b>${r.martyras_ypografi_1 || ''}</b><br/>2. <b>${r.martyras_ypografi_2 || ''}</b></div>
-    <div>Ο ΕΦΗΜΕΡΙΟΣ<br/><br/><br/></div>
+
+  <div class="signatures">
+    <div class="sig-block">
+      <div class="sig-title">Μάρτυρες (Υπογραφαί)</div>
+      <div class="sig-line"></div>
+      <div class="sig-name">1. ${r.martyras_ypografi_1 || ''}</div>
+      <div style="margin-top:16px"><div class="sig-line"></div></div>
+      <div class="sig-name">2. ${r.martyras_ypografi_2 || ''}</div>
+    </div>
+    <div class="sig-block">
+      <div class="sig-title">Ο Εφημέριος</div>
+      <div class="sig-line"></div>
+    </div>
   </div>
-  <div style="text-align:right; margin-top:20px">
-    Ἐν <b>${r.topos_ekdosis || ''}</b>, τῆ <b>${r.imera_ekdosis || ''}</b> 20<b>${r.etos_ekdosis || ''}</b>
-  </div>
+
+</div>
 </body></html>`
 
   return (

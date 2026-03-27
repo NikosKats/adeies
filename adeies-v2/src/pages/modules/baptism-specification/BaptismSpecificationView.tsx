@@ -1,4 +1,5 @@
 import { useModuleView } from '../../../components/useModule'
+import { pdfStyles } from '../../../utils/pdfStyles'
 
 function row(label: string, value: string | undefined) {
   return (
@@ -17,25 +18,108 @@ export default function BaptismSpecificationView() {
 
   const r = record
 
-  const generateHtml = () => `
-<!DOCTYPE html><html lang="el"><head><meta charset="UTF-8"/>
-<style>body{font-family:Arial,sans-serif;font-size:12pt;margin:2cm;}h1,h2{text-align:center;}.field{margin:6px 0;}</style>
+  const generateHtml = () => `<!DOCTYPE html>
+<html lang="el"><head><meta charset="UTF-8"/>
+<style>${pdfStyles}</style>
 </head><body>
-  <h1>ΕΛΛΗΝΙΚΗ ΔΗΜΟΚΡΑΤΙΑ</h1>
-  <h1>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ${r.iera_mitropolis || ''}</h1>
-  <h2>ΙΕΡΟΣ ΝΑΟΣ ${r.ieros_naos || ''}</h2>
-  <p style="text-align:right">Αριθμ.Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></p>
-  <h2>ΠΡΑΞΙΣ ΠΡΟΣΔΙΟΡΙΣΜΟΥ ΤΕΛΕΣΕΩΣ ΤΟΥ ΜΥΣΤΗΡΙΟΥ ΤΟΥ ΒΑΠΤΙΣΜΑΤΟΣ</h2>
-  <div class="field">Σήμερον την <b>${r.simeron_imera || ''}</b> του μηνός <b>${r.simeron_minas || ''}</b> του <b>${r.simeron_etos || ''}</b></div>
-  <div class="field">εμφανίσθησαν ενώπιον εμού οι γονείς:</div>
-  <div class="field">1) <b>${r.goneis_1 || ''}</b> Αρ.Ταυτ. ${r.goneis_1_id_arithmos || ''}</div>
-  <div class="field">2) <b>${r.goneis_2 || ''}</b> Αρ.Ταυτ. ${r.goneis_2_id_arithmos || ''}</div>
-  <div class="field">Α) Το τέκνο <b>${r.teknon_onoma || ''}</b> γεννηθέν <b>${r.teknon_gennitiki_imera || ''}</b> <b>${r.teknon_gennitiki_minas || ''}</b> <b>${r.teknon_gennitiki_etos || ''}</b> στο Νοσοκομείο <b>${r.teknon_nosokomeio || ''}</b></div>
-  <div class="field">Αριθμ. Πράξης Ληξ.: ${r.lixiarxeio_praxis_arithmos || ''} Τόμος: ${r.lixiarxeio_tomos || ''} Έτος: ${r.lixiarxeio_etos || ''}</div>
-  <div class="field">ΕΠΙΘΥΜΟΥΝ να το βαπτίσουν: <b>${r.baptisma_imera || ''}</b> <b>${r.baptisma_minas || ''}</b> <b>${r.baptisma_etos || ''}</b></div>
-  <div class="field">Β) Ανάδοχος: <b>${r.anadoxos || ''}</b>, ετέλεσε γάμο κατά: ${r.anadoxos_gamochronologia || ''} στον Ναό: ${r.anadoxos_gamonaos || ''}</div>
-  <div style="margin-top:40px;text-align:right">Εν ${r.topos_ypovrolis || ''}, τη ${r.imera_ypovrolis || ''} ${r.etos_ypovrolis || ''}</div>
-  <div style="margin-top:40px;text-align:center"><b>Ο ΕΦΗΜΕΡΙΟΣ</b></div>
+<div class="page">
+
+  <div class="header">
+    <span class="cross">✝</span>
+    <div class="mitropolis">Ιερά Μητρόπολις ${r.iera_mitropolis || ''}</div>
+    <div class="naos">Ενοριακός Ιερός Ναός ${r.ieros_naos || ''}</div>
+  </div>
+
+  <div class="protokolo">Αριθμ. Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></div>
+
+  <div class="doc-title">Πράξις Προσδιορισμού</div>
+  <div class="doc-subtitle">Τελέσεως τοῦ Μυστηρίου τοῦ Βαπτίσματος</div>
+  <hr class="title-rule"/>
+
+  <p class="body-text">
+    Σήμερον τήν <b>${r.simeron_imera || ''}</b> τοῦ μηνός <b>${r.simeron_minas || ''}</b>
+    τοῦ ἔτους <b>${r.simeron_etos || ''}</b>, ἐμφανίσθησαν ἐνώπιόν μου οἱ γονεῖς:
+  </p>
+
+  <div class="section">
+    <div class="section-title">Γονείς</div>
+    <table class="info-grid">
+      <tr>
+        <td class="lbl">1. Γονέας</td>
+        <td><b>${r.goneis_1 || ''}</b></td>
+        <td class="lbl">Αρ. Ταυτ.</td>
+        <td>${r.goneis_1_id_arithmos || ''} &nbsp; (${r.goneis_1_id_ekdosi || ''})</td>
+      </tr>
+      <tr>
+        <td class="lbl">2. Γονέας</td>
+        <td><b>${r.goneis_2 || ''}</b></td>
+        <td class="lbl">Αρ. Ταυτ.</td>
+        <td>${r.goneis_2_id_arithmos || ''} &nbsp; (${r.goneis_2_id_ekdosi || ''})</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Στοιχεία Τέκνου</div>
+    <table class="info-grid">
+      <tr><td class="lbl">Ονομασθέν</td><td colspan="3"><b>${r.teknon_onoma || ''}</b></td></tr>
+      <tr>
+        <td class="lbl">Ημερομηνία Γέννησης</td>
+        <td>${r.teknon_gennitiki_imera || ''} ${r.teknon_gennitiki_minas || ''} ${r.teknon_gennitiki_etos || ''}</td>
+        <td class="lbl">Νοσοκομείο</td>
+        <td>${r.teknon_nosokomeio || ''} (${r.teknon_nosokomeio_etos || ''})</td>
+      </tr>
+      <tr>
+        <td class="lbl">Αρ. Πράξης Ληξ.</td>
+        <td>${r.lixiarxeio_praxis_arithmos || ''}</td>
+        <td class="lbl">Τόμος / Έτος</td>
+        <td>${r.lixiarxeio_tomos || ''} / ${r.lixiarxeio_etos || ''}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Βάπτισμα</div>
+    <table class="info-grid">
+      <tr>
+        <td class="lbl">Ημερομηνία</td>
+        <td><b>${r.baptisma_imera || ''} ${r.baptisma_minas || ''} ${r.baptisma_etos || ''}</b></td>
+        <td class="lbl">Κατοικία</td>
+        <td>${r.katoikia_odos || ''}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Ανάδοχος</div>
+    <table class="info-grid">
+      <tr><td class="lbl">Ονοματεπώνυμο</td><td colspan="3"><b>${r.anadoxos || ''}</b></td></tr>
+      <tr>
+        <td class="lbl">Γαμοχρονολογία</td>
+        <td>${r.anadoxos_gamochronologia || ''}</td>
+        <td class="lbl">Ναός Γάμου</td>
+        <td>${r.anadoxos_gamonaos || ''}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="doc-footer">
+    Ἐν <b>${r.topos_ypovrolis || ''}</b>,
+    τῇ <b>${r.imera_ypovrolis || ''}</b> ${r.etos_ypovrolis || ''}
+  </div>
+
+  <div class="signatures" style="margin-top:30px">
+    <div class="sig-block">
+      <div class="sig-title">Ο Εφημέριος</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-block">
+      <div class="sig-title">Ο Πατήρ &amp; ἡ Μήτηρ</div>
+      <div class="sig-line"></div>
+    </div>
+  </div>
+
+</div>
 </body></html>`
 
   return (

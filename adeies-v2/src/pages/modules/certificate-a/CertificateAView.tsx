@@ -1,4 +1,5 @@
 import { useModuleView } from '../../../components/useModule'
+import { pdfStyles } from '../../../utils/pdfStyles'
 
 function row(label: string, value: string | undefined) {
   return (
@@ -17,40 +18,64 @@ export default function CertificateAView() {
 
   const r = record
 
-  const generateHtml = () => `
-<!DOCTYPE html><html lang="el"><head><meta charset="UTF-8"/>
-<style>body{font-family:Arial,sans-serif;font-size:12pt;margin:2cm;}h1,h2{text-align:center;}.field{margin:8px 0;line-height:1.8;}</style>
+  const generateHtml = () => `<!DOCTYPE html>
+<html lang="el"><head><meta charset="UTF-8"/>
+<style>${pdfStyles}</style>
 </head><body>
-  <h2>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ${r.iera_mitropolis || ''}</h2>
-  <h2>ΕΝΟΡΙΑΚΟΣ ΙΕΡΟΣ ΝΑΟΣ ${r.ieros_naos || ''}</h2>
-  <p style="text-align:right">Αριθμ.Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></p>
-  <h1>ΠΙΣΤΟΠΟΙΗΤΙΚΟΝ ΑΓΑΜΙΑΣ (ΤΥΠΟΣ Α΄)</h1>
-  <div class="field">
+<div class="page">
+
+  <div class="header">
+    <span class="cross">✝</span>
+    <div class="mitropolis">Ιερά Μητρόπολις ${r.iera_mitropolis || ''}</div>
+    <div class="naos">Ενοριακός Ιερός Ναός ${r.ieros_naos || ''}</div>
+  </div>
+
+  <div class="protokolo">Αριθμ. Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></div>
+
+  <div class="doc-title">Πιστοποιητικόν Αγαμίας</div>
+  <div class="doc-subtitle">Τύπος Α΄</div>
+  <hr class="title-rule"/>
+
+  <p class="body-text">
     Ὁ ὑπογεγραμμένος <b>${r.efimerios || ''}</b>,
     Ἐφημέριος τοῦ Ἱεροῦ Ναοῦ <b>${r.efimerios_naou || ''}</b>,
     πιστοποιῶ ὑπευθύνως ὃτι:
-  </div>
-  <div class="field">
+  </p>
+
+  <p class="body-text">
     ὁ ἢ ἡ <b>${r.agamos_onoma || ''}</b>,
     τοῦ <b>${r.patros || ''}</b> καί τῆς <b>${r.mitros || ''}</b> τό γένος,
-    γεννηθεί <b>${r.gennitiki_imera || ''}</b> ἐν <b>${r.gennitiki_poli || ''}</b>,
-    τό ἒτος <b>${r.etos_genniseos || ''}</b>,
-  </div>
-  <div class="field">
-    καί ἐν τῆ ἡμετέρα ἐνορία διαμέν <b>${r.katoikia_apo || ''}</b> ἀπό τοῦ ἒτους <b>${r.katoikia_etos || ''}</b>
+    γεννηθείς/εῖσα <b>${r.gennitiki_imera || ''}</b> ἐν <b>${r.gennitiki_poli || ''}</b>,
+    τό ἔτος <b>${r.etos_genniseos || ''}</b>,
+  </p>
+
+  <p class="body-text">
+    καί ἐν τῇ ἡμετέρα ἐνορία διαμέν<b>${r.katoikia_apo || ''}</b>
+    ἀπό τοῦ ἔτους <b>${r.katoikia_etos || ''}</b>
     (ὁδός <b>${r.odos || ''}</b> ἀρ. <b>${r.arithmos_odou || ''}</b>),
     ἐτῶν <b>${r.ilikia || ''}</b>, ἐπαγγέλματος <b>${r.epaggelma || ''}</b>,
-    καί χριστιαν <b>${r.christianos || ''}</b> ὀρθόδοξος,
-    τυγχάνει ἂγαμος <b>${r.agamos_kata || ''}</b>
-    καί δύναται νά συνάψη γάμον <b>${r.dynatos_gamos || ''}</b>.
+    καί χριστιαν<b>${r.christianos || ''}</b> ὀρθόδοξος,
+    τυγχάνει ἄγαμος/η <b>${r.agamos_kata || ''}</b>
+    καί δύναται νά συνάψῃ γάμον <b>${r.dynatos_gamos || ''}</b>.
+  </p>
+
+  <p class="body-text">
+    Χορηγεῖται τό παρόν διά τήν ἔκδοσιν ἀδείας γάμου τ<b>${r.ekdosi_adeia || ''}</b>.
+  </p>
+
+  <div class="doc-footer">
+    Ἐν <b>${r.topos_ekdosis || ''}</b>,
+    τῇ <b>${r.imera_ekdosis || ''}</b> 20<b>${r.etos_ekdosis || ''}</b>
   </div>
-  <div class="field">
-    Χορηγεῖται τό παρόν διά τήν ἒκδοσιν ἀδείας γάμου τ <b>${r.ekdosi_adeia || ''}</b>.
+
+  <div class="signatures" style="margin-top:30px">
+    <div class="sig-block">
+      <div class="sig-title">Ο Εφημέριος</div>
+      <div class="sig-line"></div>
+    </div>
   </div>
-  <div style="text-align:right; margin-top:20px">
-    Ἐν <b>${r.topos_ekdosis || ''}</b>, τῆ <b>${r.imera_ekdosis || ''}</b> 20<b>${r.etos_ekdosis || ''}</b>
-  </div>
-  <div style="text-align:center; margin-top:50px"><b>Ο ΕΦΗΜΕΡΙΟΣ</b></div>
+
+</div>
 </body></html>`
 
   return (

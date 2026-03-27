@@ -1,4 +1,5 @@
 import { useModuleView } from '../../../components/useModule'
+import { pdfStyles } from '../../../utils/pdfStyles'
 
 function row(label: string, value: string | undefined) {
   return (
@@ -17,73 +18,74 @@ export default function BaptismDeclarationView() {
 
   const r = record
 
-  const generateHtml = () => `
-<!DOCTYPE html>
-<html lang="el">
-<head>
-  <meta charset="UTF-8"/>
-  <style>
-    body { font-family: Arial, sans-serif; font-size: 12pt; margin: 2cm; }
-    h1 { text-align: center; font-size: 14pt; }
-    h2 { text-align: center; font-size: 13pt; }
-    .field { margin: 6px 0; }
-    .label { font-weight: bold; }
-    .section { margin-top: 16px; border-top: 1px solid #333; padding-top: 8px; }
-    .signatures { display: flex; justify-content: space-around; margin-top: 40px; }
-    .sig { text-align: center; }
-  </style>
-</head>
-<body>
-  <h1>ΙΕΡΑ ΜΗΤΡΟΠΟΛΙΣ ${r.iera_mitropolis || ''}</h1>
-  <h2>ΙΕΡΟΣ ΝΑΟΣ ${r.ieros_naos || ''}</h2>
-  <p style="text-align:right">Αριθμ.Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></p>
-  <h2>ΔΗΛΩΣΗ ΒΑΠΤΙΣΕΩΣ</h2>
-  <div class="field">
+  const generateHtml = () => `<!DOCTYPE html>
+<html lang="el"><head><meta charset="UTF-8"/>
+<style>${pdfStyles}</style>
+</head><body>
+<div class="page">
+
+  <div class="header">
+    <span class="cross">✝</span>
+    <div class="mitropolis">Ιερά Μητρόπολις ${r.iera_mitropolis || ''}</div>
+    <div class="naos">Ενοριακός Ιερός Ναός ${r.ieros_naos || ''}</div>
+  </div>
+
+  <div class="protokolo">Αριθμ. Πρωτ.: <b>${r.arithmos_protokolou || ''}</b></div>
+
+  <div class="doc-title">Δήλωσις Βαπτίσεως</div>
+  <hr class="title-rule"/>
+
+  <p class="body-text">
     Ὁ ὑπογεγραμμένος Ἱερεύς <b>${r.efimerios || ''}</b>,
     Ἐφημέριος τοῦ Ἱεροῦ Ναοῦ <b>${r.efimerios_naou || ''}</b>,
     δηλῶ ὃτι σήμερον τήν <b>${r.baptism_imera || ''}</b> τοῦ μηνός <b>${r.baptism_minas || ''}</b>
     τοῦ ἒτους <b>${r.baptism_etos || ''}</b>, ἡμέραν <b>${r.baptism_imera_evdomadas || ''}</b>,
-    ἐν τῶ Ἱερῶ Ναῶ <b>${r.baptism_naos || ''}</b>
-  </div>
-  <h2 style="margin-top:16px">ΕΒΑΠΤΙΣΑ</h2>
-  <div class="field">
-    κατά τοὺς Ἱερούς Κανόνας τῆς Ὁρθοδόξου Ἀνατολικῆς Ἐκκλησίας
+    ἐν τῷ Ἱερῷ Ναῷ <b>${r.baptism_naos || ''}</b>
+  </p>
+
+  <div class="center-emphasis">— ΕΒΑΠΤΙΣΑ —</div>
+
+  <p class="body-text">
+    κατά τοὺς Ἱερούς Κανόνας τῆς Ὀρθοδόξου Ἀνατολικῆς Ἐκκλησίας
     τό τέκνον τοῦ <b>${r.pateras_onoma || ''}</b>
     καί τῆς <b>${r.mitera_onoma || ''}</b> τό γένος <b>${r.mitera_eponymo_genous || ''}</b>,
-    κατοίκων <b>${r.katoikia || ''}</b> ὁδός <b>${r.odos || ''}</b> ἀριθμ. <b>${r.arithmos_odou || ''}</b>,
-    γεννηθέν τῆ <b>${r.gennitiki_imera || ''}</b> ἔν <b>${r.gennitiki_poli || ''}</b>,
-    κατά τήν ὑπ'ἀριθμ. <b>${r.lixiarxeio_praxis_arithmos || ''}</b> τόμος <b>${r.lixiarxeio_tomos || ''}</b>
-    τοῦ <b>${r.lixiarxeio_etos || ''}</b> ἔτους πρᾶξιν Γεννήσεως τοῦ κ. Ληξιάρχου <b>${r.lixiarchos || ''}</b>,
-  </div>
-  <div class="field" style="text-align:center; font-size:14pt; margin:16px 0">
-    Ὀνομασθέν <b>${r.onoma_baptisthen || ''}</b>
-  </div>
-  <div class="field">
+    κατοίκων <b>${r.katoikia || ''}</b>, ὁδός <b>${r.odos || ''}</b> ἀριθμ. <b>${r.arithmos_odou || ''}</b>,
+    γεννηθέν τῇ <b>${r.gennitiki_imera || ''}</b> ἐν <b>${r.gennitiki_poli || ''}</b>,
+    κατά τήν ὑπ' ἀριθμ. <b>${r.lixiarxeio_praxis_arithmos || ''}</b>,
+    τόμος <b>${r.lixiarxeio_tomos || ''}</b> τοῦ <b>${r.lixiarxeio_etos || ''}</b> ἔτους
+    πρᾶξιν Γεννήσεως τοῦ κ. Ληξιάρχου <b>${r.lixiarchos || ''}</b>.
+  </p>
+
+  <div class="center-emphasis">✦ &nbsp; ${r.onoma_baptisthen || ''} &nbsp; ✦</div>
+
+  <p class="body-text">
     ὑπό τοῦ/ης ἀναδεξαμένου/ης αὐτό ἐκ τῆς Ἱερᾶς Κολυμβήθρας
     <b>${r.anadexamenos || ''}</b>,
-    κατοίκου <b>${r.anadexamenos_katoikia || ''}</b>
-    ὁδός <b>${r.anadexamenos_odos || ''}</b> ἀριθμ. <b>${r.anadexamenos_arithmos || ''}</b>
-  </div>
+    κατοίκου <b>${r.anadexamenos_katoikia || ''}</b>,
+    ὁδός <b>${r.anadexamenos_odos || ''}</b> ἀριθμ. <b>${r.anadexamenos_arithmos || ''}</b>.
+  </p>
+
   <div class="signatures">
-    <div class="sig">
-      <p>Ο ΕΦΗΜΕΡΙΟΣ</p>
-      <br/><br/>
-      <p>${r.efimerios_ypografi || ''}</p>
+    <div class="sig-block">
+      <div class="sig-title">Ο Εφημέριος</div>
+      <div class="sig-line"></div>
+      <div class="sig-name">${r.efimerios_ypografi || ''}</div>
     </div>
-    <div class="sig">
-      <p>Ο ΠΑΤΗΡ ΚΑΙ Η ΜΗΤΗΡ</p>
-      <br/><br/>
-      <p>${r.pateras_ypografi || ''}</p>
-      <p>${r.mitera_ypografi || ''}</p>
+    <div class="sig-block">
+      <div class="sig-title">Ο Πατήρ &amp; ἡ Μήτηρ</div>
+      <div class="sig-line"></div>
+      <div class="sig-name">${r.pateras_ypografi || ''}</div>
+      <div class="sig-name">${r.mitera_ypografi || ''}</div>
     </div>
-    <div class="sig">
-      <p>Ο ΑΝΑΔΟΧΟΣ</p>
-      <br/><br/>
-      <p>${r.anadoxos_ypografi || ''}</p>
+    <div class="sig-block">
+      <div class="sig-title">Ο Ανάδοχος</div>
+      <div class="sig-line"></div>
+      <div class="sig-name">${r.anadoxos_ypografi || ''}</div>
     </div>
   </div>
-</body>
-</html>`
+
+</div>
+</body></html>`
 
   return (
     <div className="max-w-4xl">

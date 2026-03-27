@@ -1,4 +1,5 @@
 import { useModuleView } from '../../../components/useModule'
+import { pdfStyles } from '../../../utils/pdfStyles'
 
 function row(label: string, value: string | undefined) {
   return (
@@ -17,44 +18,133 @@ export default function MarriageView() {
 
   const r = record
 
-  const generateHtml = () => `
-<!DOCTYPE html><html lang="el"><head><meta charset="UTF-8"/>
+  const generateHtml = () => `<!DOCTYPE html>
+<html lang="el"><head><meta charset="UTF-8"/>
 <style>
-  body{font-family:Arial,sans-serif;font-size:11pt;margin:1.5cm;}
-  h1,h2{text-align:center;} table{width:100%;border-collapse:collapse;}
-  td{padding:3px 6px;border-bottom:1px solid #eee;font-size:10pt;}
-  .label{font-weight:bold;width:40%;}
-  .section{font-weight:bold;background:#f0f0f0;padding:4px 6px;margin-top:10px;}
-</style></head><body>
-  <h1>ΔΗΛΩΣΗ ΤΕΛΕΣΗΣ ΘΡΗΣΚΕΥΤΙΚΟΥ ΓΑΜΟΥ</h1>
-  <h2>ΙΕΡΑ ΜΗΤΡΟΠΟΛΗ ${r.iera_mitropoli || ''} — ΙΕΡΟΣ ΝΑΟΣ ${r.ieros_naos || ''}</h2>
-  <p>Αριθμ. Ληξ. Πράξης Γάμου: <b>${r.arithmos_lixiarkis_praxis || ''}</b> | Τόμος: ${r.tomos || ''} | Έτος: ${r.etos || ''}</p>
-  <p>Ο ιερέας <b>${r.iereus || ''}</b> δηλώνω ότι σήμερα στις <b>${r.gamos_imera || ''} ${r.gamos_minas || ''} ${r.gamos_etos || ''}</b> ώρα <b>${r.gamos_ora || ''}</b> τέλεσα το μυστήριο του γάμου των κάτωθεν:</p>
-  <div class="section">ΣΤΟΙΧΕΙΑ ΣΥΖΥΓΟΥ</div>
-  <table>
-    <tr><td class="label">Επώνυμο</td><td>${r.syzygos_eponymo || ''}</td><td class="label">Όνομα</td><td>${r.syzygos_onoma || ''}</td></tr>
-    <tr><td class="label">Επάγγελμα</td><td>${r.syzygos_epaggelma || ''}</td><td class="label">ΑΦΜ</td><td>${r.syzygos_afm || ''}</td></tr>
-    <tr><td class="label">ΑΜΚΑ</td><td>${r.syzygos_amka || ''}</td><td class="label">Ιθαγένεια</td><td>${r.syzygos_ithagenia || ''}</td></tr>
-    <tr><td class="label">Χρον. Γέννησης</td><td>${r.syzygos_chronologia_gennisis || ''}</td><td class="label">Τόπος Γέννησης</td><td>${r.syzygos_topos_gennisis || ''}</td></tr>
-    <tr><td class="label">Πατέρας</td><td>${r.syzygos_pateras || ''}</td><td class="label">Μητέρα</td><td>${r.syzygos_mitera || ''}</td></tr>
-    <tr><td class="label">Οικογ. Κατάσταση</td><td>${r.syzygos_oik_katastasi || ''}</td><td class="label">Βαθμός Γάμου</td><td>${r.syzygos_vathmos_gamou || ''}</td></tr>
-    <tr><td class="label">Αρ. Άδειας Γάμου</td><td>${r.syzygos_arithmos_adeia_gamou || ''}</td><td class="label">Αρ. Παραβόλου</td><td>${r.syzygos_arithmos_paravolo || ''}</td></tr>
-  </table>
-  <div class="section">ΣΤΟΙΧΕΙΑ ΣΥΖΥΓΟΥ (ΓΥΝΑΙΚΑ)</div>
-  <table>
-    <tr><td class="label">Επώνυμο</td><td>${r.syzygou_eponymo || ''}</td><td class="label">Όνομα</td><td>${r.syzygou_onoma || ''}</td></tr>
-    <tr><td class="label">Επάγγελμα</td><td>${r.syzygou_epaggelma || ''}</td><td class="label">ΑΦΜ</td><td>${r.syzygou_afm || ''}</td></tr>
-    <tr><td class="label">ΑΜΚΑ</td><td>${r.syzygou_amka || ''}</td><td class="label">Ιθαγένεια</td><td>${r.syzygou_ithagenia || ''}</td></tr>
-    <tr><td class="label">Χρον. Γέννησης</td><td>${r.syzygou_chronologia_gennisis || ''}</td><td class="label">Τόπος Γέννησης</td><td>${r.syzygou_topos_gennisis || ''}</td></tr>
-    <tr><td class="label">Πατέρας</td><td>${r.syzygou_pateras || ''}</td><td class="label">Μητέρα</td><td>${r.syzygou_mitera || ''}</td></tr>
-    <tr><td class="label">Οικογ. Κατάσταση</td><td>${r.syzygou_oik_katastasi || ''}</td><td class="label">Βαθμός Γάμου</td><td>${r.syzygou_vathmos_gamou || ''}</td></tr>
-    <tr><td class="label">Αρ. Άδειας Γάμου</td><td>${r.syzygou_arithmos_adeia_gamou || ''}</td><td class="label">Αρ. Παραβόλου</td><td>${r.syzygou_arithmos_paravolo || ''}</td></tr>
-  </table>
-  <div style="margin-top:40px;display:flex;justify-content:space-around;text-align:center">
-    <div>Οι Σύζυγοι<br/><br/>(υπογραφή)</div>
-    <div>Οι Παράνυμφοι<br/><br/>(υπογραφή)</div>
-    <div>Ο Ιερέας<br/><br/>(υπογραφή και σφραγίδα)</div>
+${pdfStyles}
+.couple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+  margin: 10px 0;
+}
+.couple-col-header {
+  font-size: 9.5pt;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2c3e6b;
+  border-bottom: 1px solid #2c3e6b;
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+}
+.couple-field { font-size: 10pt; margin-bottom: 4px; }
+.couple-field .lbl { color: #555; font-size: 9pt; display: block; }
+.couple-field b { font-size: 10.5pt; }
+</style>
+</head><body>
+<div class="page">
+
+  <div class="header">
+    <span class="cross">✝</span>
+    <div class="mitropolis">Ιερά Μητρόπολη ${r.iera_mitropoli || ''}</div>
+    <div class="naos">Ενοριακός Ιερός Ναός ${r.ieros_naos || ''}</div>
   </div>
+
+  <div class="protokolo">
+    Αρ. Ληξ. Πράξης: <b>${r.arithmos_lixiarkis_praxis || ''}</b> &nbsp;|&nbsp;
+    Τόμος: <b>${r.tomos || ''}</b> &nbsp;|&nbsp;
+    Έτος: <b>${r.etos || ''}</b>
+  </div>
+
+  <div class="doc-title">Δήλωσις Τελέσεως Θρησκευτικοῦ Γάμου</div>
+  <hr class="title-rule"/>
+
+  <p class="body-text">
+    Ὁ ὑπογεγραμμένος Ἱερεύς <b>${r.iereus || ''}</b>
+    (ἐνιπορίας: <b>${r.iereus_eniporias || ''}</b>),
+    δηλῶ ὅτι σήμερα <b>${r.gamos_imera || ''} ${r.gamos_minas || ''} ${r.gamos_etos || ''}</b>
+    ὥρα <b>${r.gamos_ora || ''}</b>, ἐν τῷ Ἱερῷ Ναῷ <b>${r.ieros_naos || ''}</b>
+    (${r.dimotiko_topiko || ''}, Δῆμος ${r.dimos_dimotiki_enotita || ''}, Νομός ${r.nomos || ''}),
+    ἐτέλεσα τό Μυστήριον τοῦ Γάμου τῶν κάτωθι:
+  </p>
+
+  <div class="section">
+    <div class="couple-grid">
+      <div>
+        <div class="couple-col-header">Σύζυγος (Άνδρας)</div>
+        <div class="couple-field"><span class="lbl">Επώνυμο &amp; Όνομα</span><b>${r.syzygos_eponymo || ''} ${r.syzygos_onoma || ''}</b></div>
+        <div class="couple-field"><span class="lbl">Επάγγελμα</span>${r.syzygos_epaggelma || ''}</div>
+        <div class="couple-field"><span class="lbl">Θρήσκευμα</span>${r.syzygos_thriskevma || ''}</div>
+        <div class="couple-field"><span class="lbl">Ιθαγένεια</span>${r.syzygos_ithagenia || ''}</div>
+        <div class="couple-field"><span class="lbl">ΑΦΜ / ΑΜΚΑ</span>${r.syzygos_afm || ''} / ${r.syzygos_amka || ''}</div>
+        <div class="couple-field"><span class="lbl">Χρον. Γέννησης</span>${r.syzygos_chronologia_gennisis || ''}</div>
+        <div class="couple-field"><span class="lbl">Τόπος Γέννησης</span>${r.syzygos_topos_gennisis || ''}, ${r.syzygos_nomos_gennisis || ''}</div>
+        <div class="couple-field"><span class="lbl">Πατέρας</span>${r.syzygos_pateras || ''}</div>
+        <div class="couple-field"><span class="lbl">Μητέρα</span>${r.syzygos_mitera || ''}</div>
+        <div class="couple-field"><span class="lbl">Οικογ. Κατάσταση</span>${r.syzygos_oik_katastasi || ''}</div>
+        <div class="couple-field"><span class="lbl">Βαθμός Γάμου</span>${r.syzygos_vathmos_gamou || ''}</div>
+        <div class="couple-field"><span class="lbl">Αρ. Άδειας Γάμου</span>${r.syzygos_arithmos_adeia_gamou || ''}</div>
+        <div class="couple-field"><span class="lbl">Αρ. Παραβόλου</span>${r.syzygos_arithmos_paravolo || ''}</div>
+      </div>
+      <div>
+        <div class="couple-col-header">Σύζυγος (Γυναίκα)</div>
+        <div class="couple-field"><span class="lbl">Επώνυμο &amp; Όνομα</span><b>${r.syzygou_eponymo || ''} ${r.syzygou_onoma || ''}</b></div>
+        <div class="couple-field"><span class="lbl">Επάγγελμα</span>${r.syzygou_epaggelma || ''}</div>
+        <div class="couple-field"><span class="lbl">Θρήσκευμα</span>${r.syzygou_thriskevma || ''}</div>
+        <div class="couple-field"><span class="lbl">Ιθαγένεια</span>${r.syzygou_ithagenia || ''}</div>
+        <div class="couple-field"><span class="lbl">ΑΦΜ / ΑΜΚΑ</span>${r.syzygou_afm || ''} / ${r.syzygou_amka || ''}</div>
+        <div class="couple-field"><span class="lbl">Χρον. Γέννησης</span>${r.syzygou_chronologia_gennisis || ''}</div>
+        <div class="couple-field"><span class="lbl">Τόπος Γέννησης</span>${r.syzygou_topos_gennisis || ''}, ${r.syzygou_nomos_gennisis || ''}</div>
+        <div class="couple-field"><span class="lbl">Πατέρας</span>${r.syzygou_pateras || ''}</div>
+        <div class="couple-field"><span class="lbl">Μητέρα</span>${r.syzygou_mitera || ''}</div>
+        <div class="couple-field"><span class="lbl">Οικογ. Κατάσταση</span>${r.syzygou_oik_katastasi || ''}</div>
+        <div class="couple-field"><span class="lbl">Βαθμός Γάμου</span>${r.syzygou_vathmos_gamou || ''}</div>
+        <div class="couple-field"><span class="lbl">Αρ. Άδειας Γάμου</span>${r.syzygou_arithmos_adeia_gamou || ''}</div>
+        <div class="couple-field"><span class="lbl">Αρ. Παραβόλου</span>${r.syzygou_arithmos_paravolo || ''}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Κατοικία Ζεύγους</div>
+    <table class="info-grid">
+      <tr>
+        <td class="lbl">Κατοικία</td>
+        <td>${r.zeygos_katikia || ''} ${r.zeygos_katikia_2 || ''}</td>
+        <td class="lbl">Δήμος</td>
+        <td>${r.zeygos_dimos || ''} ${r.zeygos_dimos_2 || ''}</td>
+      </tr>
+      <tr>
+        <td class="lbl">Νομός</td>
+        <td>${r.zeygos_nomos || ''} ${r.zeygos_nomos_2 || ''}</td>
+        <td class="lbl">Χώρα</td>
+        <td>${r.zeygos_chora || ''} ${r.zeygos_chora_2 || ''}</td>
+      </tr>
+      <tr>
+        <td class="lbl">Επώνυμο Τέκνων</td>
+        <td colspan="3">${r.eponymo_teknon || ''} ${r.eponymo_teknon_2 || ''}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="signatures">
+    <div class="sig-block">
+      <div class="sig-title">Οι Σύζυγοι</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-block">
+      <div class="sig-title">Οι Παράνυμφοι</div>
+      <div class="sig-line"></div>
+    </div>
+    <div class="sig-block">
+      <div class="sig-title">Ο Ιερεύς</div>
+      <div class="sig-line"></div>
+      <div class="sig-name" style="font-size:8pt;color:#888">(υπογραφή &amp; σφραγίδα)</div>
+    </div>
+  </div>
+
+</div>
 </body></html>`
 
   return (
