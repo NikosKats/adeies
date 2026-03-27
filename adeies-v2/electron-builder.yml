@@ -7,25 +7,68 @@ directories:
   output: dist-installer
 
 files:
-  - out/**/*
+  - dist-electron/**/*
   - package.json
 
+# Include node_modules needed at runtime (native deps)
+extraResources:
+  - from: node_modules/better-sqlite3
+    to: node_modules/better-sqlite3
+  - from: node_modules/bcryptjs
+    to: node_modules/bcryptjs
+
+# ── Windows ──────────────────────────────────────────────────────────────────
 win:
+  icon: build/icon.png
   target:
     - target: nsis
       arch:
         - x64
-  icon: build/icon.ico
 
 nsis:
   oneClick: false
-  allowToChangeInstallationDirectory: true
+  allowToChangeInstallationDirectory: false
   createDesktopShortcut: true
   createStartMenuShortcut: true
   shortcutName: Adeies
-  installerIcon: build/icon.ico
-  uninstallerIcon: build/icon.ico
-  installerHeaderIcon: build/icon.ico
+  installerLanguages:
+    - 1032   # Greek
+    - 1033   # English
   language: 1032
+  include: build/installer.nsh
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+mac:
+  icon: build/icon.png
+  category: public.app-category.business
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64   # Apple Silicon
+
+dmg:
+  title: Adeies
+  background: build/dmg-background.png
+  window:
+    width: 540
+    height: 380
+  contents:
+    - x: 150
+      y: 190
+      type: file
+    - x: 390
+      y: 190
+      type: link
+      path: /Applications
+
+# ── Linux ─────────────────────────────────────────────────────────────────────
+linux:
+  icon: build/icon.png
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  category: Office
 
 publish: null
