@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain, shell, dialog } from 'electron'
 import { join } from 'path'
 import Store from 'electron-store'
-import { initDb, testConnection, runMigrations, getDb, DbConfig } from '../db'
+import { initDb, testConnection, runMigrations, ensureDefaultAdmin, getDb, getPool, DbConfig } from '../db'
 import {
   baptismDeclarations,
   baptismSpecifications,
@@ -11,24 +11,33 @@ import {
 } from '../schema'
 import { eq } from 'drizzle-orm'
 import { writeFile } from 'fs/promises'
+import bcrypt from 'bcryptjs'
 
-const store = new Store<{ dbConfig: DbConfig }>()
+interface SessionUser {
+  id: number
+  username: string
+  full_name: string
+  role: 'admin' | 'user'
+}
+
+const store = new Store<{ dbConfig: DbConfig; session: SessionUser | null }>()
 
 let mainWindow: BrowserWindow | null = null
 
 function createWindow(): void {
   mainWindow = new BrowserWindow({
     width: 1280,
-    height: 800,
+    height: 820,
     minWidth: 1024,
-    minHeight: 600,
+    minHeight: 640,
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false,
       contextIsolation: true
     },
-    title: 'Άδειες - Εκκλησιαστικό Σύστημα',
-    show: false
+    title: 'Adeies — Εκκλησιαστικό Σύστημα',
+    show: false,
+    titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default'
   })
 
   mainWindow.on('ready-to-show', () => mainWindow!.show())
@@ -46,18 +55,16 @@ function createWindow(): void {
 
 app.whenReady().then(async () => {
   createWindow()
-
-  // Auto-init DB if config is saved
   const savedConfig = store.get('dbConfig')
   if (savedConfig) {
     try {
       initDb(savedConfig)
       await runMigrations()
+      await ensureDefaultAdmin()
     } catch {
-      // Will show settings screen to user
+      // Will show settings screen
     }
   }
-
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
@@ -67,22 +74,119 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
 
-// ── Settings / Connection ────────────────────────────────────────────────────
+// ── DB Settings ──────────────────────────────────────────────────────────────
 
 ipcMain.handle('db:get-config', () => store.get('dbConfig') ?? null)
-
 ipcMain.handle('db:test', async (_e, config: DbConfig) => testConnection(config))
-
 ipcMain.handle('db:save-config', async (_e, config: DbConfig) => {
   const result = await testConnection(config)
   if (!result.ok) return result
   store.set('dbConfig', config)
   initDb(config)
   await runMigrations()
+  await ensureDefaultAdmin()
   return { ok: true }
 })
 
-// ── Generic CRUD helpers ─────────────────────────────────────────────────────
+// ── Auth ─────────────────────────────────────────────────────────────────────
+
+ipcMain.handle('user:session', () => store.get('session') ?? null)
+
+ipcMain.handle('user:login', async (_e, username: string, password: string) => {
+  try {
+    const pool = getPool()
+    const res = await pool.query(
+      `SELECT id, username, full_name, role, password_hash FROM app_users WHERE username = $1`,
+      [username]
+    )
+    if (res.rows.length === 0) return { ok: false, error: 'Λανθασμένο όνομα χρήστη ή κωδικός.' }
+    const row = res.rows[0]
+    const valid = await bcrypt.compare(password, row.password_hash)
+    if (!valid) return { ok: false, error: 'Λανθασμένο όνομα χρήστη ή κωδικός.' }
+    const user: SessionUser = { id: row.id, username: row.username, full_name: row.full_name, role: row.role }
+    store.set('session', user)
+    return { ok: true, user }
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : String(e) }
+  }
+})
+
+ipcMain.handle('user:logout', () => {
+  store.delete('session')
+  return { ok: true }
+})
+
+// ── User Management (admin) ───────────────────────────────────────────────────
+
+ipcMain.handle('user:list', async () => {
+  const pool = getPool()
+  const res = await pool.query(`SELECT id, username, full_name, role, created_at FROM app_users ORDER BY id`)
+  return res.rows
+})
+
+ipcMain.handle('user:create', async (_e, data: { username: string; full_name: string; role: string; password: string }) => {
+  try {
+    const pool = getPool()
+    const hash = await bcrypt.hash(data.password, 10)
+    const res = await pool.query(
+      `INSERT INTO app_users (username, full_name, role, password_hash) VALUES ($1, $2, $3, $4) RETURNING id, username, full_name, role`,
+      [data.username, data.full_name, data.role, hash]
+    )
+    return { ok: true, user: res.rows[0] }
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : String(e)
+    return { ok: false, error: msg.includes('unique') ? 'Το όνομα χρήστη υπάρχει ήδη.' : msg }
+  }
+})
+
+ipcMain.handle('user:update', async (_e, id: number, data: { full_name: string; role: string }) => {
+  try {
+    const pool = getPool()
+    await pool.query(
+      `UPDATE app_users SET full_name = $1, role = $2, updated_at = NOW() WHERE id = $3`,
+      [data.full_name, data.role, id]
+    )
+    return { ok: true }
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : String(e) }
+  }
+})
+
+ipcMain.handle('user:change-password', async (_e, id: number, newPassword: string) => {
+  try {
+    const pool = getPool()
+    const hash = await bcrypt.hash(newPassword, 10)
+    await pool.query(`UPDATE app_users SET password_hash = $1, updated_at = NOW() WHERE id = $2`, [hash, id])
+    return { ok: true }
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : String(e) }
+  }
+})
+
+ipcMain.handle('user:delete', async (_e, id: number) => {
+  try {
+    const pool = getPool()
+    await pool.query(`DELETE FROM app_users WHERE id = $1`, [id])
+    return { ok: true }
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e.message : String(e) }
+  }
+})
+
+// ── Stats ────────────────────────────────────────────────────────────────────
+
+ipcMain.handle('db:stats', async () => {
+  const pool = getPool()
+  const tables = ['baptism_declarations', 'baptism_specifications', 'marriage_declarations', 'certificates_a', 'certificates_b']
+  const counts: Record<string, number> = {}
+  for (const t of tables) {
+    const res = await pool.query(`SELECT COUNT(*) FROM ${t}`)
+    counts[t] = parseInt(res.rows[0].count)
+  }
+  return counts
+})
+
+// ── Generic CRUD ─────────────────────────────────────────────────────────────
 
 type TableName = 'baptism_declarations' | 'baptism_specifications' | 'marriage_declarations' | 'certificates_a' | 'certificates_b'
 
@@ -130,7 +234,7 @@ ipcMain.handle('db:delete', async (_e, table: TableName, id: number) => {
   return { ok: true }
 })
 
-// ── PDF Export ───────────────────────────────────────────────────────────────
+// ── PDF Export ────────────────────────────────────────────────────────────────
 
 ipcMain.handle('pdf:export', async (_e, html: string, defaultFilename: string) => {
   if (!mainWindow) return { ok: false, error: 'No window' }

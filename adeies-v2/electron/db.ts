@@ -14,9 +14,7 @@ export interface DbConfig {
 }
 
 export function initDb(config: DbConfig): void {
-  if (pool) {
-    pool.end()
-  }
+  if (pool) pool.end()
   pool = new Pool({
     host: config.host,
     port: config.port,
@@ -31,6 +29,11 @@ export function initDb(config: DbConfig): void {
 export function getDb() {
   if (!db) throw new Error('Database not initialized. Configure connection first.')
   return db
+}
+
+export function getPool() {
+  if (!pool) throw new Error('Database not initialized.')
+  return pool
 }
 
 export async function testConnection(config: DbConfig): Promise<{ ok: boolean; error?: string }> {
@@ -161,7 +164,34 @@ export async function runMigrations(): Promise<void> {
         ekdosi_adeia_2 TEXT, topos_ekdosis TEXT, imera_ekdosis TEXT, etos_ekdosis TEXT,
         created_at TIMESTAMPTZ DEFAULT NOW(), updated_at TIMESTAMPTZ DEFAULT NOW()
       );
+
+      CREATE TABLE IF NOT EXISTS app_users (
+        id SERIAL PRIMARY KEY,
+        username TEXT NOT NULL UNIQUE,
+        full_name TEXT NOT NULL,
+        role TEXT NOT NULL DEFAULT 'user',
+        password_hash TEXT NOT NULL,
+        created_at TIMESTAMPTZ DEFAULT NOW(),
+        updated_at TIMESTAMPTZ DEFAULT NOW()
+      );
     `)
+  } finally {
+    client.release()
+  }
+}
+
+export async function ensureDefaultAdmin(): Promise<void> {
+  const bcrypt = await import('bcryptjs')
+  const client = await pool!.connect()
+  try {
+    const res = await client.query(`SELECT COUNT(*) FROM app_users WHERE role = 'admin'`)
+    if (parseInt(res.rows[0].count) === 0) {
+      const hash = await bcrypt.hash('admin123', 10)
+      await client.query(
+        `INSERT INTO app_users (username, full_name, role, password_hash) VALUES ($1, $2, $3, $4)`,
+        ['admin', 'Διαχειριστής', 'admin', hash]
+      )
+    }
   } finally {
     client.release()
   }
