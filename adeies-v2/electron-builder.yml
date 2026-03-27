@@ -1,0 +1,31 @@
+appId: gr.church.adeies
+productName: Adeies
+copyright: Copyright © 2024
+
+directories:
+  buildResources: build
+  output: dist-installer
+
+files:
+  - out/**/*
+  - package.json
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Adeies
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+  language: 1032
+
+publish: null
